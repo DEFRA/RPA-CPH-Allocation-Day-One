@@ -1,0 +1,100 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "boolRunProcess&StateMachine_1",
+        "Credentials&StateMachine_1",
+        "strWorkLogFilepath&StateMachine_1",
+        "boolContinue&StateMachine_1",
+        "boolLastTransaction&StateMachine_1",
+        "boolSkipEndConfirmation&StateMachine_1",
+        "strProcessType&StateMachine_1",
+        "intConSysEx&StateMachine_1",
+        "strUserFolder&Sequence_38",
+        "listConfigFilepaths&Sequence_40",
+        "arrFilePath&Sequence_40",
+        "strFullFilepath&Sequence_41",
+        "boolFolderExists&Sequence_42",
+        "boolShouldStop&Sequence_25",
+        "dateCaseStartTime&State_3",
+        "strCaseIDText&Sequence_28",
+        "g_arrCaseID&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_Config&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_swProcessingTimer&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_intExitPoint&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_BearerToken&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_TransactionItem&637ca998-a051-4145-92e5-f6faeff3a5eb"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_boolUnattended"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Search Rural Payments.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_Config&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_swProcessingTimer&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_intExitPoint&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_BearerToken&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_TransactionItem&637ca998-a051-4145-92e5-f6faeff3a5eb"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dictSearchFields"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dictTest&Sequence_1",
+        "g_arrCaseID&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_Config&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_swProcessingTimer&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_intExitPoint&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_BearerToken&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_TransactionItem&637ca998-a051-4145-92e5-f6faeff3a5eb"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intAttempt&Sequence_9",
+        "boolRuralPaymentsOpened&Sequence_9",
+        "g_arrCaseID&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_Config&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_swProcessingTimer&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_intExitPoint&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_BearerToken&637ca998-a051-4145-92e5-f6faeff3a5eb",
+        "g_TransactionItem&637ca998-a051-4145-92e5-f6faeff3a5eb"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

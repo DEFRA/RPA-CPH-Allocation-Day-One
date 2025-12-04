@@ -26926,9 +26926,9 @@
     "restore": {
       "projectUniqueName": "CPH Allocation Day One",
       "projectName": "CPH Allocation Day One",
-      "projectPath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\RPA-CPH-Allocation-Day-One\\CPH Allocation Day One\\.local",
+      "projectPath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\RPA-CPH-Allocation-Day-One\\.local",
       "packagesPath": "C:\\Users\\rm000121\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\RPA-CPH-Allocation-Day-One\\CPH Allocation Day One\\.local"
+      "outputPath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\RPA-CPH-Allocation-Day-One\\.local"
     },
     "frameworks": {
       "net8.0-windows7.0": {

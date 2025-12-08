@@ -3,7 +3,14 @@
     {
       "Path": null,
       "SortBy": 0,
-      "VariablesSectionElementsOrder": null,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&",
+        "g_Config&",
+        "g_swProcessingTimer&",
+        "g_intExitPoint&",
+        "g_BearerToken&",
+        "g_TransactionItem&"
+      ],
       "ArgumentsSectionElementsOrder": null,
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -12,6 +19,18 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_Config&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_swProcessingTimer&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_intExitPoint&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_BearerToken&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_TransactionItem&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_arrCaseID&d95b3abd-41f2-424f-964b-9fc15d03fa81",
+        "g_Config&d95b3abd-41f2-424f-964b-9fc15d03fa81",
+        "g_swProcessingTimer&d95b3abd-41f2-424f-964b-9fc15d03fa81",
+        "g_intExitPoint&d95b3abd-41f2-424f-964b-9fc15d03fa81",
+        "g_BearerToken&d95b3abd-41f2-424f-964b-9fc15d03fa81",
+        "g_TransactionItem&d95b3abd-41f2-424f-964b-9fc15d03fa81",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -32,13 +51,7 @@
         "boolFolderExists&Sequence_42",
         "boolShouldStop&Sequence_25",
         "dateCaseStartTime&State_3",
-        "strCaseIDText&Sequence_28",
-        "g_arrCaseID&637ca998-a051-4145-92e5-f6faeff3a5eb",
-        "g_Config&637ca998-a051-4145-92e5-f6faeff3a5eb",
-        "g_swProcessingTimer&637ca998-a051-4145-92e5-f6faeff3a5eb",
-        "g_intExitPoint&637ca998-a051-4145-92e5-f6faeff3a5eb",
-        "g_BearerToken&637ca998-a051-4145-92e5-f6faeff3a5eb",
-        "g_TransactionItem&637ca998-a051-4145-92e5-f6faeff3a5eb"
+        "strCaseIDText&Sequence_28"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_boolUnattended"
@@ -50,12 +63,12 @@
       "Path": "Search Rural Payments.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&637ca998-a051-4145-92e5-f6faeff3a5eb",
-        "g_Config&637ca998-a051-4145-92e5-f6faeff3a5eb",
-        "g_swProcessingTimer&637ca998-a051-4145-92e5-f6faeff3a5eb",
-        "g_intExitPoint&637ca998-a051-4145-92e5-f6faeff3a5eb",
-        "g_BearerToken&637ca998-a051-4145-92e5-f6faeff3a5eb",
-        "g_TransactionItem&637ca998-a051-4145-92e5-f6faeff3a5eb"
+        "g_arrCaseID&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_Config&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_swProcessingTimer&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_intExitPoint&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_BearerToken&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_TransactionItem&4e084d6e-df2e-441f-a676-949daa71bedd"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_dictSearchFields"
@@ -93,6 +106,79 @@
         "g_TransactionItem&637ca998-a051-4145-92e5-f6faeff3a5eb"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Create New Customer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_Config&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_swProcessingTimer&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_intExitPoint&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_BearerToken&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_TransactionItem&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_arrCaseID&d95b3abd-41f2-424f-964b-9fc15d03fa81",
+        "g_Config&d95b3abd-41f2-424f-964b-9fc15d03fa81",
+        "g_swProcessingTimer&d95b3abd-41f2-424f-964b-9fc15d03fa81",
+        "g_intExitPoint&d95b3abd-41f2-424f-964b-9fc15d03fa81",
+        "g_BearerToken&d95b3abd-41f2-424f-964b-9fc15d03fa81",
+        "g_TransactionItem&d95b3abd-41f2-424f-964b-9fc15d03fa81"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_strCRN",
+        "in_dictFormDetails"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Enter New Customer Record.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_Config&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_swProcessingTimer&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_intExitPoint&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_BearerToken&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_TransactionItem&4e084d6e-df2e-441f-a676-949daa71bedd"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strCRN"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Add Name To Business.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_Config&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_swProcessingTimer&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_intExitPoint&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_BearerToken&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_TransactionItem&4e084d6e-df2e-441f-a676-949daa71bedd"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Create New Business Record.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_Config&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_swProcessingTimer&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_intExitPoint&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_BearerToken&4e084d6e-df2e-441f-a676-949daa71bedd",
+        "g_TransactionItem&4e084d6e-df2e-441f-a676-949daa71bedd"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dictFormDetails"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }

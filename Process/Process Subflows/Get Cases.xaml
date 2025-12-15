@@ -1,0 +1,219 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Get_Cases" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Get_Cases_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Get_Cases" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2339.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="450,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[g_Config]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(of String, Object)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: My Dashboard - Dynamics 365" sap:VirtualizedContainerService.HintSize="450,342" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="fe2f3fbc-cd04-4aa4-8cf3-8dd08fd4c728" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="e8b09823ab33c78cd1b5d7335066e7f5.jpg" Selector="&lt;html app='msedge.exe' title='My Dashboard - Dynamics 365' /&gt;" Title="My Dashboard - Dynamics 365" Url="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=dashboard&amp;id=d201a642-6283-4f1d-81b7-da4b1685e698&amp;type=system&amp;_canOverride=true" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="450,1859.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="a4d9727e-77c1-44b1-9293-88de016f0833" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1698.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CPH Allocations'" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4d9727e-77c1-44b1-9293-88de016f0833" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=dashboard&amp;id=d201a642-6283-4f1d-81b7-da4b1685e698&amp;type=system&amp;_canOverride=true" DesignTimeRectangle="136, 784, 308, 47" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'CPH Allocations'" FullSelectorArgument="&lt;webctrl aaname='CPH Allocations Queue Items' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='CPH Allocations Queue Items' tag='SPAN' type='' class='pa-gq pa-w pa-hc pa-et pa-bo pa-eh pa-bf pa-ea pa-dz pa-vx pa-k ' check:innerText='CPH Allocations Queue Items' /&gt;" Guid="e2d62679-b3dd-45da-977f-f8dbb4b600d3" ImageBase64="" InformativeScreenshot="e8b776ba4c8309715b9e41e9931f20c1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='My Dashboard - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="137, 696, 107, 47" ElementType="Text" FriendlyName="'Pinned'" FullSelectorArgument="&lt;webctrl aaname='Pinned' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Pinned' tag='SPAN' type='' class='pa-gq pa-w pa-hc pa-hd pa-he pa-eh pa-bf pa-ea pa-dz ' check:innerText='Pinned' /&gt;" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into queue" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a4d9727e-77c1-44b1-9293-88de016f0833" Text="&lt;CPH Allocation&gt;" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=6470d3a3-9329-eb11-a813-000d3ab277b5&amp;viewType=1039" DesignTimeRectangle="621, 691, 685, 82" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'&lt;cp'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='pa-jc pa-cx pa-dt pa-uj pa-bt pa-hc pa-hj pa-uk pa-ul ' aaname='&amp;lt;cp' /&gt;" Guid="ca7a7b29-df53-4522-b688-db9deefb6138" InformativeScreenshot="3d96c1ac6c5141ae97e45805c28dfdab.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Queue Items CPH Allocations Queue Items - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&lt;CPH Allocation&gt;'" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4d9727e-77c1-44b1-9293-88de016f0833" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=6470d3a3-9329-eb11-a813-000d3ab277b5&amp;viewType=1039" DesignTimeRectangle="618, 776, 764, 82" DesignTimeScaleFactor="2.5" ElementType="ListItem" FriendlyName="'&lt;CPH Allocation&gt;'" FullSelectorArgument="&lt;webctrl aria-role='option' tag='LI' innerText='*CPH Allocation*' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' tag='LI' type='' class='pa-jh pa-cq pa-uj pa-uv pa-uw ' aaname='&amp;lt;CPH Allocation&amp;gt;' check:innerText='&amp;lt;CPH Allocation&amp;gt;' /&gt;" Guid="312f4a82-2f3b-4c53-9881-f826bc80a977" ImageBase64="" InformativeScreenshot="6f3e99481ae5af8f15feac32ce3d46b6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Queue Items CPH Allocations Queue Items - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4d9727e-77c1-44b1-9293-88de016f0833" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=6470d3a3-9329-eb11-a813-000d3ab277b5&amp;viewType=1039" DesignTimeRectangle="1032, 830, 20, 20" DesignTimeScaleFactor="2.5" FriendlyName="''" FullSelectorArgument="&lt;webctrl parentid='entity_control-powerapps_onegrid_control_container' tag='DIV' class='ms-Stack root-353' visibleinnertext='Related Case (Object)&amp;#xA;' /&gt;&lt;webctrl class='chevronIcon-359' parentid='entity_control-powerapps_onegrid_control_container' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='entity_control-powerapps_onegrid_control_container' tag='DIV' class='ms-Stack root-353' visibleinnertext='Related Case (Object)&amp;#xA;' /&gt;&lt;webctrl class='chevronIcon-359' parentid='entity_control-powerapps_onegrid_control_container' tag='I' type='' aaname='' check:text='' /&gt;" Guid="b78a42fa-cb97-46d2-9d9d-94bdc5ef7499" InformativeScreenshot="da3829719d48c6d984fc952b498e10a3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Queue Items CPH Allocations Queue Items - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Filter by'" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4d9727e-77c1-44b1-9293-88de016f0833" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=6470d3a3-9329-eb11-a813-000d3ab277b5&amp;viewType=1039" DesignTimeRectangle="868, 1074, 280, 90" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Filter by'" FullSelectorArgument="&lt;webctrl visibleInnerText='Filter by' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='fluent-default-layer-host' parentname='Filter by' tag='SPAN' type='' class='ms-ContextualMenu-itemText label-465' aaname='Filter by' check:innerText='Filter by' /&gt;" Guid="329b5acc-797a-4dc9-bc76-9e4816c0e28b" ImageBase64="" InformativeScreenshot="e643b40651a771e74feff96713c5a046.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Queue Items CPH Allocations Queue Items - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NSelectItem DisplayName="Select Item 'Equals'" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="Contains" ScopeIdentifier="a4d9727e-77c1-44b1-9293-88de016f0833" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="10">
+                  <x:String>Equals</x:String>
+                  <x:String>Does not equal</x:String>
+                  <x:String>Contains data</x:String>
+                  <x:String>Does not contain data</x:String>
+                  <x:String>Contains</x:String>
+                  <x:String>Does not contain</x:String>
+                  <x:String>Begins with</x:String>
+                  <x:String>Does not begin with</x:String>
+                  <x:String>Ends with</x:String>
+                  <x:String>Does not end with</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=6470d3a3-9329-eb11-a813-000d3ab277b5&amp;viewType=1039" DesignTimeRectangle="768, 1044, 545, 80" DesignTimeScaleFactor="2.5" ElementType="DropDown" FriendlyName="'Equals'" FullSelectorArgument="&lt;webctrl tag='DIV' class='ms-Dropdown dropdown-606' visibleinnertext='Equals&amp;#xA;' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='ms-Dropdown dropdown-606' visibleinnertext='Equals&amp;#xA;' type='' aaname='' /&gt;" Guid="56215ed5-90d0-4d25-b8ec-01361c64e112" ImageBase64="" InformativeScreenshot="2b4e1c653debd9b60d799d848156b4ca.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Queue Items CPH Allocations Queue Items - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT combobox-id__4376'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="a4d9727e-77c1-44b1-9293-88de016f0833" Text="CRM GDS CPH Online" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=6470d3a3-9329-eb11-a813-000d3ab277b5&amp;viewType=1039" DesignTimeRectangle="770, 1164, 541, 75" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT combobox-id__4376'" FullSelectorArgument="&lt;webctrl id='combobox-id__4376' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='combobox-id__4376' tag='INPUT' type='' class='ms-BasePicker-input input-691' aaname='' /&gt;" Guid="391a5db3-a4aa-4c69-a90a-68b7bb5ccd81" ImageBase64="" InformativeScreenshot="bb83ebf871f461360a6d2b68f378018b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Queue Items CPH Allocations Queue Items - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="888, 1278, 200, 80" ElementType="Button" FriendlyName="'Apply'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='ms-Button ms-Button--primary is-disabled submitButton-695' aaname='Apply' check:innerText='Apply' /&gt;" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Apply'" sap:VirtualizedContainerService.HintSize="382,182.8" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a4d9727e-77c1-44b1-9293-88de016f0833" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=6470d3a3-9329-eb11-a813-000d3ab277b5&amp;viewType=1039" DesignTimeRectangle="888, 1278, 200, 80" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Apply'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='ms-Button ms-Button--primary is-disabled submitButton-695' aaname='Apply' check:innerText='Apply' /&gt;" Guid="3236ff66-b329-4be4-bc44-e2788dd751ec" InformativeScreenshot="b1309c9e58c3880d4b69948a73a9bae8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Queue Items CPH Allocations Queue Items - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

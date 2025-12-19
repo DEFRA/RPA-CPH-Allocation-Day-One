@@ -134,19 +134,19 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search_Rural_Payments" sap:VirtualizedContainerService.HintSize="1451.6000000000001,3650.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search_Rural_Payments" sap:VirtualizedContainerService.HintSize="1451.6000000000001,3765.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - Search Rural Payments" sap:VirtualizedContainerService.HintSize="1159.2,3627.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;), UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - Search Rural Payments" sap:VirtualizedContainerService.HintSize="1159.2,3742" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;), UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Complete searches" sap:VirtualizedContainerService.HintSize="1125.2,3466" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Complete searches" sap:VirtualizedContainerService.HintSize="1125.2,3580.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -157,7 +157,7 @@
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/main" DesignTimeRectangle="317, 1007, 864, 82" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Search for'" FullSelectorArgument="&lt;webctrl tag='A' visibleinnertext='Search for customer or business' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' visibleinnertext='Search for customer or business' type='' class='' aaname='Search for customer or business' check:text='Search for customer or business' /&gt;" Guid="af3e4037-effb-44e7-b03a-a9e651b35eed" InformativeScreenshot="bdd9fa63caf4e19ff71d4891c66a049c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each searchable key and value" sap:VirtualizedContainerService.HintSize="1091.2,3214.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_dictSearchFields]">
+            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each searchable key and value" sap:VirtualizedContainerService.HintSize="1091.2,3221.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_dictSearchFields]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                   <ActivityAction.Argument>
@@ -192,7 +192,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NSelectItem>
-                    <If sap2010:Annotation.AnnotationText="Two search fields instead of one, in this case." Condition="[currentKVP.key=&quot;Customer name&quot;]" DisplayName="If key is Customer Name" sap:VirtualizedContainerService.HintSize="1023.2,1063.2" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If sap2010:Annotation.AnnotationText="Two search fields instead of one, in this case." Condition="[currentKVP.key.StartsWith(&quot;Customer name&quot;)]" DisplayName="If key is Customer Name" sap:VirtualizedContainerService.HintSize="1023.2,1063.2" sap2010:WorkflowViewState.IdRef="If_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -205,26 +205,14 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Last name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Text="[Split(in_dictSearchFields(&quot;Customer name&quot;),&quot; &quot;).Last]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Last name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Text="[Split(currentKVP.Value,&quot; &quot;).Last]" Version="V3">
                             <uix:NTypeInto.Target>
-                              <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/search" DesignTimeRectangle="355, 1535, 1588, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT lastNameSearch'" FullSelectorArgument="&lt;webctrl id='lastNameSearch' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='lastNameSearch' tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid placeholder ng-empty' aaname='                         Last name                         Enter at least the first 3 characters, example &amp;apos;Smi&amp;apos;                     ' /&gt;" Guid="7fd044d0-d18b-4d32-87bf-dab738949c35" ImageBase64="" InformativeScreenshot="0994e53d437cdeabfc218d2c6e6a216a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                                    <uix:Target DesignTimeRectangle="355, 1378, 3175, 145" ElementType="Text" FriendlyName="'Last name'" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Last name&amp;#xA;Enter at least the first 3 characters, example &amp;apos;Smi&amp;apos;' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Last name&amp;#xA;Enter at least the first 3 characters, example &amp;apos;Smi&amp;apos;' type='' class='form-label ng-binding' aaname='                         Last name                                              ' check:text='Last name&amp;#xA;                        Enter at least the first 3 characters, example &amp;apos;Smi&amp;apos;' /&gt;" ImageBase64="" SearchSteps="Selector" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
+                              <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/search" DesignTimeRectangle="355, 968, 1588, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT lastNameSearch'" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Last name&amp;#xA;Enter at least the first 3 characters, example &amp;apos;Smi&amp;apos;' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Last name&amp;#xA;Enter at least the first 3 characters, example &amp;apos;Smi&amp;apos;' /&gt;&lt;webctrl tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid placeholder ng-empty' aaname='                         Last name                         Enter at least the first 3 characters, example &amp;apos;Smi&amp;apos;                     ' /&gt;" Guid="c22e1c51-08c7-49e8-b565-16c195c3c1d2" InformativeScreenshot="17ecd8cd993b967b43c14654376a33e0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'First name (optional)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,244" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Text="[Split(in_dictSearchFields(&quot;Customer name&quot;),&quot; &quot;).First]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'First name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,244" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Text="[Split(currentKVP.Value,&quot; &quot;).First]" Version="V3">
                             <uix:NTypeInto.Target>
-                              <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/search" DesignTimeRectangle="355, 1780, 1588, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT firstNameSearch'" FullSelectorArgument="&lt;webctrl id='firstNameSearch' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='firstNameSearch' tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid placeholder ng-empty' aaname='                         First name (optional)                                              ' /&gt;" Guid="f89989f6-a98e-40b2-b060-be36c5263254" ImageBase64="" InformativeScreenshot="c918fa58e038243c5e5bfd0ffd1de0ca.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                                    <uix:Target DesignTimeRectangle="355, 1705, 3175, 63" ElementType="Text" FriendlyName="'First name (optional)'" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='First name (optional)' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='First name (optional)' type='' class='form-label ng-binding' aaname='                         First name (optional)                                              ' check:text='First name (optional)' /&gt;" SearchSteps="Selector" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
+                              <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/search" DesignTimeRectangle="329, 937, 1588, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT firstNameSearch'" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='First name (optional)' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='First name (optional)' /&gt;&lt;webctrl tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid placeholder ng-empty' aaname='                         First name (optional)                                              ' /&gt;" Guid="6a489b1b-38ed-4cae-ba41-7740daa26d4b" InformativeScreenshot="5b1e1f42a2706828b9f04ab85b634127.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
                         </Sequence>
@@ -236,7 +224,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type value" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,244" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Text="[currentKVP.Value]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type value" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,244" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Text="[currentKVP.Value]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/search" DesignTimeRectangle="355, 1535, 1588, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT search'" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Search by*' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Search by business name&amp;#xA;Enter at least the first 2 characters of the business name' /&gt;&lt;webctrl tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid placeholder ng-empty' aaname='                         Search by business name                         Enter at least the first 2 characters of the business name                     ' /&gt;" Guid="6580a641-d1a8-4d9d-9268-dc3a018d12fa" ImageBase64="" InformativeScreenshot="d0798fc1c40018ad97e6a2294d58095f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                             </uix:NTypeInto.Target>
@@ -249,18 +237,18 @@
                         <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/search" DesignTimeRectangle="355, 1780, 218, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl visibleInnerText='Search' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='party-search' tag='BUTTON' type='' class='button ng-isolate-scope' aaname='Search' check:innerText='Search' /&gt;" Guid="822fa072-0afc-4c4a-8fe6-5fd2ada13aa9" ImageBase64="" InformativeScreenshot="5eaa25c3cff4d199d4a4036f73224e8f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <Pick DisplayName="Pick - search outcome" sap:VirtualizedContainerService.HintSize="1023.2,1389.2" sap2010:WorkflowViewState.IdRef="Pick_1">
+                    <Pick DisplayName="Pick - search outcome" sap:VirtualizedContainerService.HintSize="1023.2,1526.4" sap2010:WorkflowViewState.IdRef="Pick_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <PickBranch DisplayName="Results found" sap:VirtualizedContainerService.HintSize="505.6,1310.4" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+                      <PickBranch DisplayName="Results found" sap:VirtualizedContainerService.HintSize="505.6,1456.4" sap2010:WorkflowViewState.IdRef="PickBranch_1">
                         <PickBranch.Trigger>
                           <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'DIV'" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
                             <ui:WaitUiElementAppear.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1dd66e76-790e-4a8e-a6fa-3447bf0fd1e2" InformativeScreenshot="1a8defd77db535e3c5a206044e9e8257" Selector="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;&lt;webctrl tag='TABLE' visibleinnertext='Business search results*' /&gt;">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1dd66e76-790e-4a8e-a6fa-3447bf0fd1e2" InformativeScreenshot="1a8defd77db535e3c5a206044e9e8257" Selector="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;&lt;webctrl tag='DIV' visibleinnertext='Search results*' /&gt;&lt;webctrl tag='TABLE' /&gt;">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
@@ -271,7 +259,7 @@
                             </ui:WaitUiElementAppear.Target>
                           </ui:WaitUiElementAppear>
                         </PickBranch.Trigger>
-                        <Sequence DisplayName="Branch - Results found" sap:VirtualizedContainerService.HintSize="416,1002.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <Sequence DisplayName="Branch - Results found" sap:VirtualizedContainerService.HintSize="416,1148.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -284,14 +272,21 @@
                             </InvokeMethod.TargetObject>
                           </InvokeMethod>
                           <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Results found - user prompt" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed during searches." IN_PopupMessage="[&quot;&lt;h1&gt;Results found&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Results returned on searching &quot;+currentKVP.Key+&quot;. Please verify if any of the results are relevant to the current transaction. If so, please click 'Stop' to process the rest of this case manually. Otherwise, please click 'Continue'.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+String.Join(&quot;&lt;br&gt;&quot;,in_dictSearchFields.Select(function(x) &quot;&lt;strong&gt;&quot;+x.Key+&quot;:&lt;/strong&gt;&amp;ensp; &quot;+x.Value))+&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Results found" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
-                          <InvokeMethod DisplayName="Start timer - results found" sap:VirtualizedContainerService.HintSize="382,159.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Stop">
+                          <InvokeMethod DisplayName="Start timer - results found" sap:VirtualizedContainerService.HintSize="382,168.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Stop">
                             <InvokeMethod.TargetObject>
                               <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                             </InvokeMethod.TargetObject>
                           </InvokeMethod>
+                          <uix:NNavigateBrowser Action="Refresh" sap2010:Annotation.AnnotationText="Refresh to remove outcome of current search" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="382,137.2" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NNavigateBrowser>
                         </Sequence>
                       </PickBranch>
-                      <PickBranch DisplayName="Branch - No results" sap:VirtualizedContainerService.HintSize="423.6,1310.4" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+                      <PickBranch DisplayName="Branch - No results" sap:VirtualizedContainerService.HintSize="423.6,1456.4" sap2010:WorkflowViewState.IdRef="PickBranch_2">
                         <PickBranch.Trigger>
                           <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - no results" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                             <ui:WaitUiElementAppear.Target>
@@ -309,17 +304,17 @@
                         <ui:LogMessage DisplayName="Log Message - no results" sap:VirtualizedContainerService.HintSize="334,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;No existing results found for current &quot;+currentKVP.Key+&quot;.&quot;]" />
                       </PickBranch>
                     </Pick>
-                    <uix:NNavigateBrowser Action="Refresh" sap2010:Annotation.AnnotationText="Refresh to remove outcome of current search" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="1023.2,137.2" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </uix:NNavigateBrowser>
                   </Sequence>
                 </ActivityAction>
               </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
+            <uix:NGoToUrl DisplayName="Go To URL - homepage" sap:VirtualizedContainerService.HintSize="1091.2,107.6" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[g_Config(&quot;RuralPaymentsURL&quot;).ToString]" Version="V3" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

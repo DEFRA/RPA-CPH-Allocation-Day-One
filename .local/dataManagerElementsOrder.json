@@ -19,12 +19,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_Config&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_swProcessingTimer&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_intExitPoint&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_BearerToken&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_TransactionItem&8396c8d7-1456-42b0-ae4f-2427b51501d7",
+        "g_arrCaseID&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_Config&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_swProcessingTimer&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_intExitPoint&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_BearerToken&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_TransactionItem&5cfe7700-8e38-4952-993d-e942837bab1b",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -46,12 +46,12 @@
         "boolShouldStop&Sequence_25",
         "dateCaseStartTime&State_3",
         "strCaseIDText&Sequence_28",
-        "g_arrCaseID&0dd05f76-9ee9-493d-aaa5-4e72f54caa6a",
-        "g_Config&0dd05f76-9ee9-493d-aaa5-4e72f54caa6a",
-        "g_swProcessingTimer&0dd05f76-9ee9-493d-aaa5-4e72f54caa6a",
-        "g_intExitPoint&0dd05f76-9ee9-493d-aaa5-4e72f54caa6a",
-        "g_BearerToken&0dd05f76-9ee9-493d-aaa5-4e72f54caa6a",
-        "g_TransactionItem&0dd05f76-9ee9-493d-aaa5-4e72f54caa6a"
+        "g_arrCaseID&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_Config&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_swProcessingTimer&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_intExitPoint&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_BearerToken&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_TransactionItem&4b51b488-114e-47bd-92aa-c1f66fd6e800"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_boolUnattended"
@@ -217,15 +217,21 @@
       "Path": "Process/Process Subflows/Get Form Details.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_Config&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_swProcessingTimer&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_intExitPoint&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_BearerToken&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_TransactionItem&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_arrCaseID&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_Config&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_swProcessingTimer&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_intExitPoint&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_BearerToken&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_TransactionItem&4b51b488-114e-47bd-92aa-c1f66fd6e800",
         "strSecondaryPhoneNumber&Sequence_1",
         "strMainPhoneNumber&Sequence_1",
-        "strFormContent&Sequence_1",
-        "g_arrCaseID&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_Config&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_swProcessingTimer&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_intExitPoint&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_BearerToken&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_TransactionItem&8396c8d7-1456-42b0-ae4f-2427b51501d7"
+        "strFormContent&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "out_dictFormDetails"
@@ -253,13 +259,22 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_Config&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_swProcessingTimer&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_intExitPoint&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_BearerToken&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_TransactionItem&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "strSBI&Flowchart_1",
+        "dictSearchFields&Flowchart_1",
+        "strCRNFirst&Flowchart_1",
+        "g_arrCaseID&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_Config&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_swProcessingTimer&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_intExitPoint&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_BearerToken&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_TransactionItem&4b51b488-114e-47bd-92aa-c1f66fd6e800",
         "strCRNSecond&Flowchart_1",
-        "g_arrCaseID&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_Config&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_swProcessingTimer&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_intExitPoint&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_BearerToken&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_TransactionItem&8396c8d7-1456-42b0-ae4f-2427b51501d7",
         "dictFormDetails&Flowchart_1"
       ],
       "ArgumentsSectionElementsOrder": [],
@@ -270,17 +285,17 @@
       "Path": "Process/Process Subflows/Create New Business Record.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_Config&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_swProcessingTimer&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_intExitPoint&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_BearerToken&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_TransactionItem&8396c8d7-1456-42b0-ae4f-2427b51501d7",
+        "boolBusIsPersToggle&Flowchart_1",
+        "g_arrCaseID&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_Config&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_swProcessingTimer&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_intExitPoint&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_BearerToken&5cfe7700-8e38-4952-993d-e942837bab1b",
+        "g_TransactionItem&5cfe7700-8e38-4952-993d-e942837bab1b",
         "strBusinessNameSelector&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_dictFormDetails",
-        "in_strLegalStatus",
         "out_strSBI"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -309,16 +324,102 @@
       "Path": "Process/Process Subflows/Create New Customer.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_Config&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_swProcessingTimer&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_intExitPoint&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_BearerToken&8396c8d7-1456-42b0-ae4f-2427b51501d7",
-        "g_TransactionItem&8396c8d7-1456-42b0-ae4f-2427b51501d7"
+        "g_arrCaseID&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_Config&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_swProcessingTimer&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_intExitPoint&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_BearerToken&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_TransactionItem&4b51b488-114e-47bd-92aa-c1f66fd6e800"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_dictFormDetails",
         "out_strCRN"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test flow.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strSBI&Sequence_1",
+        "strCRN&Sequence_1",
+        "dictFormDetails&Sequence_1",
+        "dictSearchFields&Sequence_1",
+        "g_arrCaseID&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_Config&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_swProcessingTimer&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_intExitPoint&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_BearerToken&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_TransactionItem&12220b57-ad98-49e5-a2de-135391ea3021"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Search Rural Payments.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_Config&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_swProcessingTimer&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_intExitPoint&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_BearerToken&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_TransactionItem&4b51b488-114e-47bd-92aa-c1f66fd6e800"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dictSearchFields"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/tc01 Search Rural Payments.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dictSearchFields&Sequence_1",
+        "g_arrCaseID&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_Config&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_swProcessingTimer&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_intExitPoint&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_BearerToken&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_TransactionItem&12220b57-ad98-49e5-a2de-135391ea3021"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Enter New Customer Record.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_Config&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_swProcessingTimer&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_intExitPoint&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_BearerToken&4b51b488-114e-47bd-92aa-c1f66fd6e800",
+        "g_TransactionItem&4b51b488-114e-47bd-92aa-c1f66fd6e800"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strCRN"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Assign Case.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_Config&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_swProcessingTimer&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_intExitPoint&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_BearerToken&12220b57-ad98-49e5-a2de-135391ea3021",
+        "g_TransactionItem&12220b57-ad98-49e5-a2de-135391ea3021"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strURL"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

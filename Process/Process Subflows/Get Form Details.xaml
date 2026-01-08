@@ -109,7 +109,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_Form_Details" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2829.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Form_Details" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2457.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strFormContent" />
       <Variable x:TypeArguments="x:String" Name="strMainPhoneNumber" />
@@ -120,7 +120,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="576,917.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="621.6,917.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -155,7 +155,7 @@
         <uix:TargetApp Area="0, 0, 0, 0" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:MultipleAssign DisplayName="Initialise dictionary and extract business or hobbyist" sap:VirtualizedContainerService.HintSize="576,180.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:MultipleAssign DisplayName="Initialise dictionary and extract business or hobbyist" sap:VirtualizedContainerService.HintSize="621.6,180.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
@@ -177,7 +177,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch - business or hobbyist?" Expression="[out_dictFormDetails(&quot;BusinessOrHobbyist&quot;)]" sap:VirtualizedContainerService.HintSize="576,1707.6" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - business or hobbyist?" Expression="[out_dictFormDetails(&quot;BusinessOrHobbyist&quot;)]" sap:VirtualizedContainerService.HintSize="621.6,1336" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <Switch.Default>
         <Throw DisplayName="Throw BRE - customer type unknown" Exception="[new BusinessRuleException(&quot;Customer type unrecognised. Business or Hobbyist answer: &quot;+out_dictFormDetails(&quot;BusinessOrHobbyist&quot;))]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -187,13 +187,14 @@
           </sap:WorkflowViewStateService.ViewState>
         </Throw>
       </Switch.Default>
-      <Sequence x:Key="I'm registering on behalf of a business (Im registering on behalf of a business)" DisplayName="Extract business fields" sap:VirtualizedContainerService.HintSize="536,1471.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <Sequence x:Key="I'm registering on behalf of a business (Im registering on behalf of a business)" DisplayName="Extract business fields" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:MultipleAssign DisplayName="Extract form fields - business" sap:VirtualizedContainerService.HintSize="502,524" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+        <ui:MultipleAssign DisplayName="Extract form fields - business" sap:VirtualizedContainerService.HintSize="502,555.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_41">
@@ -300,21 +301,35 @@
                   <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What is the main purpose of your business\?).*?(?=(Is your business a market, showground or zoo\?|Main purpose of your business\: something else)").Value.Trim]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_77">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("DateArriving")]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What date will the livestock or animal by-products arrive\?).*?(?=Livestock that you keep").Value.Trim]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
             </scg:List>
           </ui:MultipleAssign.AssignOperations>
         </ui:MultipleAssign>
         <ui:MultipleAssign sap2010:Annotation.AnnotationText="These are not always present, but it's easier to always attempt to extract them rather than list the circumstances under which they should be present (i.e. exhaustive list of legal statuses)" DisplayName="Extract charity number and company number" sap:VirtualizedContainerService.HintSize="502,242" sap2010:WorkflowViewState.IdRef="MultipleAssign_12">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-              <ui:AssignOperation Value="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignOperation_75">
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_75">
                 <ui:AssignOperation.To>
                   <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("CharityNumber")]</OutArgument>
                 </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What\'s your charity number\?).*?(?=What is the main purpose of your business\?)").Value.Trim]</InArgument>
+                </ui:AssignOperation.Value>
               </ui:AssignOperation>
-              <ui:AssignOperation Value="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignOperation_76">
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_76">
                 <ui:AssignOperation.To>
                   <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("CompanyNumber")]</OutArgument>
                 </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What\'s your company number\?).*?(?=What is the main purpose of your business\?)").Value.Trim]</InArgument>
+                </ui:AssignOperation.Value>
               </ui:AssignOperation>
             </scg:List>
           </ui:MultipleAssign.AssignOperations>
@@ -537,13 +552,13 @@
           </If.Else>
         </If>
       </Sequence>
-      <Sequence x:Key="I'm a hobbyist keeper (Im a hobbyist keeper)" DisplayName="Extract hobbyist fields" sap:VirtualizedContainerService.HintSize="581.6,1068.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence x:Key="I'm a hobbyist keeper (Im a hobbyist keeper)" DisplayName="Extract hobbyist fields" sap:VirtualizedContainerService.HintSize="581.6,1100" sap2010:WorkflowViewState.IdRef="Sequence_8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:MultipleAssign DisplayName="Extract form fields" sap:VirtualizedContainerService.HintSize="547.6,399.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+        <ui:MultipleAssign DisplayName="Extract form fields" sap:VirtualizedContainerService.HintSize="547.6,430.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_54">
@@ -616,6 +631,14 @@
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
                   <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=Second contact\s*)(Yes \(true\)|No \(false\))").Value.Trim]</InArgument>
+                </ui:AssignOperation.Value>
+              </ui:AssignOperation>
+              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_78">
+                <ui:AssignOperation.To>
+                  <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("DateArriving")]</OutArgument>
+                </ui:AssignOperation.To>
+                <ui:AssignOperation.Value>
+                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What date will the livestock or animal by-products arrive\?).*?(?=Livestock that you keep").Value.Trim]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
             </scg:List>

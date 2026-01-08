@@ -1,0 +1,218 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Add_Internal_Note" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:d="clr-namespace:DRACOE_PopUps_64;assembly=DRACOE.PopUps.64" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_strSubject" Type="InArgument(x:String)" />
+    <x:Property Name="in_strDescription" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Add_Internal_Note.in_strSubject>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Add_Internal_Note.in_strSubject>
+  <this:Add_Internal_Note.in_strDescription>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Add_Internal_Note.in_strDescription>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Add_Internal_Note_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>DRACOE_PopUps_64</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
+      <AssemblyReference>DRACOE.PopUps.64</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Add_Internal_Note" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2431.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="518,2408" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="Never" ScopeGuid="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap2010:Annotation.AnnotationText="Should already be on the Activities panel" DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,2246.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Create Timeline Record" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="3228, 992, 80, 90" DesignTimeScaleFactor="2.5" ElementType="Icon" FriendlyName="'BUTTON action_bar_add_c…'" FullSelectorArgument="&lt;webctrl aaname='Create a timeline record.' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create a timeline record.' tag='BUTTON' type='button' class='fui-Button r1alrhcs ___w3o4yv0 fhovq9v f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq4zb f1t94bn6 f1s2uweq fr80ssc f1ukrpxl fecsdlb fnwyq0v ft1hn21 fuxngvv fy5bs14 fsv2rcd f1h0usnq fs4ktlq f16h9ulv fx2bmrt f1omzyqd f1dfjoow f1j98vj9 fj8yq94 f4xjyn1 f1et0tmh f9ddjv3 f1wi8ngl f18ktai2 fwbmr0d f44c6la' /&gt;" Guid="5dec1d55-f143-40e7-a2df-d7ed0adccfdd" InformativeScreenshot="db91c79513eefeb8d0488c8e51b85933.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case: Case - SLA: CRM GDS CPH Online - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Internal Note'" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="2957, 2065, 350, 50" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Internal Note'" FullSelectorArgument="&lt;webctrl visibleInnerText='Internal Note' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Internal Note' parentid='createNewRecord_flyoutMenuItem_rpa_memo' tag='SPAN' type='' class='fui-MenuItem__content r1ls86vo' check:innerText='Internal Note' /&gt;" Guid="d18f352f-0fd5-4052-9cbe-0b78bcd7f4e8" ImageBase64="" InformativeScreenshot="c11a0cec904ace17ef090954ef40dc52.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case: Case - SLA: CRM GDS CPH Online - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Subject'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Text="[in_strSubject]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_memo" DesignTimeRectangle="1070, 973, 992, 76" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='DIV' class='pa-bl flexbox' visibleinnertext='Subject&amp;#xA;*' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='pa-bl flexbox' visibleinnertext='Subject&amp;#xA;*' /&gt;&lt;webctrl tag='INPUT' type='text' class='fui-Input__input r12stul0 ___1ukvzui f7nlbp4 f1l02sjl f1cmbuwj fly5x3f f1pivz5x' aaname='Select to enter data' /&gt;" Guid="632ff618-a82d-4389-a99e-f61ee3bc1eaa" InformativeScreenshot="149a8fec579399ca2b93c9bbd21ee20a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Internal Note: Information: New Internal Note - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Text="[in_strDescription]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_memo" DesignTimeRectangle="1070, 1093, 992, 130" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'TEXTAREA'" FullSelectorArgument="&lt;webctrl tag='DIV' class='pa-bl flexbox' visibleinnertext='Description' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='pa-bl flexbox' visibleinnertext='Description' /&gt;&lt;webctrl tag='TEXTAREA' type='' class='fui-Textarea__textarea ___rseg4c0 f1ern45e f1n71otn f1h8hb77 f1deefiw f1s184ao f3rmtva f1ewtqcl f19n0e5 fqerorx fk6fouc f11ysow2 fwyc1cq f13ta7ih f1vw9udw fbb3kq8 f1s6fcnf fvmd9f f1ww82xo f1immsc2 fkhj508 figsok6 f1i3iumi f1o1s39h f2q8o33 f1pivz5x' aaname='Select to enter data' /&gt;" Guid="c6310af8-5b83-41bc-ae32-6e4208c36e1c" InformativeScreenshot="cc8c695869b35b602c7de98e83bd256a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Internal Note: Information: New Internal Note - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <If Condition="[CBool(g_Config(&quot;PausePoint4&quot;))]" DisplayName="Pause Point 4?" sap:VirtualizedContainerService.HintSize="450,1087.2" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,825.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <InvokeMethod DisplayName="PP4 - stop timer" sap:VirtualizedContainerService.HintSize="382,168.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Stop">
+                    <InvokeMethod.TargetObject>
+                      <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
+                    </InvokeMethod.TargetObject>
+                  </InvokeMethod>
+                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP4" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 4" IN_PopupMessage="[&quot;&lt;h1&gt;Internal note added&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please confirm that the internal note has been entered correctly before it is marked as complete:&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt;&amp;ensp;&quot;+in_strSubject+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Description:&lt;/strong&gt;&amp;ensp;&quot;+in_strDescription+&quot;&lt;/p&gt;&quot;+&#xA;&quot;If these details look correct, please click 'Continue'. Otherwise, click 'Stop' and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 4" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                  <InvokeMethod DisplayName="PP4 - start timer" sap:VirtualizedContainerService.HintSize="382,159.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Start">
+                    <InvokeMethod.TargetObject>
+                      <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
+                    </InvokeMethod.TargetObject>
+                  </InvokeMethod>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Mark Complete'" sap:VirtualizedContainerService.HintSize="450,181.2" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_memo" DesignTimeRectangle="981, 433, 356, 80" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Mark Complete'" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Mark Complete' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Mark Complete' type='button' class='pa-dt pa-ch pa-mp pa-ax pa-fl pa-cq pa-jy pa-he pa-mx pa-w pa-my pa-mz pa-na pa-nb pa-nc pa-nd pa-ne pa-nf pa-ng pa-yg pa-js pa-yh flexbox' aaname='Mark Complete  Save the Internal Note and change the status to Completed.' check:text='Mark Complete' /&gt;" Guid="ae6d2358-df7f-4d00-a3d9-628a75ac49d7" InformativeScreenshot="d59f52fb2cfa249d0533a57302a2deb2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Internal Note: Information: New Internal Note - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -73,6 +73,8 @@
       <x:String>UiPath.Web</x:String>
       <x:String>UiPath.Web.Activities</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -213,7 +215,7 @@
               <av:Point x:Key="AnnotationLocation">90,350</av:Point>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="If the transaction item is processed without any exception, its status is updated as Successful and the email is moved to the Success subfolder." DisplayName="Success" sap:VirtualizedContainerService.HintSize="484,1719.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap2010:Annotation.AnnotationText="If the transaction item is processed without any exception, its status is updated as Successful and the email is moved to the Success subfolder." DisplayName="Success" sap:VirtualizedContainerService.HintSize="484,1329.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -222,34 +224,8 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Transaction Successful&quot;]" />
-            <If sap2010:Annotation.AnnotationText="Remove this and add CompletedID asset to Orchestrator for improved speed." Condition="[not g_Config.ContainsKey(&quot;CompletedID&quot;)]" DisplayName="If &quot;Completed&quot; ID not already retrieved" sap:VirtualizedContainerService.HintSize="450,572.4" sap2010:WorkflowViewState.IdRef="If_15">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,331.6" sap2010:WorkflowViewState.IdRef="Sequence_45">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <de:Get_Folder_ID DisplayName="Get &quot;Completed&quot; folder ID" sap:VirtualizedContainerService.HintSize="382,271.6" sap2010:WorkflowViewState.IdRef="Get_Folder_ID_3" in_strBearerToken="[g_BearerToken]" in_strEmailAccount="[g_Config(&quot;AccountName&quot;).ToString]" in_strFolderPath="[g_Config(&quot;Completed&quot;).ToString]" out_strFolderID="[g_Config(&quot;CompletedID&quot;)]" />
-                </Sequence>
-              </If.Then>
-              <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Sequence>
-              </If.Else>
-            </If>
-            <de:Move_Email DisplayName="Move Email to &quot;Completed&quot;" sap:VirtualizedContainerService.HintSize="450,280.4" sap2010:WorkflowViewState.IdRef="Move_Email_1" in_strBearerToken="[g_BearerToken]" in_strEmailAccount="[g_Config(&quot;AccountName&quot;).ToString]" in_strEmailID="[g_TransactionItem(&quot;EmailID&quot;).ToString]" in_strNewFolderID="[g_Config(&quot;CompletedID&quot;).ToString]" />
+            <ui:RemoveDataRow RowIndex="{x:Null}" DataTable="[g_dtTransactionData]" DisplayName="Remove complete data row" sap:VirtualizedContainerService.HintSize="450,222" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1" Row="[g_TransactionItem]" />
+            <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[g_dtTransactionData]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Update To Process data" FilePath="[g_Config(&quot;ToProcessFile&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,240.4" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_1" ShouldQuote="True" />
             <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="450,168.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_8" MethodName="Stop">
               <InvokeMethod.TargetObject>
                 <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
@@ -415,7 +391,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <de:Move_Email DisplayName="Move Email to &quot;Review&quot; - BRE" sap:VirtualizedContainerService.HintSize="450,280.4" sap2010:WorkflowViewState.IdRef="Move_Email_2" in_strBearerToken="[g_BearerToken]" in_strEmailAccount="[g_Config(&quot;AccountName&quot;).ToString]" in_strEmailID="[g_TransactionItem(&quot;EmailID&quot;).ToString]" in_strNewFolderID="[g_Config(&quot;ReviewID&quot;).ToString]" />
+                <de:Move_Email out_strNEWEmailID="{x:Null}" DisplayName="Move Email to &quot;Review&quot; - BRE" sap:VirtualizedContainerService.HintSize="450,280.4" sap2010:WorkflowViewState.IdRef="Move_Email_2" in_strBearerToken="[g_BearerToken]" in_strEmailAccount="[g_Config(&quot;AccountName&quot;).ToString]" in_strEmailID="[g_TransactionItem(&quot;EmailID&quot;).ToString]" in_strNewFolderID="[g_Config(&quot;ReviewID&quot;).ToString]" />
                 <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="450,168.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" MethodName="Stop">
                   <InvokeMethod.TargetObject>
                     <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
@@ -559,7 +535,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <de:Move_Email DisplayName="Move Email to &quot;Review&quot; - SE" sap:VirtualizedContainerService.HintSize="484,280.4" sap2010:WorkflowViewState.IdRef="Move_Email_3" in_strBearerToken="[g_BearerToken]" in_strEmailAccount="[g_Config(&quot;AccountName&quot;).ToString]" in_strEmailID="[g_TransactionItem(&quot;EmailID&quot;).ToString]" in_strNewFolderID="[g_Config(&quot;ReviewID&quot;).ToString]" />
+                <de:Move_Email out_strNEWEmailID="{x:Null}" DisplayName="Move Email to &quot;Review&quot; - SE" sap:VirtualizedContainerService.HintSize="484,280.4" sap2010:WorkflowViewState.IdRef="Move_Email_3" in_strBearerToken="[g_BearerToken]" in_strEmailAccount="[g_Config(&quot;AccountName&quot;).ToString]" in_strEmailID="[g_TransactionItem(&quot;EmailID&quot;).ToString]" in_strNewFolderID="[g_Config(&quot;ReviewID&quot;).ToString]" />
                 <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="484,168.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Stop">
                   <InvokeMethod.TargetObject>
                     <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>

@@ -128,13 +128,13 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create_New_Business_Record" sap:VirtualizedContainerService.HintSize="1451.6000000000001,8284.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Create_New_Business_Record" sap:VirtualizedContainerService.HintSize="1451.6000000000001,6446.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - register new business" sap:VirtualizedContainerService.HintSize="1094,8261.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - register new business" sap:VirtualizedContainerService.HintSize="1094,6423.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -185,10 +185,7 @@
               <Flowchart.StartNode>
                 <x:Reference>__ReferenceID5</x:Reference>
               </Flowchart.StartNode>
-              <FlowDecision x:Name="__ReferenceID1" DisplayName="Toggle appears?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-                <FlowDecision.Condition>
-                  <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="boolBusIsPersToggle" />
-                </FlowDecision.Condition>
+              <FlowDecision x:Name="__ReferenceID1" Condition="[boolBusIsPersToggle]" DisplayName="Toggle appears?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -199,10 +196,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <FlowDecision.True>
-                  <FlowDecision x:Name="__ReferenceID2" DisplayName="Business is personal address?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                    <FlowDecision.Condition>
-                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="in_dictFormDetails(&quot;BusinessIsPersonalAddress&quot;)=&quot;Yes (true)&quot;" />
-                    </FlowDecision.Condition>
+                  <FlowDecision x:Name="__ReferenceID2" Condition="[in_dictFormDetails(&quot;BusinessIsPersonalAddress&quot;)=&quot;Yes (true)&quot;]" DisplayName="Business is personal address?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -213,7 +207,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <FlowDecision.True>
-                      <FlowStep x:Name="__ReferenceID3">
+                      <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">105,365</av:Point>
@@ -228,7 +222,7 @@
                       </FlowStep>
                     </FlowDecision.True>
                     <FlowDecision.False>
-                      <FlowStep x:Name="__ReferenceID4">
+                      <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">225,365</av:Point>
@@ -242,7 +236,7 @@
                           </uix:NCheck.Target>
                         </uix:NCheck>
                         <FlowStep.Next>
-                          <FlowStep x:Name="__ReferenceID0">
+                          <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">355,365</av:Point>
@@ -255,27 +249,65 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Enter address manually'" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Enter address manually'" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1127, 477, 65" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Enter address manually'" FullSelectorArgument="&lt;webctrl visibleInnerText='Enter address manually' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='capd-address-form' tag='A' type='' class='' aaname='Enter address manually' check:innerText='Enter address manually' /&gt;" Guid="5391046b-055a-49b3-bf9d-002c25e88424" ImageBase64="" InformativeScreenshot="72677d609598d089548e9188df54ee4f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address line 1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessAddressLine1&quot;)]" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Address line 1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessAddressLine1&quot;)]" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 500, 996, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT address1'" FullSelectorArgument="&lt;webctrl id='address1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='address1' tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid-max-length ng-empty ng-invalid ng-invalid-required' aaname='Address' /&gt;" Guid="fae87c07-0d85-4441-9584-7ed3bd4403f2" InformativeScreenshot="00cfbbb660300b3cb5b193f74cfdbce2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                 </uix:NTypeInto.Target>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address line 2'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessAddressLine2&quot;)]" Version="V3">
-                                <uix:NTypeInto.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 500, 996, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT address1'" FullSelectorArgument="&lt;webctrl id='address2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='address1' tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid-max-length ng-empty ng-invalid ng-invalid-required' aaname='Address' /&gt;" Guid="fae87c07-0d85-4441-9584-7ed3bd4403f2" InformativeScreenshot="00cfbbb660300b3cb5b193f74cfdbce2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                </uix:NTypeInto.Target>
-                              </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address line 3'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessAddressLine3&quot;)]" Version="V3">
-                                <uix:NTypeInto.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 500, 996, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT address1'" FullSelectorArgument="&lt;webctrl id='address3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='address1' tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid-max-length ng-empty ng-invalid ng-invalid-required' aaname='Address' /&gt;" Guid="fae87c07-0d85-4441-9584-7ed3bd4403f2" InformativeScreenshot="00cfbbb660300b3cb5b193f74cfdbce2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                </uix:NTypeInto.Target>
-                              </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Town / city'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessTownOrCity&quot;)]" Version="V3">
+                              <If Condition="[not String.IsNullOrEmpty(in_dictFormDetails(&quot;BusinessAddressLine2&quot;))]" DisplayName="If business address line 2 provided" sap:VirtualizedContainerService.HintSize="450,500" sap2010:WorkflowViewState.IdRef="If_3">
+                                <If.Then>
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,304" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Address line 2'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,244" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessAddressLine2&quot;)]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 500, 996, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT address1'" FullSelectorArgument="&lt;webctrl id='address2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='address1' tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid-max-length ng-empty ng-invalid ng-invalid-required' aaname='Address' /&gt;" Guid="fae87c07-0d85-4441-9584-7ed3bd4403f2" InformativeScreenshot="00cfbbb660300b3cb5b193f74cfdbce2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,304" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Address line 3'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,244" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessAddressLine3&quot;)]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 500, 996, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT address1'" FullSelectorArgument="&lt;webctrl id='address3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='address1' tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid-max-length ng-empty ng-invalid ng-invalid-required' aaname='Address' /&gt;" Guid="fae87c07-0d85-4441-9584-7ed3bd4403f2" InformativeScreenshot="00cfbbb660300b3cb5b193f74cfdbce2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:CommentOut>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Town / city'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessAddressTownOrCity&quot;)]" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 985, 518, 78" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT town'" FullSelectorArgument="&lt;webctrl id='town' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='town' tag='INPUT' type='text' class='form-control-1-4 ng-pristine ng-untouched ng-valid-max-length ng-invalid ng-invalid-required ng-empty' aaname='Town / city' /&gt;" Guid="73231c35-23ac-4641-b073-4850d10153a0" ImageBase64="" InformativeScreenshot="1ee17ec2e476e218d2e08e49ae2f2772.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -286,7 +318,7 @@
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Postcode / zip code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,244" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessPostcode&quot;)]" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Postcode / zip code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,244" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessAddressPostcode&quot;)]" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1212, 518, 78" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT postalCode'" FullSelectorArgument="&lt;webctrl id='postalCode' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='postalCode' tag='INPUT' type='text' class='form-control-1-4 ng-pristine ng-untouched ng-valid-max-length ng-invalid ng-invalid-required ng-empty' aaname='Postcode / zip code' /&gt;" Guid="451df729-7263-4483-aa8c-500d693c6124" ImageBase64="" InformativeScreenshot="aee6dd4af2b291bf7d5950788ca27a5e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -308,7 +340,7 @@
                   <x:Reference>__ReferenceID0</x:Reference>
                 </FlowDecision.False>
               </FlowDecision>
-              <FlowStep x:Name="__ReferenceID5">
+              <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">245,105</av:Point>
@@ -335,7 +367,7 @@
               <x:Reference>__ReferenceID4</x:Reference>
               <x:Reference>__ReferenceID0</x:Reference>
             </Flowchart>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1026,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessEmail&quot;)]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1026,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;Email&quot;)]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1034, 996, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-email ng-empty' aaname='Email' /&gt;" Guid="2ae2a4ec-fcbf-419e-834f-b255fec1eb94" ImageBase64="" InformativeScreenshot="384c51219cdabe7f1a59d36f30333b41.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -346,7 +378,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Landline'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1026,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessLandline&quot;)]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Landline'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1026,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;Landline&quot;)]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1391, 518, 78" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT landlinenumber'" FullSelectorArgument="&lt;webctrl id='landlinenumber' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='landlinenumber' tag='INPUT' type='text' class='form-control-1-4 ng-pristine ng-untouched ng-valid-maxlength ng-valid-minlength ng-valid-numeric ng-invalid ng-invalid-required ng-empty' aaname='Landline                            Enter at least one business telephone number, either landline or mobile                 Enter a minimum of 10 characters for business landline number                 You can only enter a maximum of 50 characters for business landline number                 Business landline number is not correctly formatted. You can enter numbers, brackets, spaces only and a plus (+) in the first position                  ' /&gt;" Guid="093a38bc-30d7-4174-9b75-bd4ae0792ab3" ImageBase64="" InformativeScreenshot="049ebbee15da377fbed79a15ab880aa6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -357,7 +389,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Mobile'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1026,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessMobile&quot;)]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Mobile'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1026,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;Mobile&quot;)]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1619, 518, 78" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT mobilenumber'" FullSelectorArgument="&lt;webctrl id='mobilenumber' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mobilenumber' tag='INPUT' type='text' class='form-control-1-4 ng-pristine ng-untouched ng-valid-maxlength ng-valid-minlength ng-valid-numeric ng-invalid ng-invalid-required ng-empty' aaname='Mobile                       Enter a minimum of 10 characters for business mobile number             You can only enter a maximum of 50 characters for business mobile number             Business mobile number is not correctly formatted. You can enter numbers, brackets, spaces only and a plus (+) in the first position                  ' /&gt;" Guid="d719d300-a283-409c-b8dc-33a6945a3d82" ImageBase64="" InformativeScreenshot="2eb1adc0e7c64697dc50402c501bc0ed.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -440,7 +472,7 @@
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1491, 263, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl visibleInnerText='Continue' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='continue' tag='BUTTON' type='button' class='button btn-link ng-scope ng-isolate-scope' aaname='Continue         ' check:innerText='Continue' /&gt;" Guid="fa34e2b3-9e08-49ca-bd80-53cb3fdc8521" ImageBase64="" InformativeScreenshot="4d9a49400f06c720282fede1eecbc5d3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <If Condition="[CBool(g_Config(&quot;PausePoint2&quot;))]" DisplayName="Pause Point 2?" sap:VirtualizedContainerService.HintSize="1026,1087.2" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[CBool(g_Config(&quot;PausePoint3&quot;))]" DisplayName="Pause Point 3?" sap:VirtualizedContainerService.HintSize="1026,1087.2" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,825.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -448,13 +480,13 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <InvokeMethod DisplayName="Stop timer - PP2" sap:VirtualizedContainerService.HintSize="382,168.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Stop">
+                  <InvokeMethod DisplayName="Stop timer - PP3" sap:VirtualizedContainerService.HintSize="382,168.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Stop">
                     <InvokeMethod.TargetObject>
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                     </InvokeMethod.TargetObject>
                   </InvokeMethod>
-                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP2" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 2" IN_PopupMessage="[&quot;&lt;h1&gt;Confirm new business details&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please check that the business details entered are correct. If so, please click 'Continue'. Otherwise, please click 'Stop' and complete this registration manually.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Business Name&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessName&quot;)+&quot;&lt;br&gt;&quot;+&#xA;If(Not CBool(in_dictFormDetails(&quot;BusinessIsPersonal&quot;)),&#xA;&#x9;&quot;&lt;strong&gt;Address Line 1&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressLine1&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Address Line 2&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressLine2&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Address Line 3&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressLine3&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Town/City&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessTownOrCity&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Postcode&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessPostcode&quot;)+&quot;&lt;br&gt;&quot;,&quot;&quot;)+&#xA;&quot;&lt;strong&gt;Email&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Email&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Landline&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Landline&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Mobile&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Mobile&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Legal Status&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;LegalStatus&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Business Type&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessType&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 2" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
-                  <InvokeMethod DisplayName="Start timer - PP2" sap:VirtualizedContainerService.HintSize="382,159.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Start">
+                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP3" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 3" IN_PopupMessage="[&quot;&lt;h1&gt;Confirm new business details&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please check that the business details entered are correct. If so, please click 'Continue'. Otherwise, please click 'Stop' and complete this registration manually.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Business Name&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessName&quot;)+&quot;&lt;br&gt;&quot;+&#xA;If(Not CBool(in_dictFormDetails(&quot;BusinessIsPersonal&quot;)),&#xA;&#x9;&quot;&lt;strong&gt;Address Line 1&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressLine1&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Address Line 2&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressLine2&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Address Line 3&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressLine3&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Town/City&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessTownOrCity&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Postcode&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessPostcode&quot;)+&quot;&lt;br&gt;&quot;,&quot;&quot;)+&#xA;&quot;&lt;strong&gt;Email&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Email&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Landline&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Landline&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Mobile&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Mobile&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Legal Status&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;LegalStatus&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Business Type&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessType&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 3" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                  <InvokeMethod DisplayName="Start timer - PP3" sap:VirtualizedContainerService.HintSize="382,159.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Start">
                     <InvokeMethod.TargetObject>
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                     </InvokeMethod.TargetObject>

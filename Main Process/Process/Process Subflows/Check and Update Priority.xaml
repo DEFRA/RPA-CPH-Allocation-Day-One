@@ -131,7 +131,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Check_and_Update_Priority" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4071.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Check_and_Update_Priority" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4248.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="intDifference" />
       <Variable x:TypeArguments="x:String" Name="strPriority" />
@@ -185,13 +185,13 @@
         </Sequence>
       </If.Else>
     </If>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - update case priority" sap:VirtualizedContainerService.HintSize="562,3431.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - update case priority" sap:VirtualizedContainerService.HintSize="562,3608.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Update case priority" sap:VirtualizedContainerService.HintSize="528,3270.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Update case priority" sap:VirtualizedContainerService.HintSize="528,3447.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="boolChecked" />
             </Sequence.Variables>
@@ -200,6 +200,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message - update priority" sap:VirtualizedContainerService.HintSize="494,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Updating case priority to '&quot;+strPriority+&quot;'&quot;]" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Related'" sap:VirtualizedContainerService.HintSize="494,190" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="2219, 1091, 182, 70" DesignTimeScaleFactor="2.5" FriendlyName="'Related'" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Related' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Related' type='' class='pa-g flexbox' aaname='Related' check:text='Related' /&gt;" Guid="b8a11c07-629d-4979-bb41-dc22abc448bf" InformativeScreenshot="2ec81c837548ddcfda90e93ff138939c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case: Case - SLA: CRM GDS CPH Online - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
@@ -282,7 +283,7 @@
               <uix:NSelectItem.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_cphcasedetail&amp;id=9ab50121-49db-f011-8543-7ced8d41de08" DesignTimeRectangle="1070, 1213, 2577, 75" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'--Select--'" FullSelectorArgument="&lt;webctrl aria-label='Priority' aria-role='combobox' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Priority' aria-role='combobox' tag='BUTTON' type='button' class='fui-Dropdown__button ___iguxm40 f122n59 f1c21dwh f3bhgqh f1ewtqcl fxc4j92 f14mj54c f1k6fduh f13qh94s fk6fouc f12nh0o2 f1869bpl f1o700av fly5x3f ftqa4ok fkhj508 figsok6 f1i3iumi f14ev680' aaname='--Select--' check:innerText='--Select--' /&gt;" Guid="0a458a09-3de4-4d96-9dd2-94c715fb9ded" ImageBase64="" InformativeScreenshot="7c885a9ef5fbcc8c8b3a790234a91763.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CPH Case Detail: Information: CCD-82769 - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="608, 1216, 421, 75" ElementType="Text" FriendlyName="'Priority'" FullSelectorArgument="&lt;webctrl visibleInnerText='Priority' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Priority' tag='LABEL' type='' class='pa-bt pa-up ' check:innerText='Priority' /&gt;" ImageBase64="" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -302,7 +303,7 @@
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                     </InvokeMethod.TargetObject>
                   </InvokeMethod>
-                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP6" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 6" IN_PopupMessage="[&quot;&lt;h1&gt;Confirm priority&lt;/h1&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;Please confirm that the robot has set the correct priority.&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;&lt;strong&gt;Date of arrival:&lt;/strong&gt;&amp;ensp;&quot;+in_dateArrival.ToString(&quot;dd/MM/yyyy&quot;)+&quot;&lt;br&gt;&quot;+&#xD;&#xA;&quot;&lt;strong&gt;Date today:&lt;/strong&gt;&amp;ensp;&quot;+Now.ToString(&quot;dd/MM/yyyy&quot;)+&quot;&lt;br&gt;&quot;+&#xD;&#xA;&quot;&lt;strong&gt;Days remaining:&lt;/strong&gt;&amp;ensp;&quot;+intDifference.ToString+&quot;&lt;br&gt;&quot;+&#xD;&#xA;&quot;&lt;strong&gt;Priority:&lt;/strong&gt;&amp;ensp;&quot;+strPriority+&quot;&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;If the priority appears to be set correctly, please click 'Continue'. Otherwise, please click 'Stop' and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 6" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP6" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 6" IN_PopupMessage="[&quot;&lt;h1&gt;Confirm priority&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please confirm that the robot has set the correct priority.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Date of arrival:&lt;/strong&gt;&amp;ensp;&quot;+in_dateArrival.ToString(&quot;dd/MM/yyyy&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Date today:&lt;/strong&gt;&amp;ensp;&quot;+Now.ToString(&quot;dd/MM/yyyy&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Days remaining:&lt;/strong&gt;&amp;ensp;&quot;+intDifference.ToString+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Priority:&lt;/strong&gt;&amp;ensp;&quot;+strPriority+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;If the priority appears to be set correctly, please click 'Continue'. Otherwise, please click 'Stop' and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 6" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
                   <InvokeMethod DisplayName="PP6 - start timer" sap:VirtualizedContainerService.HintSize="382,159.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Start">
                     <InvokeMethod.TargetObject>
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
@@ -320,7 +321,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While - priority unconfirmed" sap:VirtualizedContainerService.HintSize="494,629.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[not boolChecked]" DisplayName="Do While - priority unconfirmed" sap:VirtualizedContainerService.HintSize="494,629.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
               <ui:InterruptibleDoWhile.Body>
                 <Sequence DisplayName="Confirm priority" sap:VirtualizedContainerService.HintSize="416,482.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
@@ -340,9 +341,6 @@
                   </uix:NGetAttributeGeneric>
                 </Sequence>
               </ui:InterruptibleDoWhile.Body>
-              <ui:InterruptibleDoWhile.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="not boolChecked" />
-              </ui:InterruptibleDoWhile.Condition>
             </ui:InterruptibleDoWhile>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="494,182.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
               <uix:NClick.Target>

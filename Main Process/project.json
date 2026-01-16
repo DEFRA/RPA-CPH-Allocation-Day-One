@@ -68,6 +68,20 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc01 Format Address.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "8778bc47-572f-494d-8418-f6a56daac19e",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "tc01 Validate Title.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0e460ff8-edfc-4095-a9a9-99f051ee9855",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\tc01 Get Transaction Data.xaml"
       }
     ],
     "saveToCloud": false

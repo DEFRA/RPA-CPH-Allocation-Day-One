@@ -111,24 +111,25 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add_Second_Contact_to_Business" sap:VirtualizedContainerService.HintSize="1451.6000000000001,1656.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add_Second_Contact_to_Business" sap:VirtualizedContainerService.HintSize="1451.6000000000001,1835.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1091.2,1633.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" OpenMode="Never" ScopeGuid="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - add second contact to business" sap:VirtualizedContainerService.HintSize="1091.2,1812" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" OpenMode="Never" ScopeGuid="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1057.2,1472" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Add second contact to business" sap:VirtualizedContainerService.HintSize="1057.2,1650.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message - add second business contact" sap:VirtualizedContainerService.HintSize="1023.2,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Adding second contact to business record in Rural Payments&quot;]" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add people'" sap:VirtualizedContainerService.HintSize="1023.2,190" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/5967970/menu/overview" DesignTimeRectangle="1092, 1317, 234, 65" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Add people'" FullSelectorArgument="&lt;webctrl visibleInnerText='Add people' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='addPersonBtn' tag='A' type='' class='' aaname='Add people' check:innerText='Add people' /&gt;" Guid="123a93ef-c772-4259-ac7d-0236cab16582" ImageBase64="" InformativeScreenshot="d72efe792654276e0afdcb84dcfb9d45.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Business overview - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />

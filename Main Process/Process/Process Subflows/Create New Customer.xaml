@@ -129,24 +129,25 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create_New_Customer" sap:VirtualizedContainerService.HintSize="1451.6000000000001,8061.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Create_New_Customer" sap:VirtualizedContainerService.HintSize="1451.6000000000001,8238.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1091.2,8038.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1091.2,8215.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Complete customer registration" sap:VirtualizedContainerService.HintSize="1057.2,7877.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Complete customer registration" sap:VirtualizedContainerService.HintSize="1057.2,8054.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message - create customer" sap:VirtualizedContainerService.HintSize="1023.2,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Creating new customer record in Rural Payments&quot;]" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create a new customer'" sap:VirtualizedContainerService.HintSize="1023.2,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/main" DesignTimeRectangle="317, 1194, 622, 82" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Create a new customer'" FullSelectorArgument="&lt;webctrl visibleInnerText='Create a new customer' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='register-new-customer' tag='A' type='' class='' aaname='Create a new customer' check:innerText='Create a new customer' /&gt;" Guid="7be15701-9028-47d9-8581-a6532e2cf526" ImageBase64="" InformativeScreenshot="83d5b15b2dffd7fe8b583162c54e3943.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />

@@ -19,6 +19,13 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_Config&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_swProcessingTimer&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_intExitPoint&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_BearerToken&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_TransactionItem&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_dtTransactionData&8b71c122-2ad1-4a62-9575-38e315cd79b7",
         "g_arrCaseID&ba0828f8-fd0a-4089-8649-8fc8e6a7da66",
         "g_Config&ba0828f8-fd0a-4089-8649-8fc8e6a7da66",
         "g_swProcessingTimer&ba0828f8-fd0a-4089-8649-8fc8e6a7da66",
@@ -81,6 +88,13 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_Config&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_swProcessingTimer&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_intExitPoint&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_BearerToken&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_TransactionItem&8b71c122-2ad1-4a62-9575-38e315cd79b7",
+        "g_dtTransactionData&8b71c122-2ad1-4a62-9575-38e315cd79b7",
         "strButtonSelected&Sequence_2",
         "boolDis&Sequence_2",
         "strCaseUpdateOption&Sequence_2",
@@ -155,22 +169,6 @@
     },
     {
       "Path": "Framework/InitAllApplications.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "g_arrCaseID&ba0828f8-fd0a-4089-8649-8fc8e6a7da66",
-        "g_Config&ba0828f8-fd0a-4089-8649-8fc8e6a7da66",
-        "g_swProcessingTimer&ba0828f8-fd0a-4089-8649-8fc8e6a7da66",
-        "g_intExitPoint&ba0828f8-fd0a-4089-8649-8fc8e6a7da66",
-        "g_BearerToken&ba0828f8-fd0a-4089-8649-8fc8e6a7da66",
-        "g_TransactionItem&ba0828f8-fd0a-4089-8649-8fc8e6a7da66",
-        "g_dtTransactionData&ba0828f8-fd0a-4089-8649-8fc8e6a7da66"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Sequence.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "g_arrCaseID&ba0828f8-fd0a-4089-8649-8fc8e6a7da66",

@@ -40,6 +40,7 @@
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>DRACOE_PopUps_64</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -104,9 +105,16 @@
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1451.6000000000001,952.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2623.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="boolRuralPaymentsOpened" />
       <Variable x:TypeArguments="x:Int32" Name="intAttempt" />
@@ -117,24 +125,36 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="518,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Rural Payments" sap:VirtualizedContainerService.HintSize="518,722.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="a11eaecb-fc43-42bd-bb00-5a213fb41748" Version="V2">
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="1092,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Dynamics" sap:VirtualizedContainerService.HintSize="1092,266.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="f797ba3f-af92-404e-a9be-76044a88a244" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Confirm landing page loaded" sap:VirtualizedContainerService.HintSize="484,481.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="2af37fb645f019e4633db66d5371da47.jpg" Selector="&lt;html app='msedge.exe' title='*Dynamics 365' /&gt;" Title="My Dashboard - Dynamics 365" Url="[g_Config(&quot;DynamicsURL&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Rural Payments" sap:VirtualizedContainerService.HintSize="1092,1906" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="a11eaecb-fc43-42bd-bb00-5a213fb41748" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Confirm landing page loaded" sap:VirtualizedContainerService.HintSize="1058,1656" sap2010:WorkflowViewState.IdRef="Sequence_16">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InterruptibleDoWhile CurrentIndex="[intAttempt]" DisplayName="Do While - landing page not loaded" sap:VirtualizedContainerService.HintSize="450,56.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="3">
+            <ui:InterruptibleDoWhile Condition="[not boolRuralPaymentsOpened]" CurrentIndex="[intAttempt]" DisplayName="Do While - landing page not loaded" sap:VirtualizedContainerService.HintSize="1024,1172.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="3">
               <ui:InterruptibleDoWhile.Body>
-                <uix:NCheckState DisplayName="Check App State 'Customer services'" sap:VirtualizedContainerService.HintSize="990,1026.4" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="10" Version="V3">
+                <uix:NCheckState DisplayName="Check App State 'Customer services'" sap:VirtualizedContainerService.HintSize="990,1003.2" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="10" Version="V3">
                   <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,344.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,346.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -159,7 +179,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:LogMessage DisplayName="Log Message - rural payments not loaded" sap:VirtualizedContainerService.HintSize="434,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Rural Payments landing page not recognised. Prompting user to fix.&quot;]" />
-                      <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="User prompt log-in" sap:VirtualizedContainerService.HintSize="434,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\FULLCSS.css&quot;]" IN_ErrorMessage="The stop button was pressed at initialisation of Rural Payments." IN_PopupMessage="[&quot;&lt;p&gt;The robot does not recognise the landing page for Rural Payments after &quot;+intAttempt.ToString+&quot;/3 attempts. Please log in if necessary and then click 'Continue'. Otherwise, please click 'Stop'.&quot;]" IN_PopupTitle="Rural Payments initialisation" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                      <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="User prompt log-in" sap:VirtualizedContainerService.HintSize="434,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at initialisation of Rural Payments." IN_PopupMessage="[&quot;&lt;p&gt;The robot does not recognise the landing page for Rural Payments after &quot;+(intAttempt+1).ToString+&quot;/3 attempts. Please log in if necessary and then click 'Continue'. Otherwise, please click 'Stop'.&quot;]" IN_PopupTitle="Rural Payments initialisation" IN_WidthHeight="[{500,200}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
                       <Assign DisplayName="Assign - rural payments not loaded" sap:VirtualizedContainerService.HintSize="434,107.6" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Boolean">[boolRuralPaymentsOpened]</OutArgument>
@@ -175,17 +195,14 @@
                   </uix:NCheckState.Target>
                 </uix:NCheckState>
               </ui:InterruptibleDoWhile.Body>
-              <ui:InterruptibleDoWhile.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="not boolRuralPaymentsOpened" />
-              </ui:InterruptibleDoWhile.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleDoWhile>
-            <If Condition="[not boolRuralPaymentsOpened]" DisplayName="If no landing page after 3 attempts" sap:VirtualizedContainerService.HintSize="450,363.2" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[not boolRuralPaymentsOpened]" DisplayName="If no landing page after 3 attempts" sap:VirtualizedContainerService.HintSize="1024,422" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
                   <sap:WorkflowViewStateService.ViewState>
@@ -197,7 +214,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -220,5 +237,15 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
+    <InvokeMethod sap2010:Annotation.AnnotationText="First activities use CRM and visibility can be important (even though it shouldn't be)" DisplayName="Set CRM as foreground" sap:VirtualizedContainerService.HintSize="1092,221.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("DynamicsBrowser"),UiElement)]</InArgument>
+      </InvokeMethod.TargetObject>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </InvokeMethod>
   </Sequence>
 </Activity>

@@ -134,12 +134,23 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search_Rural_Payments" sap:VirtualizedContainerService.HintSize="1451.6000000000001,3765.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search_Rural_Payments" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4154.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <InvokeMethod sap2010:Annotation.AnnotationText="Set rural payments as foreground after CRM activities." DisplayName="Bring to foreground - search rural payments" sap:VirtualizedContainerService.HintSize="1159.2,213.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="BringToForeground">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("RuralPaymentsBrowser"),UiElement)]</InArgument>
+      </InvokeMethod.TargetObject>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </InvokeMethod>
+    <ui:LogMessage DisplayName="Log Message - search rural payments" sap:VirtualizedContainerService.HintSize="1159.2,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Searching rural payments&quot;]" />
     <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - Search Rural Payments" sap:VirtualizedContainerService.HintSize="1159.2,3742" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;), UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">

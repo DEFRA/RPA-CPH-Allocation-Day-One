@@ -1,0 +1,102 @@
+{
+  "name": "CPH Allocation Day One",
+  "projectId": "d75e0dcb-8040-46e4-81f4-dda94124a324",
+  "description": "WP218",
+  "main": "Main.xaml",
+  "dependencies": {
+    "DRACOE.Logging.64": "[1.0.9]",
+    "DRACOE.Microsoft.Graph.64": "[1.0.48]",
+    "DRACOE.PopUps.64": "[1.0.9]",
+    "UiPath.Excel.Activities": "[2.23.5]",
+    "UiPath.Mail.Activities": "[1.23.11]",
+    "UiPath.System.Activities": "[24.10.4]",
+    "UiPath.Testing.Activities": "[23.10.1]",
+    "UiPath.UIAutomation.Activities": "[23.10.13]",
+    "UiPath.WebAPI.Activities": "[2.3.2]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "24.10.15.0",
+  "projectVersion": "1.0.1",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "559fce26-e348-4ef3-8757-7de47c5adf68",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Get Form Details.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "1899be8b-c428-4a2a-9eaa-4268d9e8e56b",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Search Rural Payments.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "2e32888d-8fd8-46c4-a6fe-0600e588d753",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Format Address.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0e460ff8-edfc-4095-a9a9-99f051ee9855",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\tc01 Get Transaction Data.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "8778bc47-572f-494d-8418-f6a56daac19e",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Validate Title.xaml"
+      }
+    ],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "edb115b1-c081-41b5-85f6-8b0305cfc74e",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

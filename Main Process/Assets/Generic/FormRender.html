@@ -1,0 +1,59 @@
+<!-- saved from url=(0014)about:internet -->
+<!-- Author: Mohammed Ali -->
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<link rel="stylesheet" href="C:\Users\rm000121\OneDrive - Defra\UiPath\RPA-CPH-Allocation-Day-One\Main Process\Assets\Generic\Editable Standard Template.css">
+
+<body>
+
+<h1>Format address</h1><p>Please make any formatting amendments to the following address:</p><p>HomeAddress:<br>Danvia house
+Bridgewater
+Somerset
+Ta70qg</p><p>Please also make sure that the address parts are mapped correctly (e.g. the value for AddressLine2 is not mistakenly set to TownOrCity).<br>Once you are satisfied with the address, please click 'Continue'.<br><strong>NOTE:</strong> this will not be revalidated. Failure to correctly map the address data here could cause exceptions later in the process.<br>The essential fields are <strong>Address Line 1, Town Or City and Postcode</strong>.</p>
+<div class="Table_Container" >
+<table><thead><tr><th>AddressPart</th><th>Value</th></tr></thead><tbody><tr><td><input id = 'AddressPart' value = 'Line1' readonly ></td><td><input id = 'Value' value = 'Danvia House' ></td></tr><tr><td><input id = 'AddressPart' value = 'Line2' readonly ></td><td><input id = 'Value' value = '' ></td></tr><tr><td><input id = 'AddressPart' value = 'TownOrCity' readonly ></td><td><input id = 'Value' value = 'Bridgewater' ></td></tr><tr><td><input id = 'AddressPart' value = 'County' readonly ></td><td><input id = 'Value' value = 'Somerset' ></td></tr><tr><td><input id = 'AddressPart' value = 'Postcode' readonly ></td><td><input id = 'Value' value = 'TA70QG' ></td></tr></tbody></table>
+</div>
+
+<br>
+
+<div class="Button_Container">
+<input type="submit"  value="Stop" id="StopButton">
+<input type="submit"  value="Continue" id="ContinueButton">
+</div>
+
+<script>
+document.getElementById("ContinueButton").onclick = function() {
+
+var elements = document.getElementsByTagName("input");
+var JSONObj = {};
+var JSONarr = [];
+var colName = elements[0].id;
+
+for(var i = 0;i < elements.length -2; i++) {
+	var x = elements[i].id;
+
+	if (colName == x && i !=0) {
+		JSONarr.push(JSONObj);
+		JSONObj = {};
+	};
+    
+	JSONObj[x] = elements[i].value;
+};
+
+JSONarr.push(JSONObj);
+
+window.external.setResult(JSON.stringify(JSONarr));
+
+};
+
+
+document.getElementById("StopButton").onclick = function() {
+window.external.setResult("stop");
+};
+</script>
+
+</body>
+</html>

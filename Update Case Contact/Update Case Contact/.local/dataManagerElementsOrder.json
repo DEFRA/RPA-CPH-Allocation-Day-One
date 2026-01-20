@@ -19,6 +19,13 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&735f4e51-13f9-40df-ac70-f3f0f28c373a",
+        "g_Config&735f4e51-13f9-40df-ac70-f3f0f28c373a",
+        "g_swProcessingTimer&735f4e51-13f9-40df-ac70-f3f0f28c373a",
+        "g_intExitPoint&735f4e51-13f9-40df-ac70-f3f0f28c373a",
+        "g_BearerToken&735f4e51-13f9-40df-ac70-f3f0f28c373a",
+        "g_TransactionItem&735f4e51-13f9-40df-ac70-f3f0f28c373a",
+        "g_dtTransactionData&735f4e51-13f9-40df-ac70-f3f0f28c373a",
         "g_arrCaseID&e79166d2-2338-4660-aac8-d4a3c3490de5",
         "g_Config&e79166d2-2338-4660-aac8-d4a3c3490de5",
         "g_swProcessingTimer&e79166d2-2338-4660-aac8-d4a3c3490de5",

@@ -135,7 +135,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1032.8,830.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="2054.8,3314.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="boolRuralPaymentsOpened" />
       <Variable x:TypeArguments="x:Int32" Name="intAttempt" />
@@ -146,8 +146,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="434,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Open Dynamics" sap:VirtualizedContainerService.HintSize="434,266.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="Always" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="f797ba3f-af92-404e-a9be-76044a88a244" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="2054.8,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Open Dynamics" sap:VirtualizedContainerService.HintSize="2054.8,266.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="Always" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="f797ba3f-af92-404e-a9be-76044a88a244" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -159,14 +159,14 @@
         <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="2af37fb645f019e4633db66d5371da47.jpg" Selector="&lt;html app='msedge.exe' title='*Dynamics 365' /&gt;" Title="My Dashboard - Dynamics 365" Url="[g_Config(&quot;DynamicsURL&quot;).ToString]" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Open Rural Payments" sap:VirtualizedContainerService.HintSize="434,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="{x:Null}" InteractionMode="Simulate" IsIncognito="{x:Null}" OpenMode="Always" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Open Rural Payments" sap:VirtualizedContainerService.HintSize="2054.8,2540.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="{x:Null}" InteractionMode="Simulate" IsIncognito="{x:Null}" OpenMode="Always" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Pick sap:VirtualizedContainerService.HintSize="2020.8000000000002,2287.6" sap2010:WorkflowViewState.IdRef="Pick_1">
-            <PickBranch DisplayName="Already logged in" sap:VirtualizedContainerService.HintSize="425.6,2240.8" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+          <Pick sap:VirtualizedContainerService.HintSize="2020.8,2290.8" sap2010:WorkflowViewState.IdRef="Pick_1">
+            <PickBranch DisplayName="Already logged in" sap:VirtualizedContainerService.HintSize="425.6,2244" sap2010:WorkflowViewState.IdRef="PickBranch_1">
               <PickBranch.Trigger>
                 <ui:WaitUiElementAppear ContinueOnError="{x:Null}" DisplayName="Find Element - Customer Services heading" FoundElement="{x:Null}" sap:VirtualizedContainerService.HintSize="334,86.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1" Result="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}">
                   <ui:WaitUiElementAppear.Target>
@@ -180,7 +180,7 @@
               </PickBranch.Trigger>
               <ui:LogMessage DisplayName="Log Message - rural payments already logged in" sap:VirtualizedContainerService.HintSize="336,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="{x:Null}" Message="[&quot;User already logged in to Rural Payments&quot;]" />
             </PickBranch>
-            <PickBranch DisplayName="Log in page" sap:VirtualizedContainerService.HintSize="1077.6,2240.8" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+            <PickBranch DisplayName="Log in page" sap:VirtualizedContainerService.HintSize="1077.6,2244" sap2010:WorkflowViewState.IdRef="PickBranch_2">
               <PickBranch.Variables>
                 <Variable x:TypeArguments="sn:NetworkCredential" Name="credsRuralPayments" />
               </PickBranch.Variables>
@@ -195,7 +195,7 @@
                   </ui:WaitUiElementAppear.Target>
                 </ui:WaitUiElementAppear>
               </PickBranch.Trigger>
-              <Sequence DisplayName="Log in to Rural Payments" sap:VirtualizedContainerService.HintSize="988,1933.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <Sequence DisplayName="Log in to Rural Payments" sap:VirtualizedContainerService.HintSize="988,1936.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -219,11 +219,11 @@
                 </uix:NClick>
                 <TryCatch DisplayName="Try Catch - session exists dialog" sap:VirtualizedContainerService.HintSize="954,423.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                   <TryCatch.Try>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="3" Version="V3">
+                    <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_2" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="3" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/login" DesignTimeRectangle="2162, 872, 146, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Yes'" FullSelectorArgument="&lt;webctrl id='confirmLogin' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='confirmLogin' tag='BUTTON' type='button' class='button btn capd-btn' aaname='Yes' check:innerText='Yes' /&gt;" Guid="20092896-dc94-4369-bcc2-2f6474813c8f" ImageBase64="" InformativeScreenshot="5cd89ae963d11760a5fe951e7b3bdb26.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign in - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target DesignTimeRectangle="1269, 347, 1200, 71" ElementType="Text" FriendlyName="'Session exists'" FullSelectorArgument="&lt;webctrl innerText='Session exists' tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl innerText='Session exists' tag='H4' type='' class='modal-title w-100' aaname='Session exists' check:text='Session exists' /&gt;" SearchSteps="Selector" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -248,7 +248,7 @@
                     </Catch>
                   </TryCatch.Catches>
                 </TryCatch>
-                <uix:NCheckState ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Check App State 'Customer services'" Exists="{x:Null}" sap:VirtualizedContainerService.HintSize="954,474" sap2010:WorkflowViewState.IdRef="NCheckState_7" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" Result="{x:Null}" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="5" Version="V3">
+                <uix:NCheckState ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Check App State 'Customer services'" Exists="{x:Null}" sap:VirtualizedContainerService.HintSize="954,475.6" sap2010:WorkflowViewState.IdRef="NCheckState_7" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" Result="{x:Null}" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="5" Version="V3">
                   <uix:NCheckState.IfExists>
                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,231.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
                       <sap:WorkflowViewStateService.ViewState>
@@ -294,7 +294,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2054.8,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1126,1998" sap2010:WorkflowViewState.IdRef="Sequence_20">
           <sap:WorkflowViewStateService.ViewState>
@@ -410,7 +410,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <InvokeMethod sap2010:Annotation.AnnotationText="First activities use CRM and visibility can be important (even though it shouldn't be)" DisplayName="Set CRM as foreground" sap:VirtualizedContainerService.HintSize="434,220.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">
+    <InvokeMethod sap2010:Annotation.AnnotationText="First activities use CRM and visibility can be important (even though it shouldn't be)" DisplayName="Set CRM as foreground" sap:VirtualizedContainerService.HintSize="2054.8,220.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">
       <InvokeMethod.TargetObject>
         <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("DynamicsBrowser"),UiElement)]</InArgument>
       </InvokeMethod.TargetObject>

@@ -146,7 +146,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Get_Form_Details" sap:VirtualizedContainerService.HintSize="1451.6000000000001,1669.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Form_Details" sap:VirtualizedContainerService.HintSize="1451.6000000000001,5043.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strFormContent" />
       <Variable x:TypeArguments="x:String" Name="strMainPhoneNumber" />
@@ -158,7 +158,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - get form details" sap:VirtualizedContainerService.HintSize="597.6,1184.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - get form details" sap:VirtualizedContainerService.HintSize="674,1184.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -189,7 +189,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=incident&amp;id=24d583d2-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1650, 1682, 165, 50" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'View more'" FullSelectorArgument="&lt;webctrl aaname='View more' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='View more' tag='LABEL' type='' class='fui-Label ___1yevxz2 fk6fouc f19n0e5 fkhj508 f1i3iumi' check:innerText='View more' /&gt;" Guid="e0175ddb-caa0-4038-82b1-7ac97a8ea250" ImageBase64="" InformativeScreenshot="81500a6bc4f2fc9c32aa709c99ec3d99.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target DesignTimeRectangle="1698, 1389, 96, 80" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl innerText='Email' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='fui-CardHeader__header38' tag='LABEL' type='' class='fui-Label ___1yevxz2 fk6fouc f19n0e5 fkhj508 f1i3iumi' aaname='Email' check:innerText='Email' /&gt;" ImageBase64="" SearchSteps="Selector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -217,7 +217,7 @@
               <uix:NGetAttributeGeneric.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=incident&amp;id=24d583d2-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1915, 1987, 1450, 9513" DesignTimeScaleFactor="2.5" FriendlyName="'For security'" FullSelectorArgument="&lt;webctrl class='content' tag='TABLE' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl class='content' tag='TABLE' /&gt;&lt;webctrl type='' class='ck-editor__editable ck-editor__nested-editable' tag='TD' aaname='' check:innerText='For security reasons, the links in this email expire at 1:58pm on Monday 9 March 2026&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Apply for a' /&gt;" Guid="6a9b17f5-10a3-460e-b33f-6fca1db8f2f9" ImageBase64="" InformativeScreenshot="e04b05a3b18c16150562be8d43e13142.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1698, 1161, 96, 80" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl innerText='Email' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='fui-CardHeader__header38' tag='LABEL' type='' class='fui-Label ___1yevxz2 fk6fouc f19n0e5 fkhj508 f1i3iumi' aaname='Email' check:innerText='Email' /&gt;" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -243,7 +243,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:MultipleAssign DisplayName="Initialise dictionary and extract business or hobbyist" sap:VirtualizedContainerService.HintSize="597.6,85.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:MultipleAssign DisplayName="Initialise dictionary and extract business or hobbyist" sap:VirtualizedContainerService.HintSize="674,85.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
@@ -265,7 +265,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch - business or hobbyist?" Expression="[out_dictFormDetails(&quot;BusinessOrHobbyist&quot;)]" sap:VirtualizedContainerService.HintSize="597.6,198.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - business or hobbyist?" Expression="[out_dictFormDetails(&quot;BusinessOrHobbyist&quot;)]" sap:VirtualizedContainerService.HintSize="674,3572.4" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <Switch.Default>
         <Throw DisplayName="Throw BRE - customer type unknown" Exception="[new BusinessRuleException(&quot;Customer type unrecognised. Business or Hobbyist answer: &quot;+out_dictFormDetails(&quot;BusinessOrHobbyist&quot;))]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -281,15 +281,15 @@
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence x:Key="I'm registering on behalf of a business (Im registering on behalf of a business)" DisplayName="Extract business fields" sap:VirtualizedContainerService.HintSize="634,2150.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <Sequence x:Key="I'm registering on behalf of a business (Im registering on behalf of a business)" DisplayName="Extract business fields" sap:VirtualizedContainerService.HintSize="634,3327.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message - business" sap:VirtualizedContainerService.HintSize="600,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Customer identified as Business&quot;]" />
-        <ui:MultipleAssign DisplayName="Extract form fields - business" sap:VirtualizedContainerService.HintSize="600,56.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+        <ui:LogMessage DisplayName="Log Message - business" sap:VirtualizedContainerService.HintSize="600,85.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Customer identified as Business&quot;]" />
+        <ui:MultipleAssign DisplayName="Extract form fields - business" sap:VirtualizedContainerService.HintSize="600,85.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_41">
@@ -413,7 +413,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:MultipleAssign>
-        <If Condition="[not g_Config(&quot;AcceptedTitles&quot;).ToString.Split(&quot;,&quot;).Contains(Regex.Replace(out_dictFormDetails(&quot;Title&quot;),&quot;[^A-z]&quot;,&quot;&quot;))]" DisplayName="Valid title?" sap:VirtualizedContainerService.HintSize="600,56.8" sap2010:WorkflowViewState.IdRef="If_14">
+        <If Condition="[not g_Config(&quot;AcceptedTitles&quot;).ToString.Split(&quot;,&quot;).Contains(Regex.Replace(out_dictFormDetails(&quot;Title&quot;),&quot;[^A-z]&quot;,&quot;&quot;))]" DisplayName="Valid title?" sap:VirtualizedContainerService.HintSize="600,85.2" sap2010:WorkflowViewState.IdRef="If_14">
           <If.Then>
             <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,259.2" sap2010:WorkflowViewState.IdRef="Sequence_38">
               <Sequence.Variables>
@@ -445,7 +445,7 @@
             </Sequence>
           </If.Else>
         </If>
-        <ui:MultipleAssign sap2010:Annotation.AnnotationText="These are not always present, but it's easier to always attempt to extract them rather than list the circumstances under which they should be present (i.e. exhaustive list of legal statuses)" DisplayName="Extract charity number and company number" sap:VirtualizedContainerService.HintSize="600,134.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_12">
+        <ui:MultipleAssign sap2010:Annotation.AnnotationText="These are not always present, but it's easier to always attempt to extract them rather than list the circumstances under which they should be present (i.e. exhaustive list of legal statuses)" DisplayName="Extract charity number and company number" sap:VirtualizedContainerService.HintSize="600,146.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_12">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_75">
@@ -474,7 +474,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:MultipleAssign>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Format address - business" sap:VirtualizedContainerService.HintSize="600,56.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Process Subflows\Format Address.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Format address - business" sap:VirtualizedContainerService.HintSize="600,85.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Process Subflows\Format Address.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="in_strKeyName">BusinessAddress</InArgument>
             <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_dictFormDetails">[out_dictFormDetails]</InOutArgument>
@@ -486,7 +486,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeWorkflowFile>
-        <If Condition="[out_dictFormDetails(&quot;BusinessIsPersonalAddress&quot;)=&quot;No (false)&quot;]" DisplayName="If business address is not home address" sap:VirtualizedContainerService.HintSize="600,56.8" sap2010:WorkflowViewState.IdRef="If_6">
+        <If Condition="[out_dictFormDetails(&quot;BusinessIsPersonalAddress&quot;)=&quot;No (false)&quot;]" DisplayName="If business address is not home address" sap:VirtualizedContainerService.HintSize="600,85.2" sap2010:WorkflowViewState.IdRef="If_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -580,17 +580,17 @@
             </Sequence>
           </If.Else>
         </If>
-        <Sequence DisplayName="Format legal status" sap:VirtualizedContainerService.HintSize="600,56.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
+        <Sequence DisplayName="Format legal status" sap:VirtualizedContainerService.HintSize="600,1022.4" sap2010:WorkflowViewState.IdRef="Sequence_46">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataRow[]" Name="rowsLegalStatus" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[out_dictFormDetails(&quot;LegalStatus&quot;)=&quot;Something else&quot;]" DisplayName="If Legal status is Something Else" sap:VirtualizedContainerService.HintSize="502,56.8" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[out_dictFormDetails(&quot;LegalStatus&quot;)=&quot;Something else&quot;]" DisplayName="If Legal status is Something Else" sap:VirtualizedContainerService.HintSize="502,85.2" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -624,7 +624,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <Assign sap2010:Annotation.AnnotationText="For example: &#xA;&quot;Charitable incorporated organisation (CIO) (charitable incorporated organisation CIO)&quot; &#xA;should be converted to &#xA;&quot;Charitable incorporated organisation (CIO)&quot;" DisplayName="Replace repeated bracketed value" sap:VirtualizedContainerService.HintSize="502,200" sap2010:WorkflowViewState.IdRef="Assign_11">
+          <Assign sap2010:Annotation.AnnotationText="For example: &#xA;&quot;Charitable incorporated organisation (CIO) (charitable incorporated organisation CIO)&quot; &#xA;should be converted to &#xA;&quot;Charitable incorporated organisation (CIO)&quot;" DisplayName="Replace repeated bracketed value" sap:VirtualizedContainerService.HintSize="502,228.4" sap2010:WorkflowViewState.IdRef="Assign_11">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("LegalStatus")]</OutArgument>
             </Assign.To>
@@ -644,7 +644,7 @@
               <OutArgument x:TypeArguments="sd:DataRow[]">[rowsLegalStatus]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="sd:DataRow[]">[in_dtBusinessAndLegal.Select("LegalStatus_CRM='"+out_dictFormDetails("LegalStatus")+"'")]</InArgument>
+              <InArgument x:TypeArguments="sd:DataRow[]">[in_dtBusinessAndLegal.Select("LegalStatuses_CRM='"+out_dictFormDetails("LegalStatus")+"'")]</InArgument>
             </Assign.Value>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -671,7 +671,7 @@
                     <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("LegalStatus")]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[rowsLegalStatus(0)("LegalStatus_RPA").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[rowsLegalStatus(0)("LegalStatuses_RPA").ToString]</InArgument>
                   </Assign.Value>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -700,7 +700,7 @@
             </If.Else>
           </If>
         </Sequence>
-        <Sequence DisplayName="Format business purpose" sap:VirtualizedContainerService.HintSize="600,967.2" sap2010:WorkflowViewState.IdRef="Sequence_47">
+        <Sequence DisplayName="Format business purpose" sap:VirtualizedContainerService.HintSize="600,1024.8" sap2010:WorkflowViewState.IdRef="Sequence_47">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="boolBusinessPurposeMatch" />
             <Variable x:TypeArguments="sd:DataRow[]" Name="rowsBusinessPurpose" />
@@ -711,7 +711,7 @@
               <x:Boolean x:Key="IsPinned">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[out_dictFormDetails(&quot;BusinessPurpose&quot;)=&quot;Something else&quot;]" DisplayName="If business purpose is something else" sap:VirtualizedContainerService.HintSize="502,56.8" sap2010:WorkflowViewState.IdRef="If_4">
+          <If Condition="[out_dictFormDetails(&quot;BusinessPurpose&quot;)=&quot;Something else&quot;]" DisplayName="If business purpose is something else" sap:VirtualizedContainerService.HintSize="502,85.2" sap2010:WorkflowViewState.IdRef="If_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -764,7 +764,7 @@
               <OutArgument x:TypeArguments="sd:DataRow[]">[rowsBusinessPurpose]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="sd:DataRow[]">[in_dtBusinessAndLegal.Select("BusinessPurpose_CRM='"+out_dictFormDetails("BusinessPurpose")+"'")]</InArgument>
+              <InArgument x:TypeArguments="sd:DataRow[]">[in_dtBusinessAndLegal.Select("BusinessPurposes_CRM='"+out_dictFormDetails("BusinessPurpose")+"'")]</InArgument>
             </Assign.Value>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -791,7 +791,7 @@
                     <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("BusinessPurpose")]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[rowsBusinessPurpose(0)("BusinessPurpose_RPA").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[rowsBusinessPurpose(0)("BusinessPurposes_RPA").ToString]</InArgument>
                   </Assign.Value>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -819,7 +819,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <If Condition="[out_dictFormDetails(&quot;BusinessPurpose&quot;)=&quot;Other&quot;]" DisplayName="If business purpose is &quot;other&quot;" sap:VirtualizedContainerService.HintSize="502,48" sap2010:WorkflowViewState.IdRef="If_5">
+          <If Condition="[out_dictFormDetails(&quot;BusinessPurpose&quot;)=&quot;Other&quot;]" DisplayName="If business purpose is &quot;other&quot;" sap:VirtualizedContainerService.HintSize="502,76.4" sap2010:WorkflowViewState.IdRef="If_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1841,7 +1841,7 @@
         </ui:MultipleAssign>
       </Sequence>
     </Switch>
-    <Sequence DisplayName="Format and assign phone numbers" sap:VirtualizedContainerService.HintSize="597.6,101.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
+    <Sequence DisplayName="Format and assign phone numbers" sap:VirtualizedContainerService.HintSize="674,101.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1941,7 +1941,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <If Condition="[CBool(g_Config(&quot;PausePoint1&quot;))]" DisplayName="Pause Point 1?" sap:VirtualizedContainerService.HintSize="597.6,76.4" sap2010:WorkflowViewState.IdRef="If_8">
+    <If Condition="[CBool(g_Config(&quot;PausePoint1&quot;))]" DisplayName="Pause Point 1?" sap:VirtualizedContainerService.HintSize="674,76.4" sap2010:WorkflowViewState.IdRef="If_8">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="502,1077.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
           <Sequence.Variables>

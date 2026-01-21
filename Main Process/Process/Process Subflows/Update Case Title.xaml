@@ -50,6 +50,7 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>DRACOE_PopUps_64</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -120,6 +121,7 @@
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Update_Case_Title" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2250.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -171,7 +173,7 @@
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                     </InvokeMethod.TargetObject>
                   </InvokeMethod>
-                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP5" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 5" IN_PopupMessage="[&quot;&lt;h1&gt;Case title updated&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please confirm that the case title has been updated correctly:&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;New case title:&lt;/strong&gt;&quot;+&quot;&lt;br&gt;&quot;+&#xA;in_strCaseTitle+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;If these details look correct, please click 'Continue'. Otherwise, click 'Stop' and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 5" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP5" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 5" IN_PopupMessage="[&quot;&lt;h1&gt;Case title updated&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please confirm that the case title has been updated correctly:&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;New case title:&lt;/strong&gt;&quot;+&quot;&lt;br&gt;&quot;+&#xA;in_strCaseTitle+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;If these details look correct, please click 'Continue'. Otherwise, click 'Stop' and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 5" IN_WidthHeight="[{500,450}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
                   <InvokeMethod DisplayName="PP5 - start timer" sap:VirtualizedContainerService.HintSize="382,159.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Start">
                     <InvokeMethod.TargetObject>
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>

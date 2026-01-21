@@ -47,6 +47,7 @@
       <x:String>DRACOE_PopUps_64</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -132,6 +133,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
       <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Search_Rural_Payments" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4154.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -282,7 +284,7 @@
                               <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                             </InvokeMethod.TargetObject>
                           </InvokeMethod>
-                          <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Results found - user prompt" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed during searches." IN_PopupMessage="[&quot;&lt;h1&gt;Results found&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Results returned on searching &quot;+currentKVP.Key+&quot;. Please verify if any of the results are relevant to the current transaction. If so, please click 'Stop' to process the rest of this case manually. Otherwise, please click 'Continue'.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+String.Join(&quot;&lt;br&gt;&quot;,in_dictSearchFields.Select(function(x) &quot;&lt;strong&gt;&quot;+x.Key+&quot;:&lt;/strong&gt;&amp;ensp; &quot;+x.Value))+&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Results found" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                          <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Results found - user prompt" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed during searches." IN_PopupMessage="[&quot;&lt;h1&gt;Results found&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Results returned on searching &quot;+currentKVP.Key+&quot;. Please verify if any of the results are relevant to the current transaction. If so, please click 'Stop' to process the rest of this case manually. Otherwise, please click 'Continue'.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+String.Join(&quot;&lt;br&gt;&quot;,in_dictSearchFields.Select(function(x) &quot;&lt;strong&gt;&quot;+x.Key+&quot;:&lt;/strong&gt;&amp;ensp; &quot;+x.Value))+&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Results found" IN_WidthHeight="[{500,450}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
                           <InvokeMethod DisplayName="Start timer - results found" sap:VirtualizedContainerService.HintSize="382,168.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Stop">
                             <InvokeMethod.TargetObject>
                               <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>

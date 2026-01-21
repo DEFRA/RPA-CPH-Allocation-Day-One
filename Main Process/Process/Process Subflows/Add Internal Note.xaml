@@ -51,6 +51,9 @@
       <x:String>System.Reflection</x:String>
       <x:String>DRACOE_PopUps_64</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -130,16 +133,17 @@
       <AssemblyReference>System.IO.Packaging</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add_Internal_Note" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2822" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add_Internal_Note" sap:VirtualizedContainerService.HintSize="1451.6000000000001,3231.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - add internal note" sap:VirtualizedContainerService.HintSize="518,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Adding internal note to case activities&quot;]" />
-    <InvokeMethod sap2010:Annotation.AnnotationText="Returns foreground to CRM after rural payments activities" DisplayName="Bring to foreground - internal note" sap:VirtualizedContainerService.HintSize="518,213.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="BringToForeground">
+    <ui:LogMessage DisplayName="Log Message - add internal note" sap:VirtualizedContainerService.HintSize="526,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Adding internal note to case activities&quot;]" />
+    <InvokeMethod sap2010:Annotation.AnnotationText="Returns foreground to CRM after rural payments activities" DisplayName="Bring to foreground - internal note" sap:VirtualizedContainerService.HintSize="526,213.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="BringToForeground">
       <InvokeMethod.TargetObject>
         <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("DynamicsBrowser"),UiElement)]</InArgument>
       </InvokeMethod.TargetObject>
@@ -149,30 +153,60 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </InvokeMethod>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - add internal note" sap:VirtualizedContainerService.HintSize="518,2409.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="Never" ScopeGuid="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - add internal note" sap:VirtualizedContainerService.HintSize="526,2818.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="Never" ScopeGuid="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="Should already be on the Activities panel" DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,2248.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap2010:Annotation.AnnotationText="Should already be on the Activities panel" DisplayName="Add internal note" sap:VirtualizedContainerService.HintSize="492,2657.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Create Timeline Record" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="3228, 992, 80, 90" DesignTimeScaleFactor="2.5" ElementType="Icon" FriendlyName="'BUTTON action_bar_add_c…'" FullSelectorArgument="&lt;webctrl aaname='Create a timeline record.' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create a timeline record.' tag='BUTTON' type='button' class='fui-Button r1alrhcs ___w3o4yv0 fhovq9v f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq4zb f1t94bn6 f1s2uweq fr80ssc f1ukrpxl fecsdlb fnwyq0v ft1hn21 fuxngvv fy5bs14 fsv2rcd f1h0usnq fs4ktlq f16h9ulv fx2bmrt f1omzyqd f1dfjoow f1j98vj9 fj8yq94 f4xjyn1 f1et0tmh f9ddjv3 f1wi8ngl f18ktai2 fwbmr0d f44c6la' /&gt;" Guid="5dec1d55-f143-40e7-a2df-d7ed0adccfdd" InformativeScreenshot="db91c79513eefeb8d0488c8e51b85933.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NClick.Target>
-            </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Internal Note'" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V3">
+            <ui:RetryScope sap2010:Annotation.AnnotationText="Doesn't always open even if activity executes." DisplayName="Retry Scope - click create timeline record" sap:VirtualizedContainerService.HintSize="458,600.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <Sequence DisplayName="Click create record and find submenu" sap:VirtualizedContainerService.HintSize="416,360" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Create Timeline Record" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="3228, 992, 80, 90" DesignTimeScaleFactor="2.5" ElementType="Icon" FriendlyName="'BUTTON action_bar_add_c…'" FullSelectorArgument="&lt;webctrl aaname='Create a timeline record.' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create a timeline record.' tag='BUTTON' type='button' class='fui-Button r1alrhcs ___w3o4yv0 fhovq9v f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq4zb f1t94bn6 f1s2uweq fr80ssc f1ukrpxl fecsdlb fnwyq0v ft1hn21 fuxngvv fy5bs14 fsv2rcd f1h0usnq fs4ktlq f16h9ulv fx2bmrt f1omzyqd f1dfjoow f1j98vj9 fj8yq94 f4xjyn1 f1et0tmh f9ddjv3 f1wi8ngl f18ktai2 fwbmr0d f44c6la' /&gt;" Guid="5dec1d55-f143-40e7-a2df-d7ed0adccfdd" InformativeScreenshot="db91c79513eefeb8d0488c8e51b85933.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - internal note menu item" sap:VirtualizedContainerService.HintSize="382,110" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                      <ui:WaitUiElementAppear.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b61c712-5210-4a71-8ed5-020fdd36452a" Selector="&lt;webctrl visibleInnerText='Internal Note' tag='SPAN' /&gt;" TimeoutMS="3000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:WaitUiElementAppear.Target>
+                    </ui:WaitUiElementAppear>
+                  </Sequence>
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean" />
+              </ui:RetryScope.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:RetryScope>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Internal Note'" sap:VirtualizedContainerService.HintSize="458,190" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="2957, 2065, 350, 50" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Internal Note'" FullSelectorArgument="&lt;webctrl visibleInnerText='Internal Note' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Internal Note' parentid='createNewRecord_flyoutMenuItem_rpa_memo' tag='SPAN' type='' class='fui-MenuItem__content r1ls86vo' check:innerText='Internal Note' /&gt;" Guid="d18f352f-0fd5-4052-9cbe-0b78bcd7f4e8" ImageBase64="" InformativeScreenshot="c11a0cec904ace17ef090954ef40dc52.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Subject'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Text="[in_strSubject]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Subject'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="458,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Text="[in_strSubject]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=rpa_memo" DesignTimeRectangle="1070, 973, 992, 76" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' aria-label='Subject' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aria-label='Subject' class='fui-Input__input r12stul0 ___1ukvzui f7nlbp4 f1l02sjl f1cmbuwj fly5x3f f1pivz5x' aaname='Select to enter data' /&gt;" Guid="3ae2bf79-869d-4d76-9a35-5ab777c6a5b3" InformativeScreenshot="199735370e1258026beed5f427655f4e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -183,7 +217,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Text="[in_strDescription]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="458,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Text="[in_strDescription]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=rpa_memo" DesignTimeRectangle="1070, 1093, 992, 130" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'TEXTAREA'" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='' class='fui-Textarea__textarea ___rseg4c0 f1ern45e f1n71otn f1h8hb77 f1deefiw f1s184ao f3rmtva f1ewtqcl f19n0e5 fqerorx fk6fouc f11ysow2 fwyc1cq f13ta7ih f1vw9udw fbb3kq8 f1s6fcnf fvmd9f f1ww82xo f1immsc2 fkhj508 figsok6 f1i3iumi f1o1s39h f2q8o33 f1pivz5x' aaname='Select to enter data' /&gt;" Guid="4577865a-c36e-4966-a816-0cbf0562c95f" ImageBase64="" InformativeScreenshot="41add88ddf6b181de2d3252b8d983632.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -194,7 +228,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <If Condition="[CBool(g_Config(&quot;PausePoint4&quot;))]" DisplayName="Pause Point 4?" sap:VirtualizedContainerService.HintSize="450,1087.2" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[CBool(g_Config(&quot;PausePoint4&quot;))]" DisplayName="Pause Point 4?" sap:VirtualizedContainerService.HintSize="458,1087.2" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,825.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -207,7 +241,7 @@
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                     </InvokeMethod.TargetObject>
                   </InvokeMethod>
-                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP4" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 4" IN_PopupMessage="[&quot;&lt;h1&gt;Internal note added&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please confirm that the internal note has been entered correctly before it is marked as complete:&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt;&amp;ensp;&quot;+in_strSubject+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Description:&lt;/strong&gt;&amp;ensp;&quot;+in_strDescription+&quot;&lt;/p&gt;&quot;+&#xA;&quot;If these details look correct, please click 'Continue'. Otherwise, click 'Stop' and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 4" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP4" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 4" IN_PopupMessage="[&quot;&lt;h1&gt;Internal note added&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please confirm that the internal note has been entered correctly before it is marked as complete:&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt;&amp;ensp;&quot;+in_strSubject+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Description:&lt;/strong&gt;&amp;ensp;&quot;+in_strDescription+&quot;&lt;/p&gt;&quot;+&#xA;&quot;If these details look correct, please click 'Continue'. Otherwise, click 'Stop' and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 4" IN_WidthHeight="[{500,450}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
                   <InvokeMethod DisplayName="PP4 - start timer" sap:VirtualizedContainerService.HintSize="382,159.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Start">
                     <InvokeMethod.TargetObject>
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>

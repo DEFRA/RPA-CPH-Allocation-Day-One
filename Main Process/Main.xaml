@@ -173,7 +173,7 @@
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID5}" DisplayName="Automation Template" sap:VirtualizedContainerService.HintSize="1468.8000000000002,658.84" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID5}" DisplayName="Automation Template" sap:VirtualizedContainerService.HintSize="1050,684.84" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -464,9 +464,9 @@
           </sap:WorkflowViewStateService.ViewState>
           <Transition.Condition>[g_TransactionItem IsNot Nothing]</Transition.Condition>
           <Transition.To>
-            <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: &#xA;&#xA;1) Success&#xA;2) Business Exception&#xA;3) System Exception&#xA;4) Last Transaction&#xA;&#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="208.8,273.6" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: &#xA;&#xA;1) Success&#xA;2) Business Exception&#xA;3) System Exception&#xA;4) Last Transaction&#xA;&#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="585.2,2189.6" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="496,666" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="539.6,1581.2" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -547,12 +547,13 @@
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process Transaction workflow" sap:VirtualizedContainerService.HintSize="468,199.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="Process\Process Transaction.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dtCaseUpdates">[dtCaseUpdates]</InOutArgument>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtBusinessAndLegal">[dtBusinessAndLegal]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="462,23.6" sap2010:WorkflowViewState.IdRef="Catch`1_9">
+                    <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="505.6,23.6" sap2010:WorkflowViewState.IdRef="Catch`1_9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -573,7 +574,7 @@
                         </Assign>
                       </ActivityAction>
                     </Catch>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="462,23.6" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="505.6,23.6" sap2010:WorkflowViewState.IdRef="Catch`1_10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -793,7 +794,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.Condition>[boolContinue AND SystemException IsNot Nothing]</Transition.Condition>
                           <Transition.To>
-                            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="857.2,5222.8" sap2010:WorkflowViewState.IdRef="State_2">
+                            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="232,120.8" sap2010:WorkflowViewState.IdRef="State_2">
                               <State.Entry>
                                 <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="811.6,4770.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -1667,17 +1668,17 @@
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="If attended, present user with pop-up to confirm robotic process start. Also allow user to confirm single, or multiple transaction processing." DisplayName="Determine Run Type" sap:VirtualizedContainerService.HintSize="213.2,153.6" sap2010:WorkflowViewState.IdRef="State_5">
+    <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="If attended, present user with pop-up to confirm robotic process start. Also allow user to confirm single, or multiple transaction processing." DisplayName="Determine Run Type" sap:VirtualizedContainerService.HintSize="619.2,1638.8" sap2010:WorkflowViewState.IdRef="State_5">
       <State.Entry>
-        <If Condition="[in_boolUnattended]" DisplayName="If - Unattended" sap:VirtualizedContainerService.HintSize="510,822.8" sap2010:WorkflowViewState.IdRef="If_15">
+        <If Condition="[in_boolUnattended]" DisplayName="If - Unattended" sap:VirtualizedContainerService.HintSize="573.6,1201.2" sap2010:WorkflowViewState.IdRef="If_15">
           <If.Then>
-            <Sequence sap:VirtualizedContainerService.HintSize="476,170.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="468,165.6" sap2010:WorkflowViewState.IdRef="Sequence_34">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_29">
+              <Assign sap:VirtualizedContainerService.HintSize="434,105.6" sap2010:WorkflowViewState.IdRef="Assign_29">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Boolean">[boolRunProcess]</OutArgument>
                 </Assign.To>
@@ -1688,21 +1689,21 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <Sequence sap:VirtualizedContainerService.HintSize="476,468.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
+            <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="539.6,896.4" sap2010:WorkflowViewState.IdRef="Sequence_35">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Present Start Form" sap:VirtualizedContainerService.HintSize="434,380.4" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+              <TryCatch DisplayName="Present Start Form" sap:VirtualizedContainerService.HintSize="505.6,836.4" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="496,639.2" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                  <Sequence sap:VirtualizedContainerService.HintSize="468,580" sap2010:WorkflowViewState.IdRef="Sequence_36">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <d:Generic_PopUp OUT_strButtonSelected="{x:Null}" DisplayName="Start Form" sap:VirtualizedContainerService.HintSize="434,405.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\StartForm.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="&lt;h1&gt;Start the Robot?&lt;/h1&gt;&lt;P&gt;Please ensure all your work is saved and all applications are closed before continuing.&lt;/P&gt;&lt;BR&gt;" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{675,475}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" OUT_ProcessType="[strProcessType]" />
+                    <d:Generic_PopUp OUT_strButtonSelected="{x:Null}" DisplayName="Start Form" sap:VirtualizedContainerService.HintSize="434,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\StartForm.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="&lt;h1&gt;Start the Robot?&lt;/h1&gt;&lt;P&gt;Please ensure all your work is saved and all applications are closed before continuing.&lt;/P&gt;&lt;BR&gt;" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{675,475}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" OUT_ProcessType="[strProcessType]" />
                     <Assign DisplayName="Run Process" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_30">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">[boolRunProcess]</OutArgument>
@@ -1714,10 +1715,10 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,214" sap2010:WorkflowViewState.IdRef="Catch`1_14">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="471.6,23.6" sap2010:WorkflowViewState.IdRef="Catch`1_14">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>

@@ -146,7 +146,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Get_Form_Details" sap:VirtualizedContainerService.HintSize="1451.6000000000001,3193.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Form_Details" sap:VirtualizedContainerService.HintSize="1451.6000000000001,1669.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strFormContent" />
       <Variable x:TypeArguments="x:String" Name="strMainPhoneNumber" />
@@ -158,13 +158,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - get form details" sap:VirtualizedContainerService.HintSize="674,1164.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - get form details" sap:VirtualizedContainerService.HintSize="597.6,1184.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Get form details" sap:VirtualizedContainerService.HintSize="416,954.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Get form details" sap:VirtualizedContainerService.HintSize="416,1014.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,7 +174,7 @@
             <ui:LogMessage DisplayName="Log Message - extracting form fields" sap:VirtualizedContainerService.HintSize="382,85.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Extracting form data&quot;]" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ActivitiesActivities'" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=9914e4fe-1fa5-f011-bbd2-000d3ab44730" DesignTimeRectangle="1619, 1089, 165, 113" DesignTimeScaleFactor="2.5" ElementType="ListItem" FriendlyName="'ActivitiesActivities'" FullSelectorArgument="&lt;webctrl tag='LI' aria-role='tab' visibleinnertext='Activities' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='UL' visibleinnertext='Summary&amp;#xA;Knowledge Articles&amp;#xA;Linked KB Articles&amp;#xA;Activities&amp;#xA;Case Relationships&amp;#xA;Related' /&gt;&lt;webctrl tag='LI' visibleinnertext='Activities' type='' class='pa-bg pa-gy pa-jo pa-gc pa-cb pa-jp pa-jq pa-cw pa-hq pa-ek pa-k pa-ej pa-jr pa-ei pa-js pa-jt pa-ju pa-jv ' aaname='Activities' check:text='ActivitiesActivities' /&gt;" Guid="4f4a11b0-e377-4b2c-868e-8b930b02dba2" InformativeScreenshot="fdc35a7d36a92eb6807027ad72102624.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case: Case - SLA: CRM GDS CPH Online - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=9914e4fe-1fa5-f011-bbd2-000d3ab44730" DesignTimeRectangle="1619, 1089, 165, 113" DesignTimeScaleFactor="2.5" ElementType="ListItem" FriendlyName="'ActivitiesActivities'" FullSelectorArgument="&lt;webctrl tag='LI' aria-role='tab' visibleinnertext='Activities' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='UL' visibleinnertext='Summary&amp;#xA;Knowledge Articles&amp;#xA;Linked KB Articles&amp;#xA;Activities&amp;#xA;Case Relationships&amp;#xA;Related' /&gt;&lt;webctrl tag='LI' visibleinnertext='Activities' type='' class='pa-bg pa-gy pa-jo pa-gc pa-cb pa-jp pa-jq pa-cw pa-hq pa-ek pa-k pa-ej pa-jr pa-ei pa-js pa-jt pa-ju pa-jv ' aaname='Activities' check:text='ActivitiesActivities' /&gt;" Guid="4f4a11b0-e377-4b2c-868e-8b930b02dba2" InformativeScreenshot="fdc35a7d36a92eb6807027ad72102624.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -182,12 +182,18 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <ui:RetryScope sap2010:Annotation.AnnotationText="Element Invalid can occur with slow loading time" DisplayName="Retry Scope - view more" sap:VirtualizedContainerService.HintSize="382,478.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+            <ui:RetryScope sap2010:Annotation.AnnotationText="Element Invalid can occur with slow loading time" DisplayName="Retry Scope - view more" sap:VirtualizedContainerService.HintSize="382,398.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View more'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Timeout="3" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=9914e4fe-1fa5-f011-bbd2-000d3ab44730" DesignTimeRectangle="1650, 1859, 165, 50" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'View more'" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='View more' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='View more' tag='LABEL' type='' class='fui-Label ___1yevxz2 fk6fouc f19n0e5 fkhj508 f1i3iumi' check:innerText='View more' /&gt;" Guid="ad51dbaa-399c-4860-882c-07513feb6869" InformativeScreenshot="ae9be9726c7cc2b8ef8fc610672a12af.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case: Case - SLA: CRM GDS CPH Online - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=incident&amp;id=24d583d2-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1650, 1682, 165, 50" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'View more'" FullSelectorArgument="&lt;webctrl aaname='View more' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='View more' tag='LABEL' type='' class='fui-Label ___1yevxz2 fk6fouc f19n0e5 fkhj508 f1i3iumi' check:innerText='View more' /&gt;" Guid="e0175ddb-caa0-4038-82b1-7ac97a8ea250" ImageBase64="" InformativeScreenshot="81500a6bc4f2fc9c32aa709c99ec3d99.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="1698, 1389, 96, 80" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl innerText='Email' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='fui-CardHeader__header38' tag='LABEL' type='' class='fui-Label ___1yevxz2 fk6fouc f19n0e5 fkhj508 f1i3iumi' aaname='Email' check:innerText='Email' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
                     </uix:NClick.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -207,15 +213,21 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:RetryScope>
-            <uix:NGetAttributeGeneric x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="&quot;Get Attribute -&gt; visibleInnerText&quot; retains line breaks. &quot;Get Text&quot; does not." Attribute="visibleInnerText" DisplayName="Get form text" sap:VirtualizedContainerService.HintSize="382,139.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[strFormContent]" ScopeIdentifier="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V3">
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="&quot;Get Attribute -&gt; visibleInnerText&quot; retains line breaks. &quot;Get Text&quot; does not." Attribute="visibleInnerText" DisplayName="Get form text" sap:VirtualizedContainerService.HintSize="382,278.8" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[strFormContent]" ScopeIdentifier="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V3">
               <uix:NGetAttributeGeneric.Target>
-                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;newWindow=true&amp;pagetype=entityrecord&amp;etn=email&amp;id=eb5a45bb-40af-f011-bbd2-000d3ab442fc" DesignTimeRectangle="1454, 1662, 1450, 12180" DesignTimeScaleFactor="2.5" FriendlyName="'For security'" FullSelectorArgument="&lt;webctrl class='content' innerText='For security reasons*' tag='TABLE' /&gt;" FuzzySelectorArgument="&lt;webctrl class='content' type='' tag='TABLE' aaname='' check:innerText='For security reasons, the links in this email expire at 12:14pm on Tuesday 20 January 2026&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Apply' /&gt;" Guid="8cea60ab-3a6d-4671-aa44-0033e0ea874d" ImageBase64="" InformativeScreenshot="255f3aa3cac9533bdad18829acd655b3.png" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=incident&amp;id=24d583d2-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1915, 1987, 1450, 9513" DesignTimeScaleFactor="2.5" FriendlyName="'For security'" FullSelectorArgument="&lt;webctrl class='content' tag='TABLE' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl class='content' tag='TABLE' /&gt;&lt;webctrl type='' class='ck-editor__editable ck-editor__nested-editable' tag='TD' aaname='' check:innerText='For security reasons, the links in this email expire at 1:58pm on Monday 9 March 2026&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Apply for a' /&gt;" Guid="6a9b17f5-10a3-460e-b33f-6fca1db8f2f9" ImageBase64="" InformativeScreenshot="e04b05a3b18c16150562be8d43e13142.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1698, 1161, 96, 80" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl innerText='Email' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='fui-CardHeader__header38' tag='LABEL' type='' class='fui-Label ___1yevxz2 fk6fouc f19n0e5 fkhj508 f1i3iumi' aaname='Email' check:innerText='Email' /&gt;" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
               </uix:NGetAttributeGeneric.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetAttributeGeneric>
@@ -231,7 +243,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:MultipleAssign DisplayName="Initialise dictionary and extract business or hobbyist" sap:VirtualizedContainerService.HintSize="674,85.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:MultipleAssign DisplayName="Initialise dictionary and extract business or hobbyist" sap:VirtualizedContainerService.HintSize="597.6,85.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
@@ -253,7 +265,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch - business or hobbyist?" Expression="[out_dictFormDetails(&quot;BusinessOrHobbyist&quot;)]" sap:VirtualizedContainerService.HintSize="674,1815.6" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - business or hobbyist?" Expression="[out_dictFormDetails(&quot;BusinessOrHobbyist&quot;)]" sap:VirtualizedContainerService.HintSize="597.6,198.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <Switch.Default>
         <Throw DisplayName="Throw BRE - customer type unknown" Exception="[new BusinessRuleException(&quot;Customer type unrecognised. Business or Hobbyist answer: &quot;+out_dictFormDetails(&quot;BusinessOrHobbyist&quot;))]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -269,7 +281,7 @@
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence x:Key="I'm registering on behalf of a business (Im registering on behalf of a business)" DisplayName="Extract business fields" sap:VirtualizedContainerService.HintSize="634,2151.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <Sequence x:Key="I'm registering on behalf of a business (Im registering on behalf of a business)" DisplayName="Extract business fields" sap:VirtualizedContainerService.HintSize="634,2150.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1829,7 +1841,7 @@
         </ui:MultipleAssign>
       </Sequence>
     </Switch>
-    <Sequence DisplayName="Format and assign phone numbers" sap:VirtualizedContainerService.HintSize="674,56.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
+    <Sequence DisplayName="Format and assign phone numbers" sap:VirtualizedContainerService.HintSize="597.6,101.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1929,7 +1941,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <If Condition="[CBool(g_Config(&quot;PausePoint1&quot;))]" DisplayName="Pause Point 1?" sap:VirtualizedContainerService.HintSize="674,48" sap2010:WorkflowViewState.IdRef="If_8">
+    <If Condition="[CBool(g_Config(&quot;PausePoint1&quot;))]" DisplayName="Pause Point 1?" sap:VirtualizedContainerService.HintSize="597.6,76.4" sap2010:WorkflowViewState.IdRef="If_8">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="502,1077.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
           <Sequence.Variables>

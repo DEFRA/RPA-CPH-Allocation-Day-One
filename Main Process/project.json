@@ -18,7 +18,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.15.0",
-  "projectVersion": "1.0.2-alpha.3",
+  "projectVersion": "1.0.2-alpha.8",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -82,6 +82,34 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc01 Validate Title.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "8ed750cb-5aff-4181-8471-bca9f2f52302",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Create New Business Record.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "9c93a593-b755-4980-bc2c-3721640bc5c4",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Create New Customer.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "069dc351-5c9a-4733-8171-0f7edc0aba7f",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Add Internal Note.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "817e8ddf-fc88-44be-8bc7-c58d0f183658",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Check and Update Priority.xaml"
       }
     ],
     "saveToCloud": false

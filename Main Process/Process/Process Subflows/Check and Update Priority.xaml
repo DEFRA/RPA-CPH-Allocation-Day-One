@@ -131,7 +131,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Check_and_Update_Priority" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4059.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Check_and_Update_Priority" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4160.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="intDifference" />
       <Variable x:TypeArguments="x:String" Name="strPriority" />
@@ -185,13 +185,13 @@
         </Sequence>
       </If.Else>
     </If>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - update case priority" sap:VirtualizedContainerService.HintSize="562,3419.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - update case priority" sap:VirtualizedContainerService.HintSize="562,3520.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Update case priority" sap:VirtualizedContainerService.HintSize="528,3258" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Update case priority" sap:VirtualizedContainerService.HintSize="528,3359.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="boolChecked" />
             </Sequence.Variables>
@@ -206,19 +206,30 @@
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="2219, 1091, 182, 70" DesignTimeScaleFactor="2.5" FriendlyName="'Related'" FullSelectorArgument="&lt;webctrl tag='LI' visibleinnertext='Related' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Related' type='' class='pa-g flexbox' aaname='Related' check:text='Related' /&gt;" Guid="b8a11c07-629d-4979-bb41-dc22abc448bf" InformativeScreenshot="2ec81c837548ddcfda90e93ff138939c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CPH Case Details'" sap:VirtualizedContainerService.HintSize="494,190" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
+            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Input mode Simulate on this as Chromium kept picking the wrong menu item...?" ClickType="Single" DisplayName="Click 'CPH Case Details'" sap:VirtualizedContainerService.HintSize="494,234.8" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="2306, 1893, 586, 50" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'CPH Case Details'" FullSelectorArgument="&lt;webctrl visibleInnerText='CPH Case Details' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='CPH Case Details' parentid='relatedEntityContainer' tag='SPAN' type='' class='fui-MenuItem__content r1ls86vo' check:innerText='CPH Case Details' /&gt;" Guid="9d78cd81-fa42-48d5-a48a-331dd217efbe" ImageBase64="" InformativeScreenshot="c031218d6ba7a5579655d62340ec18da.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-prod.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=d2099ff3-a4f7-f011-8406-7c1e5277e5e8" DesignTimeRectangle="2214, 1696, 676, 80" DesignTimeScaleFactor="2.5" FriendlyName="'CPH Case Details'" FullSelectorArgument="&lt;webctrl aria-label='CPH Case Details' aria-role='menuitem' visibleInnerText='CPH Case Details' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='CPH Case Details' aria-role='menuitem' tag='DIV' type='' class='fui-MenuItem r11normc' aaname='' check:innerText='CPH Case Details' /&gt;" Guid="e63083f1-c438-401b-b672-69b85f0c23ab" ImageBase64="" InformativeScreenshot="23e7b9b49b1849b7c56a4b2271c917a0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case: Case - SLA: CRM GDS CPH Online - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="2289, 1711, 586, 50" ElementType="Text" FriendlyName="'CPH Case Details'" FullSelectorArgument="&lt;webctrl aaname='CPH Case Details' visibleInnerText='CPH Case Details' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='CPH Case Details' parentid='relatedEntityContainer' tag='SPAN' type='' class='fui-MenuItem__content r1ls86vo' check:innerText='CPH Case Details' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
               </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CCD'" sap:VirtualizedContainerService.HintSize="494,190" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1475, 1647, 175, 47" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'CCD-82769'" FullSelectorArgument="&lt;webctrl visibleInnerText='CCD-*' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='spanWrapper-346' parentid='entity_control-powerapps_onegrid_control_container' tag='SPAN' type='' aaname='CCD-82769' check:innerText='CCD-82769' /&gt;" Guid="d803ec06-d5a6-4a94-a3df-f15411da72f5" ImageBase64="" InformativeScreenshot="0e786e065ca99a38b963daed31b82550.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State - change priority slider" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,742.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
+            <uix:NCheckState DisplayName="Check App State - change priority slider" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,770.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,491.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,519.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -229,7 +240,7 @@
                       <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_cphcasedetail&amp;id=9ab50121-49db-f011-8543-7ced8d41de08" DesignTimeRectangle="1068, 1561, 197, 56" DesignTimeScaleFactor="2.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Change Priority:*' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' class='fui-Switch__input rsji9ng ___1elyq2r f1vgc2s3 f15twtuk' aaname='No' /&gt;" Guid="70d0d71f-6892-49f6-888c-59518308e9ce" InformativeScreenshot="42e716f527130fc5bf37828b94ef7fda.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CPH Case Detail: Information: CCD-* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NCheck.Target>
                   </uix:NCheck>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,85.2" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,680.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
@@ -305,7 +316,7 @@
               <uix:NSelectItem.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=rpa_cphcasedetail&amp;id=72530603-49db-f011-8543-7ced8d41de08" DesignTimeRectangle="1070, 1213, 2577, 75" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl aria-label='Priority' aria-role='combobox' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Priority' aria-role='combobox' tag='BUTTON' type='button' class='fui-Dropdown__button ___iguxm40 f122n59 f1c21dwh f3bhgqh f1ewtqcl fxc4j92 f14mj54c f1k6fduh f13qh94s fk6fouc f12nh0o2 f1869bpl f1o700av fly5x3f ftqa4ok fkhj508 figsok6 f1i3iumi f14ev680' aaname='---' check:innerText='---' /&gt;" Guid="9119a884-3421-49ea-839b-3fc9c19004cf" ImageBase64="" InformativeScreenshot="bf94474249c4194854fb29609c2031c1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CPH Case Detail: Information: CCD-* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="608, 1216, 421, 75" ElementType="Text" FriendlyName="'Priority'" FullSelectorArgument="&lt;webctrl aaname='Priority' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Priority' tag='LABEL' type='' class='pa-bx pa-qv ' check:innerText='Priority' /&gt;" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -348,7 +359,7 @@
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_cphcasedetail&amp;id=9ab50121-49db-f011-8543-7ced8d41de08" DesignTimeRectangle="1068, 1561, 197, 56" DesignTimeScaleFactor="2.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' class='fui-Switch__input rsji9ng ___1elyq2r f1vgc2s3 f15twtuk' aaname='No' /&gt;" Guid="70d0d71f-6892-49f6-888c-59518308e9ce" InformativeScreenshot="42e716f527130fc5bf37828b94ef7fda.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CPH Case Detail: Information: CCD-* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NCheck.Target>
             </uix:NCheck>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="494,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="494,85.2" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,680.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>

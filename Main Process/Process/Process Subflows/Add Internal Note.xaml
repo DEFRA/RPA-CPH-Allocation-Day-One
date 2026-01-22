@@ -136,7 +136,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add_Internal_Note" sap:VirtualizedContainerService.HintSize="1451.6000000000001,3231.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add_Internal_Note" sap:VirtualizedContainerService.HintSize="1451.6000000000001,3294" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -153,13 +153,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </InvokeMethod>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - add internal note" sap:VirtualizedContainerService.HintSize="526,2818.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="Never" ScopeGuid="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - add internal note" sap:VirtualizedContainerService.HintSize="526,2881.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="Never" ScopeGuid="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="Should already be on the Activities panel" DisplayName="Add internal note" sap:VirtualizedContainerService.HintSize="492,2657.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap2010:Annotation.AnnotationText="Should already be on the Activities panel" DisplayName="Add internal note" sap:VirtualizedContainerService.HintSize="492,2720.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -182,7 +182,7 @@
                     </uix:NClick>
                     <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - internal note menu item" sap:VirtualizedContainerService.HintSize="382,110" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                       <ui:WaitUiElementAppear.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b61c712-5210-4a71-8ed5-020fdd36452a" Selector="&lt;webctrl visibleInnerText='Internal Note' tag='SPAN' /&gt;" TimeoutMS="3000">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b61c712-5210-4a71-8ed5-020fdd36452a" Selector="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;&lt;webctrl aria-role='menuitem' visibleinnertext='Internal Note' /&gt;" TimeoutMS="3000">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
@@ -201,10 +201,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:RetryScope>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Internal Note'" sap:VirtualizedContainerService.HintSize="458,190" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V3">
+            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="weird inconsistency between UAT and Prod here. Menu items have tag LI in prod but not in UAT. Careful if updating this selector becomes necessary." ClickType="Single" DisplayName="Click 'Internal Note'" sap:VirtualizedContainerService.HintSize="458,251.2" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="2957, 2065, 350, 50" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Internal Note'" FullSelectorArgument="&lt;webctrl visibleInnerText='Internal Note' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Internal Note' parentid='createNewRecord_flyoutMenuItem_rpa_memo' tag='SPAN' type='' class='fui-MenuItem__content r1ls86vo' check:innerText='Internal Note' /&gt;" Guid="d18f352f-0fd5-4052-9cbe-0b78bcd7f4e8" ImageBase64="" InformativeScreenshot="c11a0cec904ace17ef090954ef40dc52.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="2957, 2065, 350, 50" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Internal Note'" FullSelectorArgument="&lt;webctrl aria-role='menuitem' visibleinnertext='Internal Note' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Internal Note' parentid='createNewRecord_flyoutMenuItem_rpa_memo' tag='SPAN' type='' class='fui-MenuItem__content r1ls86vo' check:innerText='Internal Note' /&gt;" Guid="d18f352f-0fd5-4052-9cbe-0b78bcd7f4e8" ImageBase64="" InformativeScreenshot="c11a0cec904ace17ef090954ef40dc52.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Subject'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="458,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="4be41ff4-50d4-4df3-a2fe-918d0666a677" Text="[in_strSubject]" Version="V3">
               <uix:NTypeInto.Target>

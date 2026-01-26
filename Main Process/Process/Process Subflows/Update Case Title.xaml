@@ -51,6 +51,8 @@
       <x:String>System.Reflection</x:String>
       <x:String>DRACOE_PopUps_64</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -124,31 +126,45 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Update_Case_Title" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2250.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_Case_Title" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2459.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - update case title" sap:VirtualizedContainerService.HintSize="518,2227.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="[NAppOpenMode.Never]" ScopeGuid="990553be-84cb-4756-9ba8-5caa8d2038d4" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - update case title" sap:VirtualizedContainerService.HintSize="518,2436.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="[NAppOpenMode.Never]" ScopeGuid="990553be-84cb-4756-9ba8-5caa8d2038d4" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Update case title" sap:VirtualizedContainerService.HintSize="484,2066.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Update case title" sap:VirtualizedContainerService.HintSize="484,2275.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message - update case title" sap:VirtualizedContainerService.HintSize="450,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Updating case title with CRN and SBI info.&quot;]" />
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="450,114.8" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[g_TransactionItem(&quot;Case Url&quot;).ToString]" Version="V3" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Summary' tab" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="990553be-84cb-4756-9ba8-5caa8d2038d4" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="621, 1091, 174, 113" DesignTimeScaleFactor="2.5" ElementType="ListItem" FriendlyName="'SummarySummary'" FullSelectorArgument="&lt;webctrl tag='LI' visibleinnertext='Summary' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LI' visibleinnertext='Summary' type='' class='pa-bn pa-tm pa-tx pa-du pa-cq pa-ed pa-ty pa-gr pa-tz pa-dz pa-k pa-bf pa-ua pa-eh pa-jv pa-ub pa-uc pa-ud ' aaname='Summary' check:text='SummarySummary' /&gt;" Guid="71a1f134-80ef-408e-a1e3-b263c6c23c0b" InformativeScreenshot="4356aaa76eb95981081926a11d4f99ec.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NClick.Target>
-            </uix:NClick>
+            <uix:NGoToUrl DisplayName="Go To URL - case url" sap:VirtualizedContainerService.HintSize="450,114.8" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[g_TransactionItem(&quot;Case Url&quot;).ToString]" Version="V3" />
+            <ui:RetryScope sap2010:Annotation.AnnotationText="prone to element invalid exception" DisplayName="Retry Scope - click summary" sap:VirtualizedContainerService.HintSize="450,398.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Summary' tab" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="990553be-84cb-4756-9ba8-5caa8d2038d4" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="621, 1091, 174, 113" DesignTimeScaleFactor="2.5" ElementType="ListItem" FriendlyName="'SummarySummary'" FullSelectorArgument="&lt;webctrl tag='LI' visibleinnertext='Summary' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LI' visibleinnertext='Summary' type='' class='pa-bn pa-tm pa-tx pa-du pa-cq pa-ed pa-ty pa-gr pa-tz pa-dz pa-k pa-bf pa-ua pa-eh pa-jv pa-ub pa-uc pa-ud ' aaname='Summary' check:text='SummarySummary' /&gt;" Guid="71a1f134-80ef-408e-a1e3-b263c6c23c0b" InformativeScreenshot="4356aaa76eb95981081926a11d4f99ec.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean" />
+              </ui:RetryScope.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:RetryScope>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into case title" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="990553be-84cb-4756-9ba8-5caa8d2038d4" Text="[in_strCaseTitle]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=incident&amp;id=24d583d2-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1070, 1530, 992, 76" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'CRM GDS CPH Online'" FullSelectorArgument="&lt;webctrl aria-label='Case Title' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Case Title' tag='INPUT' type='text' class='fui-Input__input r12stul0 ___1ukvzui f7nlbp4 f1l02sjl f1cmbuwj fly5x3f f1pivz5x' aaname='CRM GDS CPH Online' /&gt;" Guid="82165aab-175c-4660-bfac-af3509b8688d" ImageBase64="" InformativeScreenshot="73c91510d1c19daf5de25f15cdf1f94d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">

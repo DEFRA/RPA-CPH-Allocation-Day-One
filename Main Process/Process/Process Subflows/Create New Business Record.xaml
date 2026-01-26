@@ -49,6 +49,7 @@
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -128,21 +129,22 @@
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create_New_Business_Record" sap:VirtualizedContainerService.HintSize="1451.6000000000001,6876.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Create_New_Business_Record" sap:VirtualizedContainerService.HintSize="1451.6000000000001,7437.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - register new business" sap:VirtualizedContainerService.HintSize="1094,6853.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - register new business" sap:VirtualizedContainerService.HintSize="1094,7414.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Register new business" sap:VirtualizedContainerService.HintSize="1060,6692.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Register new business" sap:VirtualizedContainerService.HintSize="1060,7253.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Default="Test Business*SBI:*" Name="strBusinessNameSelector" />
             </Sequence.Variables>
@@ -251,7 +253,7 @@
                                 <av:Size x:Key="ShapeSize">110,70</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Postcode search" sap:VirtualizedContainerService.HintSize="450,1326" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                            <Sequence DisplayName="Postcode search" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_14">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -369,7 +371,7 @@
                                   <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                                 </InvokeMethod.TargetObject>
                               </InvokeMethod>
-                              <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="User prompt - select business address" sap:VirtualizedContainerService.HintSize="416,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at selection of customer address." IN_PopupMessage="[&quot;&lt;h1&gt;Select address&lt;/h1&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;Please select the address that best matches the address provided by the customer:&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;&quot;+in_dictFormDetails(&quot;BusinessAddressLine1&quot;)+&quot;&lt;br&gt;&quot;+&#xD;&#xA;in_dictFormDetails(&quot;BusinessAddressLine2&quot;)+&quot;&lt;br&gt;&quot;+&#xD;&#xA;in_dictFormDetails(&quot;BusinessAddressTownOrCity&quot;)+&quot;&lt;br&gt;&quot;+&#xD;&#xA;in_dictFormDetails(&quot;BusinessAddressPostcode&quot;)+&quot;&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;Once you have selected the address, please click 'Continue' on this pop-up.&lt;br&gt;&quot;+&#xD;&#xA;&quot;Alternatively, please click 'Enter Address Manually' in Rural Payments and type the address in as appropriate, then click 'Continue' on this pop-up.&lt;br&gt;&quot;+&#xD;&#xA;&quot;If there is a problem with the address, please click 'Stop' on this pop-up and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Select business address" IN_WidthHeight="[{700,500}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_3" />
+                              <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="User prompt - select business address" sap:VirtualizedContainerService.HintSize="416,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at selection of customer address." IN_PopupMessage="[&quot;&lt;h1&gt;Select address&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please select the address that best matches the address provided by the customer:&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+in_dictFormDetails(&quot;BusinessAddressLine1&quot;)+&quot;&lt;br&gt;&quot;+&#xA;in_dictFormDetails(&quot;BusinessAddressLine2&quot;)+&quot;&lt;br&gt;&quot;+&#xA;in_dictFormDetails(&quot;BusinessAddressTownOrCity&quot;)+&quot;&lt;br&gt;&quot;+&#xA;in_dictFormDetails(&quot;BusinessAddressPostcode&quot;)+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;Once you have selected the address, please click 'Continue' on this pop-up.&lt;br&gt;&quot;+&#xA;&quot;Alternatively, please click 'Enter Address Manually' in Rural Payments and type the address in as appropriate, then click 'Continue' on this pop-up.&lt;br&gt;&quot;+&#xA;&quot;If there is a problem with the address, please click 'Stop' on this pop-up and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Select business address" IN_WidthHeight="[{700,500}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_3" />
                               <InvokeMethod DisplayName="Start timer - select business address" sap:VirtualizedContainerService.HintSize="416,160" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Start">
                                 <InvokeMethod.TargetObject>
                                   <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
@@ -513,6 +515,23 @@
                 </uix:TargetAnchorable>
               </uix:NSelectItem.Target>
             </uix:NSelectItem>
+            <uix:NCheckState DisplayName="Check App State 'Reference number'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1026,516.8" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Timeout="2" Version="V3">
+              <uix:NCheckState.IfExists>
+                <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Should never be a situation where both have been provided, so just type whichever field isn't blank" ClickBeforeMode="None" DisplayName="Type charity/company number" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,265.6" sap2010:WorkflowViewState.IdRef="NTypeInto_26" InteractionMode="DebuggerApi" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[if(not String.IsNullOrEmpty(in_dictFormDetails(&quot;CharityNumber&quot;)),in_dictFormDetails(&quot;CharityNumber&quot;),in_dictFormDetails(&quot;CompanyNumber&quot;))]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create/details?personId=5752555" DesignTimeRectangle="317, 1509, 1550, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT charitycommission…'" FullSelectorArgument="&lt;webctrl type='text' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='charitycommissionregnbr' tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-format ng-empty' aaname='                     Charity Commission registration number                                                            ' /&gt;" Guid="c12a8427-0257-4b08-9e09-9ab184c9b069" ImageBase64="" InformativeScreenshot="ed1ef13a8af7224ff03710fc07b4cea0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create/details?personId=5752555" DesignTimeRectangle="317, 1101, 501, 75" DesignTimeScaleFactor="2.5" FriendlyName="'Reference number'" FullSelectorArgument="&lt;webctrl visibleInnerText='Reference number' tag='LEGEND' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='LEGEND' class='heading-medium ng-scope' aaname='Reference number' check:innerText='Reference number' /&gt;" Guid="438bd711-2287-4d63-a906-5d8d2d521f9f" ImageBase64="" InformativeScreenshot="33bd446e3ef45c6af0e99def91e5f966.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="1026,190" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1491, 263, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='button' aaname='Continue' /&gt;" FuzzySelectorArgument="&lt;webctrl id='continue' tag='BUTTON' type='button' class='button btn-link ng-scope ng-isolate-scope' aaname='Continue         ' check:innerText='Continue' /&gt;" Guid="fa34e2b3-9e08-49ca-bd80-53cb3fdc8521" ImageBase64="" InformativeScreenshot="4d9a49400f06c720282fede1eecbc5d3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
@@ -531,7 +550,7 @@
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                     </InvokeMethod.TargetObject>
                   </InvokeMethod>
-                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP3" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 3" IN_PopupMessage="[&quot;&lt;h1&gt;Confirm new business details&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please check that the business details entered are correct. If so, please click 'Continue'. Otherwise, please click 'Stop' and complete this registration manually.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Business Name&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessName&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Address Line 1&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressLine1&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Address Line 2&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressLine2&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Town/City&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressTownOrCity&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Postcode&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressPostcode&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Email&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Email&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Landline&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Landline&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Mobile&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Mobile&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Legal Status&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;LegalStatus&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Business Type&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessPurpose&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 3" IN_WidthHeight="[{500,500}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP3" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 3" IN_PopupMessage="[&quot;&lt;h1&gt;Confirm new business details&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please check that the business details entered are correct. If so, please click 'Continue'. Otherwise, please click 'Stop' and complete this registration manually.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Business Name&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessName&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Address Line 1&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressLine1&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Address Line 2&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressLine2&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Town/City&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressTownOrCity&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Postcode&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessAddressPostcode&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Email&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Email&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Landline&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Landline&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Mobile&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;Mobile&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Legal Status&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;LegalStatus&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Business Type&lt;/strong&gt;:&amp;ensp;&quot;+in_dictFormDetails(&quot;BusinessPurpose&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 3" IN_WidthHeight="[{500,600}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
                   <InvokeMethod DisplayName="Start timer - PP3" sap:VirtualizedContainerService.HintSize="382,159.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Start">
                     <InvokeMethod.TargetObject>
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
@@ -554,8 +573,8 @@
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create/summary?personId=5967943" DesignTimeRectangle="317, 1096, 853, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'I confirm'" FullSelectorArgument="&lt;webctrl tag='INPUT' aaname='I confirm that these details are correct' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aaname='I confirm that these details are correct' type='button' class='button ng-isolate-scope' check:text='I confirm that these details are correct' /&gt;" Guid="52d9722e-17e0-468a-8b4f-0b6fd1ddbd9f" ImageBase64="" InformativeScreenshot="03f24d0c40ec5bb4e808acf650520b76.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Business details summary - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <Pick sap:VirtualizedContainerService.HintSize="1026,1578.4" sap2010:WorkflowViewState.IdRef="Pick_1">
-              <PickBranch DisplayName="PickBranch - duplicate business found" sap:VirtualizedContainerService.HintSize="505.6,1499.6" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+            <Pick sap:VirtualizedContainerService.HintSize="1026,1588.8" sap2010:WorkflowViewState.IdRef="Pick_1">
+              <PickBranch DisplayName="PickBranch - duplicate business found" sap:VirtualizedContainerService.HintSize="505.6,1510" sap2010:WorkflowViewState.IdRef="PickBranch_1">
                 <PickBranch.Trigger>
                   <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find element - duplicate business found" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                     <ui:WaitUiElementAppear.Target>
@@ -570,32 +589,32 @@
                     </ui:WaitUiElementAppear.Target>
                   </ui:WaitUiElementAppear>
                 </PickBranch.Trigger>
-                <Sequence DisplayName="User prompt to check business" sap:VirtualizedContainerService.HintSize="416,1192" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="User prompt to check business" sap:VirtualizedContainerService.HintSize="416,1202.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message - duplicate business found" sap:VirtualizedContainerService.HintSize="382,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Potential duplicate business found&quot;]" />
-                  <InvokeMethod DisplayName="Stop timer - duplicate business" sap:VirtualizedContainerService.HintSize="382,168.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Stop">
+                  <ui:LogMessage DisplayName="Log Message - duplicate business found" sap:VirtualizedContainerService.HintSize="382,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Potential duplicate business found&quot;]" />
+                  <InvokeMethod DisplayName="Stop timer - duplicate business" sap:VirtualizedContainerService.HintSize="382,171.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Stop">
                     <InvokeMethod.TargetObject>
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                     </InvokeMethod.TargetObject>
                   </InvokeMethod>
                   <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="User prompt - duplicate business" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at duplicate business prompt" IN_PopupMessage="[&quot;&lt;h1&gt;Possible duplicate business&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;A possible duplicate business has been identified in Rural Payments. Please manually review this potential duplicate in a separate tab/window.&lt;br&gt;&quot;+&#xA;&quot;If you believe this is a duplicate business, please click the 'Stop' button and complete this transaction manually.&lt;br&gt;&quot;+&#xA;&quot;Otherwise, please click 'Continue'.&lt;/p&gt;&quot;]" IN_PopupTitle="Duplicate business found" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_2" />
-                  <InvokeMethod DisplayName="Start timer - duplicate business" sap:VirtualizedContainerService.HintSize="382,168.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Start">
+                  <InvokeMethod DisplayName="Start timer - duplicate business" sap:VirtualizedContainerService.HintSize="382,171.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Start">
                     <InvokeMethod.TargetObject>
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                     </InvokeMethod.TargetObject>
                   </InvokeMethod>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirm details'" sap:VirtualizedContainerService.HintSize="382,181.2" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirm details'" sap:VirtualizedContainerService.HintSize="382,182.8" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create/summary?personId=5967943" DesignTimeRectangle="1453, 1570, 388, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Confirm details'" FullSelectorArgument="&lt;webctrl aaname='Confirm details' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Confirm details' tag='BUTTON' type='' class='button ng-isolate-scope' check:innerText='Confirm details' /&gt;" Guid="8578986a-7740-481f-a07b-0b7d551b8663" InformativeScreenshot="e2838e2130b3b1e7a1886314a88ff2f4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Business details summary - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
                 </Sequence>
               </PickBranch>
-              <PickBranch DisplayName="PickBranch - business successfully registered" sap:VirtualizedContainerService.HintSize="426.4,1499.6" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+              <PickBranch DisplayName="PickBranch - business successfully registered" sap:VirtualizedContainerService.HintSize="426.4,1510" sap2010:WorkflowViewState.IdRef="PickBranch_2">
                 <PickBranch.Trigger>
                   <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find element - business successfully registered" sap:VirtualizedContainerService.HintSize="336.8,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
                     <ui:WaitUiElementAppear.Target>
@@ -610,23 +629,28 @@
                     </ui:WaitUiElementAppear.Target>
                   </ui:WaitUiElementAppear>
                 </PickBranch.Trigger>
-                <ui:LogMessage DisplayName="Log Message - business successfully registered" sap:VirtualizedContainerService.HintSize="336.8,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Business successfully registered&quot;]" />
+                <ui:LogMessage DisplayName="Log Message - business successfully registered" sap:VirtualizedContainerService.HintSize="336.8,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Business successfully registered&quot;]" />
               </PickBranch>
             </Pick>
-            <Assign DisplayName="Assign selector part for retrieving SBI" sap:VirtualizedContainerService.HintSize="1026,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap2010:Annotation.AnnotationText="Replace &lt; &gt; &amp; ' &quot; from company name with ? wildcard" DisplayName="Assign selector part for retrieving SBI" sap:VirtualizedContainerService.HintSize="1026,146" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[strBusinessNameSelector]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[in_dictFormDetails("BusinessName")+"*SBI:*"]</InArgument>
+                <InArgument x:TypeArguments="x:String">[Regex.Replace(in_dictFormDetails("BusinessName"),"[&lt;&gt;&amp;'""]","?")+"*SBI:*"]</InArgument>
               </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <uix:NGetText DisplayName="Get Text 'Test Business'" sap:VirtualizedContainerService.HintSize="1026,190" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" TextString="[out_strSBI]" Version="V3">
+            <uix:NGetText DisplayName="Get SBI" sap:VirtualizedContainerService.HintSize="1026,190" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" TextString="[out_strSBI]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/dashboard/5967943/my-account" DesignTimeRectangle="317, 2017, 678, 154" DesignTimeScaleFactor="2.5" FriendlyName="'Test Business'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl visibleInnerText='{0}' tag='TD' /&gt;&quot;, strBusinessNameSelector)]" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='                                                              ' /&gt;" Guid="c0f5fd55-c6a3-4481-9776-a67285f89d94" ImageBase64="" InformativeScreenshot="7eefcda60ddd10e707275c4bee404d48.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer businesses and messages - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <Assign DisplayName="Extract SBI" sap:VirtualizedContainerService.HintSize="1026,105.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Extract SBI" sap:VirtualizedContainerService.HintSize="1026,107.6" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[out_strSBI]</OutArgument>
               </Assign.To>

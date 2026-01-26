@@ -237,7 +237,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[dtCaseUpdatesCurrent]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" FilePath="[g_Config(&quot;CaseUpdatesFiles&quot;).ToString]" sap:VirtualizedContainerService.HintSize="502,190.8" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+              <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[dtCaseUpdatesCurrent]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" FilePath="[g_Config(&quot;CaseUpdatesFile&quot;).ToString]" sap:VirtualizedContainerService.HintSize="502,190.8" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
               <If Condition="[dtCaseUpdatesCurrent.RowCount=0]" DisplayName="If case updates table empty" sap:VirtualizedContainerService.HintSize="502,745.6" sap2010:WorkflowViewState.IdRef="If_12">
                 <If.Then>
                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,291.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
@@ -246,7 +246,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[io_dtCaseUpdates]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Append to case updates file" FilePath="[g_Config(&quot;CaseUpdatesFile&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,231.6" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_2" ShouldQuote="True">
+                    <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[io_dtCaseUpdates]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Write to case updates file" FilePath="[g_Config(&quot;CaseUpdatesFile&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,231.6" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_2" ShouldQuote="True">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

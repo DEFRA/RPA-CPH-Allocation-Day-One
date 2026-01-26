@@ -135,7 +135,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="2054.8,3314.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="2054.8,3330" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="boolRuralPaymentsOpened" />
       <Variable x:TypeArguments="x:Int32" Name="intAttempt" />
@@ -159,14 +159,14 @@
         <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="2af37fb645f019e4633db66d5371da47.jpg" Selector="&lt;html app='msedge.exe' title='*Dynamics 365' /&gt;" Title="My Dashboard - Dynamics 365" Url="[g_Config(&quot;DynamicsURL&quot;).ToString]" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Rural Payments" sap:VirtualizedContainerService.HintSize="2054.8,2540.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" OpenMode="Always" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="a11eaecb-fc43-42bd-bb00-5a213fb41748" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Rural Payments" sap:VirtualizedContainerService.HintSize="2054.8,2757.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" OpenMode="Always" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="a11eaecb-fc43-42bd-bb00-5a213fb41748" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Pick sap:VirtualizedContainerService.HintSize="2020.8,2290.8" sap2010:WorkflowViewState.IdRef="Pick_1">
-            <PickBranch DisplayName="Already logged in" sap:VirtualizedContainerService.HintSize="425.6,2244" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+          <Pick sap:VirtualizedContainerService.HintSize="2020.8,2507.2" sap2010:WorkflowViewState.IdRef="Pick_1">
+            <PickBranch DisplayName="Already logged in" sap:VirtualizedContainerService.HintSize="425.6,2460.4" sap2010:WorkflowViewState.IdRef="PickBranch_1">
               <PickBranch.Trigger>
                 <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - Customer Services heading" sap:VirtualizedContainerService.HintSize="334,86.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                   <ui:WaitUiElementAppear.Target>
@@ -180,7 +180,7 @@
               </PickBranch.Trigger>
               <ui:LogMessage DisplayName="Log Message - rural payments already logged in" sap:VirtualizedContainerService.HintSize="336,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;User already logged in to Rural Payments&quot;]" />
             </PickBranch>
-            <PickBranch DisplayName="Log in page" sap:VirtualizedContainerService.HintSize="1077.6,2244" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+            <PickBranch DisplayName="Log in page" sap:VirtualizedContainerService.HintSize="1077.6,2460.4" sap2010:WorkflowViewState.IdRef="PickBranch_2">
               <PickBranch.Variables>
                 <Variable x:TypeArguments="sn:NetworkCredential" Name="credsRuralPayments" />
               </PickBranch.Variables>
@@ -195,12 +195,22 @@
                   </ui:WaitUiElementAppear.Target>
                 </ui:WaitUiElementAppear>
               </PickBranch.Trigger>
-              <Sequence DisplayName="Log in to Rural Payments" sap:VirtualizedContainerService.HintSize="988,1936.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <Sequence DisplayName="Log in to Rural Payments" sap:VirtualizedContainerService.HintSize="988,2152.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
+                <InvokeMethod sap2010:Annotation.AnnotationText="Set rural payments as foreground for login" DisplayName="Bring to foreground - search rural payments" sap:VirtualizedContainerService.HintSize="954,216.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="BringToForeground">
+                  <InvokeMethod.TargetObject>
+                    <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("RuralPaymentsBrowser"),UiElement)]</InArgument>
+                  </InvokeMethod.TargetObject>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </InvokeMethod>
                 <d:Get_Credential DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="954,280.4" IN_strRequestMessage="Please enter your email address and Rural Payments password here. By entering your Rural Payments credentials into this pop-up, the robot will be able to log in automatically in future. Please note that these credentials are securely stored in Windows Credential Manager on your device." sap2010:WorkflowViewState.IdRef="Get_Credential_1" in_strCredentialName="RuralPayments" in_strRequestTitle="Please enter Rural Payments credentials" out_credNetworkCredential="[credsRuralPayments]" />
                 <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type email" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Text="[credsRuralPayments.UserName]" Version="V3">
                   <uix:NTypeInto.Target>
@@ -294,7 +304,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2054.8,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2054.8,76.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1126,1998" sap2010:WorkflowViewState.IdRef="Sequence_20">
           <sap:WorkflowViewStateService.ViewState>
@@ -410,15 +420,5 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <InvokeMethod sap2010:Annotation.AnnotationText="First activities use CRM and visibility can be important (even though it shouldn't be)" DisplayName="Set CRM as foreground" sap:VirtualizedContainerService.HintSize="2054.8,220.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">
-      <InvokeMethod.TargetObject>
-        <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("DynamicsBrowser"),UiElement)]</InArgument>
-      </InvokeMethod.TargetObject>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </InvokeMethod>
   </Sequence>
 </Activity>

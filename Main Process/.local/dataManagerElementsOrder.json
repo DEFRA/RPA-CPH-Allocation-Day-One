@@ -19,6 +19,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_Config&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_swProcessingTimer&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_intExitPoint&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_BearerToken&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_TransactionItem&6592d279-3a8e-49ca-9f68-b0775cedcda0",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -265,12 +271,12 @@
       "Path": "Process/Process Subflows/Create New Business Record.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_Config&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_swProcessingTimer&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_intExitPoint&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_BearerToken&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_TransactionItem&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
+        "g_arrCaseID&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_Config&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_swProcessingTimer&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_intExitPoint&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_BearerToken&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_TransactionItem&6592d279-3a8e-49ca-9f68-b0775cedcda0",
         "boolBusIsPersToggle&Flowchart_1",
         "strBusinessNameSelector&Sequence_2"
       ],
@@ -304,12 +310,12 @@
       "Path": "Process/Process Subflows/Create New Customer.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_Config&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_swProcessingTimer&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_intExitPoint&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_BearerToken&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_TransactionItem&c0aed9c8-8c4d-4775-8f12-a5567f74e564"
+        "g_arrCaseID&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_Config&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_swProcessingTimer&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_intExitPoint&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_BearerToken&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_TransactionItem&6592d279-3a8e-49ca-9f68-b0775cedcda0"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_dictFormDetails",
@@ -341,12 +347,13 @@
       "Path": "Process/Process Subflows/Search Rural Payments.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_Config&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_swProcessingTimer&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_intExitPoint&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_BearerToken&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_TransactionItem&c0aed9c8-8c4d-4775-8f12-a5567f74e564"
+        "strURLCurrent&Sequence_2",
+        "g_arrCaseID&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_Config&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_swProcessingTimer&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_intExitPoint&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_BearerToken&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_TransactionItem&6592d279-3a8e-49ca-9f68-b0775cedcda0"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_strEmail",
@@ -417,6 +424,12 @@
       "Path": "Process/Process Subflows/Assign Case.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_Config&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_swProcessingTimer&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_intExitPoint&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_BearerToken&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_TransactionItem&6592d279-3a8e-49ca-9f68-b0775cedcda0",
         "g_arrCaseID&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
         "g_Config&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
         "g_swProcessingTimer&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
@@ -435,12 +448,13 @@
       "Path": "Framework/GetTransactionData.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_Config&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_swProcessingTimer&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_intExitPoint&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_BearerToken&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
-        "g_TransactionItem&c0aed9c8-8c4d-4775-8f12-a5567f74e564",
+        "strURLCurrent&Sequence_19",
+        "g_arrCaseID&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_Config&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_swProcessingTimer&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_intExitPoint&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_BearerToken&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_TransactionItem&6592d279-3a8e-49ca-9f68-b0775cedcda0",
         "dtToProcess&Sequence_1",
         "credNetworkCredentials&Sequence_2",
         "rowCurrentCase&Sequence_2",
@@ -515,12 +529,12 @@
       "Path": "Process/Process Subflows/Update Case Title.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&200b3a58-1bc9-4e33-9100-76bf3c39f620",
-        "g_Config&200b3a58-1bc9-4e33-9100-76bf3c39f620",
-        "g_swProcessingTimer&200b3a58-1bc9-4e33-9100-76bf3c39f620",
-        "g_intExitPoint&200b3a58-1bc9-4e33-9100-76bf3c39f620",
-        "g_BearerToken&200b3a58-1bc9-4e33-9100-76bf3c39f620",
-        "g_TransactionItem&200b3a58-1bc9-4e33-9100-76bf3c39f620"
+        "g_arrCaseID&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_Config&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_swProcessingTimer&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_intExitPoint&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_BearerToken&6592d279-3a8e-49ca-9f68-b0775cedcda0",
+        "g_TransactionItem&6592d279-3a8e-49ca-9f68-b0775cedcda0"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_boolException",

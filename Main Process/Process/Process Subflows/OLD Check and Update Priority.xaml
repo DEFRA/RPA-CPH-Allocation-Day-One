@@ -151,7 +151,7 @@
     </Assign>
     <If Condition="[intDifference&lt;10]" DisplayName="If arrival date is less than 10 days from now" sap:VirtualizedContainerService.HintSize="518,1440" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="596,4097.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -166,13 +166,13 @@
               <InArgument x:TypeArguments="x:String">[if(intDifference&lt;=2,"Critical","High")]</InArgument>
             </Assign.Value>
           </Assign>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - update case priority" sap:VirtualizedContainerService.HintSize="562,3923.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - update case priority" sap:VirtualizedContainerService.HintSize="562,4254" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Update case priority" sap:VirtualizedContainerService.HintSize="528,3762" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Update case priority" sap:VirtualizedContainerService.HintSize="528,4092.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="boolChecked" />
                   </Sequence.Variables>
@@ -238,9 +238,9 @@
                       <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2c737cd8-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1475, 1647, 175, 47" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'CCD-82769'" FullSelectorArgument="&lt;webctrl visibleInnerText='CCD-*' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='spanWrapper-346' parentid='entity_control-powerapps_onegrid_control_container' tag='SPAN' type='' aaname='CCD-82769' check:innerText='CCD-82769' /&gt;" Guid="d803ec06-d5a6-4a94-a3df-f15411da72f5" ImageBase64="" InformativeScreenshot="0e786e065ca99a38b963daed31b82550.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="Check App State - change priority slider" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,770.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
+                  <uix:NCheckState DisplayName="Check App State - change priority slider" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,742.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,519.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,491.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -251,7 +251,7 @@
                             <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_cphcasedetail&amp;id=9ab50121-49db-f011-8543-7ced8d41de08" DesignTimeRectangle="1068, 1561, 197, 56" DesignTimeScaleFactor="2.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Change Priority:*' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' class='fui-Switch__input rsji9ng ___1elyq2r f1vgc2s3 f15twtuk' aaname='No' /&gt;" Guid="70d0d71f-6892-49f6-888c-59518308e9ce" InformativeScreenshot="42e716f527130fc5bf37828b94ef7fda.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CPH Case Detail: Information: CCD-* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                           </uix:NCheck.Target>
                         </uix:NCheck>
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,85.2" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                           <ui:CommentOut.Body>
                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,680.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
                               <sap:WorkflowViewStateService.ViewState>
@@ -365,54 +365,44 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <uix:NCheck Action="Check" DisplayName="Set confirm priority to 'Yes'" sap:VirtualizedContainerService.HintSize="494,190" sap2010:WorkflowViewState.IdRef="NCheck_4" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
-                    <uix:NCheck.Target>
-                      <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_cphcasedetail&amp;id=9ab50121-49db-f011-8543-7ced8d41de08" DesignTimeRectangle="1068, 1561, 197, 56" DesignTimeScaleFactor="2.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' class='fui-Switch__input rsji9ng ___1elyq2r f1vgc2s3 f15twtuk' aaname='No' /&gt;" Guid="70d0d71f-6892-49f6-888c-59518308e9ce" InformativeScreenshot="42e716f527130fc5bf37828b94ef7fda.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CPH Case Detail: Information: CCD-* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                    </uix:NCheck.Target>
-                  </uix:NCheck>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="494,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                    <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,680.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[not boolChecked]" DisplayName="Do While - priority unconfirmed" sap:VirtualizedContainerService.HintSize="450,620.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
-                          <ui:InterruptibleDoWhile.Body>
-                            <Sequence DisplayName="Confirm priority" sap:VirtualizedContainerService.HintSize="416,482.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <uix:NCheck Action="Check" DisplayName="Set confirm priority to 'Yes'" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
-                                <uix:NCheck.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_cphcasedetail&amp;id=9ab50121-49db-f011-8543-7ced8d41de08" DesignTimeRectangle="1068, 1561, 197, 56" DesignTimeScaleFactor="2.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' class='fui-Switch__input rsji9ng ___1elyq2r f1vgc2s3 f15twtuk' aaname='No' /&gt;" Guid="70d0d71f-6892-49f6-888c-59518308e9ce" InformativeScreenshot="42e716f527130fc5bf37828b94ef7fda.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CPH Case Detail: Information: CCD-82769 - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                </uix:NCheck.Target>
-                              </uix:NCheck>
-                              <uix:NGetAttributeGeneric x:TypeArguments="x:Boolean" Attribute="checked" DisplayName="Toggle yes successful?" sap:VirtualizedContainerService.HintSize="382,232.4" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" Result="[boolChecked]" Version="V3">
-                                <uix:NGetAttributeGeneric.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' /&gt;" Guid="159358f7-0907-4231-ac2c-2ab7175db222" SearchSteps="Selector" />
-                                </uix:NGetAttributeGeneric.Target>
-                              </uix:NGetAttributeGeneric>
-                            </Sequence>
-                          </ui:InterruptibleDoWhile.Body>
-                        </ui:InterruptibleDoWhile>
-                      </Sequence>
-                    </ui:CommentOut.Body>
+                  <ui:RetryScope sap2010:Annotation.AnnotationText="Prone to element invalid exception" DisplayName="Retry Scope - confirm priority" sap:VirtualizedContainerService.HintSize="494,398.8" sap2010:WorkflowViewState.IdRef="RetryScope_3">
+                    <ui:RetryScope.ActivityBody>
+                      <ActivityAction>
+                        <uix:NCheck Action="Check" DisplayName="Set confirm priority to 'Yes'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NCheck_6" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
+                          <uix:NCheck.Target>
+                            <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_cphcasedetail&amp;id=9ab50121-49db-f011-8543-7ced8d41de08" DesignTimeRectangle="1068, 1561, 197, 56" DesignTimeScaleFactor="2.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aria-label='Confirm Priority:*' type='checkbox' class='fui-Switch__input rsji9ng ___1elyq2r f1vgc2s3 f15twtuk' aaname='No' /&gt;" Guid="70d0d71f-6892-49f6-888c-59518308e9ce" InformativeScreenshot="42e716f527130fc5bf37828b94ef7fda.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CPH Case Detail: Information: CCD-* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NCheck.Target>
+                        </uix:NCheck>
+                      </ActivityAction>
+                    </ui:RetryScope.ActivityBody>
+                    <ui:RetryScope.Condition>
+                      <ActivityFunc x:TypeArguments="x:Boolean" />
+                    </ui:RetryScope.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </ui:CommentOut>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="494,182.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_cphcasedetail&amp;id=9ab50121-49db-f011-8543-7ced8d41de08" DesignTimeRectangle="766, 157, 189, 80" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Save' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Save' type='button' class='pa-dc pa-ch pa-kx pa-ax pa-kn pa-cq pa-dz pa-du pa-lf pa-w pa-lg pa-lh pa-li pa-lj pa-lk pa-ll pa-lm pa-ln pa-lo pa-zg pa-ds pa-zh flexbox' aaname='Save (CTRL+S)  Save this CPH Case Detail.' check:text='Save' /&gt;" Guid="31490fd0-a3f5-422e-b619-61b4611a620d" InformativeScreenshot="56628f7a6633abe2d10bfe6c6cdffb10.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CPH Case Detail: Information: CCD-82769 - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                  </uix:NClick>
+                  </ui:RetryScope>
+                  <ui:RetryScope sap2010:Annotation.AnnotationText="Prone to element invalid exception" DisplayName="Retry Scope - save priority update" sap:VirtualizedContainerService.HintSize="494,390" sap2010:WorkflowViewState.IdRef="RetryScope_4">
+                    <ui:RetryScope.ActivityBody>
+                      <ActivityAction>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save' - update priority" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="616d4d34-488c-4fd6-92bf-dd6820df7513" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=rpa_cphcasedetail&amp;id=9ab50121-49db-f011-8543-7ced8d41de08" DesignTimeRectangle="766, 157, 189, 80" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Save' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Save' type='button' class='pa-dc pa-ch pa-kx pa-ax pa-kn pa-cq pa-dz pa-du pa-lf pa-w pa-lg pa-lh pa-li pa-lj pa-lk pa-ll pa-lm pa-ln pa-lo pa-zg pa-ds pa-zh flexbox' aaname='Save (CTRL+S)  Save this CPH Case Detail.' check:text='Save' /&gt;" Guid="31490fd0-a3f5-422e-b619-61b4611a620d" InformativeScreenshot="56628f7a6633abe2d10bfe6c6cdffb10.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CPH Case Detail: Information: CCD-82769 - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </ActivityAction>
+                    </ui:RetryScope.ActivityBody>
+                    <ui:RetryScope.Condition>
+                      <ActivityFunc x:TypeArguments="x:Boolean" />
+                    </ui:RetryScope.Condition>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:RetryScope>
                 </Sequence>
               </ActivityAction>
             </uix:NApplicationCard.Body>

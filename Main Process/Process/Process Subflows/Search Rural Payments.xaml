@@ -139,13 +139,13 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search_Rural_Payments" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4745.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search_Rural_Payments" sap:VirtualizedContainerService.HintSize="1582.8,4746.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <InvokeMethod sap2010:Annotation.AnnotationText="Set rural payments as foreground after CRM activities." DisplayName="Bring to foreground - search rural payments" sap:VirtualizedContainerService.HintSize="1159.2,213.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="BringToForeground">
+    <InvokeMethod sap2010:Annotation.AnnotationText="Set rural payments as foreground after CRM activities." DisplayName="Bring to foreground - search rural payments" sap:VirtualizedContainerService.HintSize="1582.8,213.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="BringToForeground">
       <InvokeMethod.TargetObject>
         <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("RuralPaymentsBrowser"),UiElement)]</InArgument>
       </InvokeMethod.TargetObject>
@@ -155,14 +155,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </InvokeMethod>
-    <ui:LogMessage DisplayName="Log Message - search rural payments" sap:VirtualizedContainerService.HintSize="1159.2,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Searching rural payments&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - Search Rural Payments" sap:VirtualizedContainerService.HintSize="1159.2,4332.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;), UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V2">
+    <ui:LogMessage DisplayName="Log Message - search rural payments" sap:VirtualizedContainerService.HintSize="1582.8,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Searching rural payments&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - Search Rural Payments" sap:VirtualizedContainerService.HintSize="1582.8,4334.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;), UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Complete searches" sap:VirtualizedContainerService.HintSize="1125.2,4171.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Complete searches" sap:VirtualizedContainerService.HintSize="1548.8,4173.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strURLCurrent" />
             </Sequence.Variables>
@@ -171,8 +171,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetUrl CurrentUrl="[strURLCurrent]" DisplayName="Get URL - search rural payments" sap:VirtualizedContainerService.HintSize="1091.2,120" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V3" />
-            <If Condition="[strURLCurrent&lt;&gt;g_Config(&quot;RuralPaymentsURL&quot;).ToString]" DisplayName="If current URL is not rural payments homepage" sap:VirtualizedContainerService.HintSize="1091.2,472.4" sap2010:WorkflowViewState.IdRef="If_2">
+            <uix:NGetUrl CurrentUrl="[strURLCurrent]" DisplayName="Get URL - search rural payments" sap:VirtualizedContainerService.HintSize="1514.8,120" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V3" />
+            <If Condition="[strURLCurrent&lt;&gt;g_Config(&quot;RuralPaymentsURL&quot;).ToString]" DisplayName="If current URL is not rural payments homepage" sap:VirtualizedContainerService.HintSize="1514.8,472.4" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,210.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
@@ -199,24 +199,24 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search for'" sap:VirtualizedContainerService.HintSize="1091.2,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search for'" sap:VirtualizedContainerService.HintSize="1514.8,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/main" DesignTimeRectangle="317, 1007, 864, 82" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Search for'" FullSelectorArgument="&lt;webctrl tag='A' visibleinnertext='Search for customer or business' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' visibleinnertext='Search for customer or business' type='' class='' aaname='Search for customer or business' check:text='Search for customer or business' /&gt;" Guid="af3e4037-effb-44e7-b03a-a9e651b35eed" InformativeScreenshot="bdd9fa63caf4e19ff71d4891c66a049c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each searchable key and value" sap:VirtualizedContainerService.HintSize="1091.2,3221.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_dictSearchFields]">
+            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each searchable key and value" sap:VirtualizedContainerService.HintSize="1514.8,3221.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_dictSearchFields]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="currentKVP" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1057.2,3074.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1480.8,3074.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NSelectItem sap2010:Annotation.AnnotationText="Remove digits to allow for first and second customer searches" DisplayName="Select key" sap:VirtualizedContainerService.HintSize="1023.2,234.8" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[Regex.Replace(currentKVP.Key,&quot;[0-9]&quot;,&quot;&quot;).Trim]" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V3">
+                    <uix:NSelectItem sap2010:Annotation.AnnotationText="Remove digits to allow for first and second customer searches" DisplayName="Select key" sap:VirtualizedContainerService.HintSize="1446.8,234.8" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[Regex.Replace(currentKVP.Key,&quot;[0-9]&quot;,&quot;&quot;).Trim]" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V3">
                       <uix:NSelectItem.Items>
                         <scg:List x:TypeArguments="x:String" Capacity="9">
                           <x:String>SBI</x:String>
@@ -239,7 +239,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NSelectItem>
-                    <If sap2010:Annotation.AnnotationText="Two search fields instead of one, in this case." Condition="[currentKVP.key.StartsWith(&quot;Customer name&quot;)]" DisplayName="If key is Customer Name" sap:VirtualizedContainerService.HintSize="1023.2,1063.2" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If sap2010:Annotation.AnnotationText="Two search fields instead of one, in this case." Condition="[currentKVP.key.StartsWith(&quot;Customer name&quot;)]" DisplayName="If key is Customer Name" sap:VirtualizedContainerService.HintSize="1446.8,1063.2" sap2010:WorkflowViewState.IdRef="If_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -279,12 +279,12 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="1023.2,190" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="1446.8,190" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8afe62ec-ae7b-4d81-9178-21ecf78a3ebe" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/search" DesignTimeRectangle="355, 1780, 218, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl visibleInnerText='Search' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='party-search' tag='BUTTON' type='' class='button ng-isolate-scope' aaname='Search' check:innerText='Search' /&gt;" Guid="822fa072-0afc-4c4a-8fe6-5fd2ada13aa9" ImageBase64="" InformativeScreenshot="5eaa25c3cff4d199d4a4036f73224e8f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <Pick DisplayName="Pick - search outcome" sap:VirtualizedContainerService.HintSize="1023.2,1526.4" sap2010:WorkflowViewState.IdRef="Pick_1">
+                    <Pick DisplayName="Pick - search outcome" sap:VirtualizedContainerService.HintSize="1446.8,1526.4" sap2010:WorkflowViewState.IdRef="Pick_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -295,10 +295,7 @@
                         <PickBranch.Trigger>
                           <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - results" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
                             <ui:WaitUiElementAppear.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1dd66e76-790e-4a8e-a6fa-3447bf0fd1e2" InformativeScreenshot="1a8defd77db535e3c5a206044e9e8257" Selector="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;&lt;webctrl tag='DIV' visibleinnertext='Search results*' /&gt;&lt;webctrl tag='TABLE' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1dd66e76-790e-4a8e-a6fa-3447bf0fd1e2" InformativeScreenshot="1a8defd77db535e3c5a206044e9e8257" Selector="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;&lt;webctrl tag='DIV' visibleinnertext='Search results*' /&gt;&lt;webctrl tag='TABLE' /&gt;" TimeoutMS="10100">
                                 <ui:Target.WaitForReady>
                                   <InArgument x:TypeArguments="ui:WaitForReady" />
                                 </ui:Target.WaitForReady>
@@ -337,10 +334,7 @@
                         <PickBranch.Trigger>
                           <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - no results" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                             <ui:WaitUiElementAppear.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b8df1fe-3e23-4d1a-b8a7-0fa206572d83" InformativeScreenshot="0fdc1680f86d796e154a32a31ae6ed20" Selector="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='No results were found for your search*' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b8df1fe-3e23-4d1a-b8a7-0fa206572d83" InformativeScreenshot="0fdc1680f86d796e154a32a31ae6ed20" Selector="&lt;html app='msedge.exe' title='Search - Rural Payments' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='No results were found for your search*' /&gt;" TimeoutMS="10100">
                                 <ui:Target.WaitForReady>
                                   <InArgument x:TypeArguments="ui:WaitForReady" />
                                 </ui:Target.WaitForReady>
@@ -349,6 +343,12 @@
                           </ui:WaitUiElementAppear>
                         </PickBranch.Trigger>
                         <ui:LogMessage DisplayName="Log Message - no results" sap:VirtualizedContainerService.HintSize="334,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;No existing results found for current &quot;+currentKVP.Key+&quot;.&quot;]" />
+                      </PickBranch>
+                      <PickBranch DisplayName="Branch - default" sap:VirtualizedContainerService.HintSize="423.6,1456.4" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+                        <PickBranch.Trigger>
+                          <Delay DisplayName="Delay - neither results nor message" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                        </PickBranch.Trigger>
+                        <Throw DisplayName="Throw SE - unknown error" Exception="[new System.Exception(&quot;Unknown error encountered on performing Rural Payments searches. Neither results nor a 'no results' message appeared.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
                       </PickBranch>
                     </Pick>
                   </Sequence>

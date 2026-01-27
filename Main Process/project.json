@@ -18,7 +18,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.15.0",
-  "projectVersion": "1.0.2-alpha.11",
+  "projectVersion": "1.0.2-alpha.12",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -110,6 +110,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc01 Check and Update Priority.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "31aee7d0-a4ef-4466-989c-d83a38f7efa6",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Add Second Contact to Business.xaml"
       }
     ],
     "saveToCloud": false

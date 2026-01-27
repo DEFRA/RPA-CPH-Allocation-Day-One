@@ -131,31 +131,31 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create_New_Customer" sap:VirtualizedContainerService.HintSize="1451.6000000000001,7912.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Create_New_Customer" sap:VirtualizedContainerService.HintSize="1514.8,7912.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1091.2,7889.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1514.8,7889.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Complete customer registration" sap:VirtualizedContainerService.HintSize="1057.2,7728.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Complete customer registration" sap:VirtualizedContainerService.HintSize="1480.8,7728.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - create customer" sap:VirtualizedContainerService.HintSize="1023.2,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Creating new customer record in Rural Payments&quot;]" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create a new customer'" sap:VirtualizedContainerService.HintSize="1023.2,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V3">
+            <ui:LogMessage DisplayName="Log Message - create customer" sap:VirtualizedContainerService.HintSize="1446.8,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Creating new customer record in Rural Payments&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create a new customer'" sap:VirtualizedContainerService.HintSize="1446.8,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/main" DesignTimeRectangle="317, 1194, 622, 82" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Create a new customer'" FullSelectorArgument="&lt;webctrl visibleInnerText='Create a new customer' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='register-new-customer' tag='A' type='' class='' aaname='Create a new customer' check:innerText='Create a new customer' /&gt;" Guid="7be15701-9028-47d9-8581-a6532e2cf526" ImageBase64="" InformativeScreenshot="83d5b15b2dffd7fe8b583162c54e3943.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Title (optional)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1023.2,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Text="[in_dictFormDetails(&quot;Title&quot;)]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Title (optional)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1446.8,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Text="[in_dictFormDetails(&quot;Title&quot;)]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/create-customer" DesignTimeRectangle="317, 637, 355, 80" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT title'" FullSelectorArgument="&lt;webctrl id='title' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='title' tag='INPUT' type='text' class='ng-pristine ng-untouched ng-valid ng-valid-max-length ng-empty' aaname='Title (optional)' /&gt;" Guid="d6c4d81e-e1dd-425a-aef1-462e18001a8c" ImageBase64="" InformativeScreenshot="00f981567d2bc9dd7666751e169412c1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New customer registration - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -463,7 +463,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <If Condition="[CBool(g_Config(&quot;PausePoint2&quot;))]" DisplayName="Pause Point 2?" sap:VirtualizedContainerService.HintSize="1023.2,1084.4" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[CBool(g_Config(&quot;PausePoint2&quot;))]" DisplayName="Pause Point 2?" sap:VirtualizedContainerService.HintSize="1446.8,1084.4" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,822.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
@@ -494,20 +494,17 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="1023.2,190" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="1446.8,190" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/create-customer" DesignTimeRectangle="317, 1734, 175, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl visibleInnerText='Next' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='btn capd-btn' aaname='Next         ' check:innerText='Next' /&gt;" Guid="7489a2b4-9be7-46b9-a60f-53e25aa8ab85" ImageBase64="" InformativeScreenshot="0f34f59d8341d5b233bc78d85027a6c3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New customer registration - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <Pick sap:VirtualizedContainerService.HintSize="1023.2,1588.8" sap2010:WorkflowViewState.IdRef="Pick_1">
+            <Pick DisplayName="Pick - duplicate customer?" sap:VirtualizedContainerService.HintSize="1446.8,1588.8" sap2010:WorkflowViewState.IdRef="Pick_1">
               <PickBranch DisplayName="Duplicate customer found" sap:VirtualizedContainerService.HintSize="505.6,1510" sap2010:WorkflowViewState.IdRef="PickBranch_1">
                 <PickBranch.Trigger>
                   <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find element - duplicate customer" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
                     <ui:WaitUiElementAppear.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="73afbbc2-cd7d-4f8e-84ac-7bfca64e73e5" InformativeScreenshot="9d85c3824c8315b9ed993404e6915dd9" Selector="&lt;html app='msedge.exe' title='New customer registration - Rural Payments' /&gt;&lt;webctrl visibleInnerText='Duplicate customer record found' tag='H1' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="73afbbc2-cd7d-4f8e-84ac-7bfca64e73e5" InformativeScreenshot="9d85c3824c8315b9ed993404e6915dd9" Selector="&lt;html app='msedge.exe' title='New customer registration - Rural Payments' /&gt;&lt;webctrl visibleInnerText='Duplicate customer record found' tag='H1' /&gt;" TimeoutMS="10100">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
@@ -544,10 +541,7 @@
                 <PickBranch.Trigger>
                   <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - register button" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                     <ui:WaitUiElementAppear.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="73afbbc2-cd7d-4f8e-84ac-7bfca64e73e5" InformativeScreenshot="bd3aaa77e3f5e5da1de5834f5aec7241" Selector="&lt;html app='msedge.exe' title='security-questions - Rural Payments' /&gt;&lt;webctrl tag='BUTTON' visibleInnerText='Register' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="73afbbc2-cd7d-4f8e-84ac-7bfca64e73e5" InformativeScreenshot="bd3aaa77e3f5e5da1de5834f5aec7241" Selector="&lt;html app='msedge.exe' title='security-questions - Rural Payments' /&gt;&lt;webctrl tag='BUTTON' visibleInnerText='Register' /&gt;" TimeoutMS="10100">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
@@ -556,6 +550,12 @@
                   </ui:WaitUiElementAppear>
                 </PickBranch.Trigger>
                 <ui:LogMessage DisplayName="Log Message - customer details complete" sap:VirtualizedContainerService.HintSize="334,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Customer details entered successfully.&quot;]" />
+              </PickBranch>
+              <PickBranch DisplayName="Default" sap:VirtualizedContainerService.HintSize="423.6,1510" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+                <PickBranch.Trigger>
+                  <Delay DisplayName="Delay - no duplicate or register button" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                </PickBranch.Trigger>
+                <Throw DisplayName="Throw SE - unknown error" Exception="[new System.Exception(&quot;Unknown error encountered on registering customer. Neither duplicate prompt nor register button appeared.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
               </PickBranch>
             </Pick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register'" sap:VirtualizedContainerService.HintSize="1023.2,190" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V3">

@@ -139,7 +139,7 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Case: Case - SLA: CRM GDS CPH Online CRN 1106769839 Critical - Dynamics 365" sap:VirtualizedContainerService.HintSize="479.6,333.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="73e17ec1-b626-4e77-b145-874a998bf849" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Case: Case - SLA: CRM GDS CPH Online - Dynamics 365" sap:VirtualizedContainerService.HintSize="479.6,333.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="73e17ec1-b626-4e77-b145-874a998bf849" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -155,7 +155,7 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="c3444f0b2257bd8726626960943be543.jpg" Selector="&lt;html app='msedge.exe' title='Case: Case - SLA: CRM GDS CPH Online CRN 1106769839 Critical - Dynamics 365' /&gt;" Title="Case: Case - SLA: CRM GDS CPH Online - Dynamics 365" Url="https://rpa-csc-prod.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=7aec9742-05f7-f011-8406-7c1e5277ee1c" />
+          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="b6d308adf8a23d803570859075290cb0.jpg" Selector="&lt;html app='msedge.exe' title='Case: Case - SLA: CRM GDS CPH Online - Dynamics 365' /&gt;" Title="Case: Case - SLA: CRM GDS CPH Online - Dynamics 365" Url="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=3ea91caa-48db-f011-8543-7ced8d41de08" />
         </uix:NApplicationCard.TargetApp>
       </uix:NApplicationCard>
     </Sequence>

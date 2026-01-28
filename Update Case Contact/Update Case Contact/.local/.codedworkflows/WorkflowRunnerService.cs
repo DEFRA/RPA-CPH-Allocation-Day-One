@@ -18,37 +18,37 @@ namespace UpdateCaseContact
         }
 
         /// <summary>
-        /// Invokes the Main.xaml
+        /// Invokes the Framework/NetworkConnectivityTool.xaml
         /// </summary>
-        public void Main(bool in_boolUnattended)
+        public void NetworkConnectivityTool()
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Main.xaml", new Dictionary<string, object>{{"in_boolUnattended", in_boolUnattended}}, default, default, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\NetworkConnectivityTool.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
-        /// Invokes the Main.xaml
+        /// Invokes the Framework/NetworkConnectivityTool.xaml
         /// </summary>
 		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
-        public void Main(bool in_boolUnattended, System.Boolean isolated)
+        public void NetworkConnectivityTool(System.Boolean isolated)
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Main.xaml", new Dictionary<string, object>{{"in_boolUnattended", in_boolUnattended}}, default, isolated, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\NetworkConnectivityTool.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
         }
 
         /// <summary>
-        /// Invokes the Process/Process Transaction.xaml
+        /// Invokes the Process/Process Subflows/Example Subflow.xaml
         /// </summary>
-        public void Process_Transaction()
+        public void Example_Subflow()
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Process\Process Transaction.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Process\Process Subflows\Example Subflow.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
-        /// Invokes the Process/Process Transaction.xaml
+        /// Invokes the Process/Process Subflows/Example Subflow.xaml
         /// </summary>
 		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
-        public void Process_Transaction(System.Boolean isolated)
+        public void Example_Subflow(System.Boolean isolated)
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Process\Process Transaction.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Process\Process Subflows\Example Subflow.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -85,25 +85,6 @@ namespace UpdateCaseContact
         public void tc01_Process_Transaction(System.Boolean isolated)
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"Process\tc01 Process Transaction.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Framework/GetTransactionData.xaml
-        /// </summary>
-        public bool GetTransactionData(int in_TransactionNumber, string in_strProcessType, bool in_boolContinue)
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\GetTransactionData.xaml", new Dictionary<string, object>{{"in_TransactionNumber", in_TransactionNumber}, {"in_strProcessType", in_strProcessType}, {"in_boolContinue", in_boolContinue}}, default, default, default, GetAssemblyName());
-            return (bool)result["out_boolLastTransaction"];
-        }
-
-        /// <summary>
-        /// Invokes the Framework/GetTransactionData.xaml
-        /// </summary>
-		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
-        public bool GetTransactionData(int in_TransactionNumber, string in_strProcessType, bool in_boolContinue, System.Boolean isolated)
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\GetTransactionData.xaml", new Dictionary<string, object>{{"in_TransactionNumber", in_TransactionNumber}, {"in_strProcessType", in_strProcessType}, {"in_boolContinue", in_boolContinue}}, default, isolated, default, GetAssemblyName());
-            return (bool)result["out_boolLastTransaction"];
         }
 
         /// <summary>
@@ -145,6 +126,57 @@ namespace UpdateCaseContact
         }
 
         /// <summary>
+        /// Invokes the Framework/InitAllApplications.xaml
+        /// </summary>
+        public void InitAllApplications()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\InitAllApplications.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Framework/InitAllApplications.xaml
+        /// </summary>
+		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
+        public void InitAllApplications(System.Boolean isolated)
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\InitAllApplications.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Framework/KillAllProcesses.xaml
+        /// </summary>
+        public void KillAllProcesses()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\KillAllProcesses.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Framework/KillAllProcesses.xaml
+        /// </summary>
+		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
+        public void KillAllProcesses(System.Boolean isolated)
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\KillAllProcesses.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Main.xaml
+        /// </summary>
+        public void Main(bool in_boolUnattended)
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Main.xaml", new Dictionary<string, object>{{"in_boolUnattended", in_boolUnattended}}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Main.xaml
+        /// </summary>
+		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
+        public void Main(bool in_boolUnattended, System.Boolean isolated)
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Main.xaml", new Dictionary<string, object>{{"in_boolUnattended", in_boolUnattended}}, default, isolated, default, GetAssemblyName());
+        }
+
+        /// <summary>
         /// Invokes the Framework/TakeScreenshot.xaml
         /// </summary>
         public string TakeScreenshot(string in_Folder, string io_FilePath)
@@ -161,6 +193,23 @@ namespace UpdateCaseContact
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\TakeScreenshot.xaml", new Dictionary<string, object>{{"in_Folder", in_Folder}, {"io_FilePath", io_FilePath}}, default, isolated, default, GetAssemblyName());
             return (string)result["io_FilePath"];
+        }
+
+        /// <summary>
+        /// Invokes the Process/Process Transaction.xaml
+        /// </summary>
+        public void Process_Transaction()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Process\Process Transaction.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Process/Process Transaction.xaml
+        /// </summary>
+		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
+        public void Process_Transaction(System.Boolean isolated)
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Process\Process Transaction.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -183,54 +232,22 @@ namespace UpdateCaseContact
         }
 
         /// <summary>
-        /// Invokes the Framework/NetworkConnectivityTool.xaml
+        /// Invokes the Framework/GetTransactionData.xaml
         /// </summary>
-        public void NetworkConnectivityTool()
+        public bool GetTransactionData(int in_TransactionNumber, string in_strProcessType, bool in_boolContinue)
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\NetworkConnectivityTool.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\GetTransactionData.xaml", new Dictionary<string, object>{{"in_TransactionNumber", in_TransactionNumber}, {"in_strProcessType", in_strProcessType}, {"in_boolContinue", in_boolContinue}}, default, default, default, GetAssemblyName());
+            return (bool)result["out_boolLastTransaction"];
         }
 
         /// <summary>
-        /// Invokes the Framework/NetworkConnectivityTool.xaml
+        /// Invokes the Framework/GetTransactionData.xaml
         /// </summary>
 		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
-        public void NetworkConnectivityTool(System.Boolean isolated)
+        public bool GetTransactionData(int in_TransactionNumber, string in_strProcessType, bool in_boolContinue, System.Boolean isolated)
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\NetworkConnectivityTool.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Framework/KillAllProcesses.xaml
-        /// </summary>
-        public void KillAllProcesses()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\KillAllProcesses.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Framework/KillAllProcesses.xaml
-        /// </summary>
-		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
-        public void KillAllProcesses(System.Boolean isolated)
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\KillAllProcesses.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Framework/InitAllApplications.xaml
-        /// </summary>
-        public void InitAllApplications()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\InitAllApplications.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Framework/InitAllApplications.xaml
-        /// </summary>
-		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
-        public void InitAllApplications(System.Boolean isolated)
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\InitAllApplications.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\GetTransactionData.xaml", new Dictionary<string, object>{{"in_TransactionNumber", in_TransactionNumber}, {"in_strProcessType", in_strProcessType}, {"in_boolContinue", in_boolContinue}}, default, isolated, default, GetAssemblyName());
+            return (bool)result["out_boolLastTransaction"];
         }
 
         /// <summary>
@@ -248,23 +265,6 @@ namespace UpdateCaseContact
         public void CloseAllApplications(System.Boolean isolated)
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\CloseAllApplications.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Process/Process Subflows/Example Subflow.xaml
-        /// </summary>
-        public void Example_Subflow()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Process\Process Subflows\Example Subflow.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Process/Process Subflows/Example Subflow.xaml
-        /// </summary>
-		/// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
-        public void Example_Subflow(System.Boolean isolated)
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Process\Process Subflows\Example Subflow.xaml", new Dictionary<string, object>{}, default, isolated, default, GetAssemblyName());
         }
 
         private string GetAssemblyName()

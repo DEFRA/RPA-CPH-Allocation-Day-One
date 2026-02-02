@@ -134,7 +134,7 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Customer businesses and messages - Rural Payments" sap:VirtualizedContainerService.HintSize="479.6,333.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="5006f4ae-8d6c-4e92-977a-2b1ff55b3775" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Customer businesses and messages - Rural Payments" sap:VirtualizedContainerService.HintSize="479.6,333.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="5006f4ae-8d6c-4e92-977a-2b1ff55b3775" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -162,7 +162,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Add Second Contact to Business - Invoke Workflow File (Process\Process Subflows\Add Second Contact to Business.xaml)" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Process Subflows\Add Second Contact to Business.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_strCRN">1103287605</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_strCRN">1101850833</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_strBusinessNameSelector">test*SBI: 201109643*</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>

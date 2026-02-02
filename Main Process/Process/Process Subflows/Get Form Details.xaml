@@ -147,7 +147,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Get_Form_Details" sap:VirtualizedContainerService.HintSize="1451.6000000000001,5958.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Form_Details" sap:VirtualizedContainerService.HintSize="1451.6000000000001,6115.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strFormContent" />
       <Variable x:TypeArguments="x:String" Name="strMainPhoneNumber" />
@@ -159,34 +159,49 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - get form details" sap:VirtualizedContainerService.HintSize="674,1444.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - get form details" sap:VirtualizedContainerService.HintSize="674,1602" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Get form details" sap:VirtualizedContainerService.HintSize="416,1274.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Get form details" sap:VirtualizedContainerService.HintSize="416,1432" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - extracting form fields" sap:VirtualizedContainerService.HintSize="382,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Extracting form data&quot;]" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ActivitiesActivities'" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=9914e4fe-1fa5-f011-bbd2-000d3ab44730" DesignTimeRectangle="1619, 1089, 165, 113" DesignTimeScaleFactor="2.5" ElementType="ListItem" FriendlyName="'ActivitiesActivities'" FullSelectorArgument="&lt;webctrl tag='LI' aria-role='tab' visibleinnertext='Activities' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='UL' visibleinnertext='Summary&amp;#xA;Knowledge Articles&amp;#xA;Linked KB Articles&amp;#xA;Activities&amp;#xA;Case Relationships&amp;#xA;Related' /&gt;&lt;webctrl tag='LI' visibleinnertext='Activities' type='' class='pa-bg pa-gy pa-jo pa-gc pa-cb pa-jp pa-jq pa-cw pa-hq pa-ek pa-k pa-ej pa-jr pa-ei pa-js pa-jt pa-ju pa-jv ' aaname='Activities' check:text='ActivitiesActivities' /&gt;" Guid="4f4a11b0-e377-4b2c-868e-8b930b02dba2" InformativeScreenshot="fdc35a7d36a92eb6807027ad72102624.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NClick.Target>
+            <ui:LogMessage DisplayName="Log Message - extracting form fields" sap:VirtualizedContainerService.HintSize="382,85.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Extracting form data&quot;]" />
+            <ui:RetryScope sap2010:Annotation.AnnotationText="Occasional slow load time going from queue to case" DisplayName="Retry Scope - click activities" sap:VirtualizedContainerService.HintSize="382,398.8" sap2010:WorkflowViewState.IdRef="RetryScope_3">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Activities'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Timeout="5" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=9914e4fe-1fa5-f011-bbd2-000d3ab44730" DesignTimeRectangle="1619, 1089, 165, 113" DesignTimeScaleFactor="2.5" ElementType="ListItem" FriendlyName="'ActivitiesActivities'" FullSelectorArgument="&lt;webctrl tag='LI' aria-role='tab' visibleinnertext='Activities' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='UL' visibleinnertext='Summary&amp;#xA;Knowledge Articles&amp;#xA;Linked KB Articles&amp;#xA;Activities&amp;#xA;Case Relationships&amp;#xA;Related' /&gt;&lt;webctrl tag='LI' visibleinnertext='Activities' type='' class='pa-bg pa-gy pa-jo pa-gc pa-cb pa-jp pa-jq pa-cw pa-hq pa-ek pa-k pa-ej pa-jr pa-ei pa-js pa-jt pa-ju pa-jv ' aaname='Activities' check:text='ActivitiesActivities' /&gt;" Guid="4f4a11b0-e377-4b2c-868e-8b930b02dba2" InformativeScreenshot="fdc35a7d36a92eb6807027ad72102624.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean" />
+              </ui:RetryScope.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </uix:NClick>
-            <ui:RetryScope sap2010:Annotation.AnnotationText="Element Invalid can occur with slow loading time" DisplayName="Retry Scope - view more" sap:VirtualizedContainerService.HintSize="382,478.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+            </ui:RetryScope>
+            <ui:RetryScope sap2010:Annotation.AnnotationText="Element Invalid can occur with slow loading time" DisplayName="Retry Scope - view more" sap:VirtualizedContainerService.HintSize="382,398.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View more'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Timeout="3" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View more'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Timeout="5" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=incident&amp;id=24d583d2-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1650, 1682, 165, 50" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'View more'" FullSelectorArgument="&lt;webctrl aaname='View more' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='View more' tag='LABEL' type='' class='fui-Label ___1yevxz2 fk6fouc f19n0e5 fkhj508 f1i3iumi' check:innerText='View more' /&gt;" Guid="e0175ddb-caa0-4038-82b1-7ac97a8ea250" ImageBase64="" InformativeScreenshot="81500a6bc4f2fc9c32aa709c99ec3d99.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -217,7 +232,7 @@
             <ui:RetryScope sap2010:Annotation.AnnotationText="Allows time for form to load after &quot;View More&quot; is clicked." DisplayName="Retry Scope - get form text" sap:VirtualizedContainerService.HintSize="382,487.6" sap2010:WorkflowViewState.IdRef="RetryScope_2">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <uix:NGetAttributeGeneric x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="&quot;Get Attribute -&gt; visibleInnerText&quot; retains line breaks. &quot;Get Text&quot; does not." Attribute="visibleInnerText" DisplayName="Get form text" sap:VirtualizedContainerService.HintSize="334,254" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" Result="[strFormContent]" ScopeIdentifier="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Timeout="5000" Version="V3">
+                  <uix:NGetAttributeGeneric x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="&quot;Get Attribute -&gt; visibleInnerText&quot; retains line breaks. &quot;Get Text&quot; does not." Attribute="visibleInnerText" DisplayName="Get form text" sap:VirtualizedContainerService.HintSize="334,254" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" Result="[strFormContent]" ScopeIdentifier="cd551577-61dc-40d2-9e5b-f8d04e5e1eef" Timeout="5" Version="V3">
                     <uix:NGetAttributeGeneric.Target>
                       <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=incident&amp;id=24d583d2-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1915, 1987, 1450, 9513" DesignTimeScaleFactor="2.5" FriendlyName="'For security'" FullSelectorArgument="&lt;webctrl class='content' tag='TABLE' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl class='content' tag='TABLE' /&gt;&lt;webctrl type='' class='ck-editor__editable ck-editor__nested-editable' tag='TD' aaname='' check:innerText='For security reasons, the links in this email expire at 1:58pm on Monday 9 March 2026&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Apply for a' /&gt;" Guid="6a9b17f5-10a3-460e-b33f-6fca1db8f2f9" ImageBase64="" InformativeScreenshot="e04b05a3b18c16150562be8d43e13142.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -313,7 +328,7 @@
                   <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("Title")]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=Are you a hobbyist.*?Title).*?(?=First name)").Value.Trim]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Regex.Match(strFormContent,"(?s)(?&lt;=Are you a hobbyist.*?Title).*?(?=First name)").Value.Trim.ToLower)]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_42">
@@ -353,7 +368,7 @@
                   <OutArgument x:TypeArguments="x:String">[strMainPhoneNumber]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What\'s your main phone number\?).*?(?=What\'s your second phone number\?)").Value.Trim]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What\'s your main phone number\?).*?(?=What\'s your second phone number\?)").Value.Trim.Replace(" ","")]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_47">
@@ -361,7 +376,7 @@
                   <OutArgument x:TypeArguments="x:String">[strSecondaryPhoneNumber]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What\'s your second phone number\?).*?(?=What\'s your email address\?)").Value.Trim]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What\'s your second phone number\?).*?(?=What\'s your email address\?)").Value.Trim.Replace(" ","")]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_48">
@@ -988,7 +1003,7 @@
                             <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("TitleSecondary")]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=second contact.*?Title).*?(?=First name of second contact)").Value.Trim]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Regex.Match(strFormContent,"(?s)(?&lt;=second contact.*?Title).*?(?=First name of second contact)").Value.Trim.ToLower)]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_123">
@@ -1044,7 +1059,7 @@
                             <OutArgument x:TypeArguments="x:String">[strSecondContactPhoneNumber]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">[Regex.Replace(strSecondContactPhoneNumber,"^(\+44|44|044|0044)","0")]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[Regex.Replace(strSecondContactPhoneNumber,"^(\+44|44|044|0044)","0").Replace(" ","")]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                       </scg:List>
@@ -1392,15 +1407,15 @@
           <x:Reference>__ReferenceID5</x:Reference>
         </Flowchart>
       </Sequence>
-      <Sequence x:Key="I'm a hobbyist keeper (Im a hobbyist keeper)" DisplayName="Extract hobbyist fields" sap:VirtualizedContainerService.HintSize="1502.8,1761.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence x:Key="I'm a hobbyist keeper (Im a hobbyist keeper)" DisplayName="Extract hobbyist fields" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message - hobbyist" sap:VirtualizedContainerService.HintSize="1468.8,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Customer identified as Hobbyist&quot;]" />
-        <ui:MultipleAssign DisplayName="Extract form fields" sap:VirtualizedContainerService.HintSize="1468.8,430.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+        <ui:LogMessage DisplayName="Log Message - hobbyist" sap:VirtualizedContainerService.HintSize="600,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Customer identified as Hobbyist&quot;]" />
+        <ui:MultipleAssign DisplayName="Extract form fields" sap:VirtualizedContainerService.HintSize="600,430.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_54">
@@ -1408,7 +1423,7 @@
                   <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("Title")]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=Are you a hobbyist.*?Title).*?(?=First name)").Value.Trim]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Regex.Match(strFormContent,"(?s)(?&lt;=Are you a hobbyist.*?Title).*?(?=First name)").Value.Trim.ToLower)]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_55">
@@ -1440,7 +1455,7 @@
                   <OutArgument x:TypeArguments="x:String">[strMainPhoneNumber]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What\'s your main phone number\?).*?(?=What\'s your second phone number\?)").Value.Trim]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What\'s your main phone number\?).*?(?=What\'s your second phone number\?)").Value.Trim.Replace(" ","")]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_59">
@@ -1448,7 +1463,7 @@
                   <OutArgument x:TypeArguments="x:String">[strSecondaryPhoneNumber]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What\'s your second phone number\?).*?(?=What\'s your email address\?)").Value.Trim]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What\'s your second phone number\?).*?(?=What\'s your email address\?)").Value.Trim.Replace(" ","")]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_60">
@@ -1492,14 +1507,14 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:MultipleAssign>
-        <If Condition="[not (g_Config(&quot;AcceptedTitles&quot;).ToString.Split(&quot;,&quot;).Contains(Regex.Replace(out_dictFormDetails(&quot;Title&quot;),&quot;[^A-z]&quot;,&quot;&quot;)) or String.IsNullOrEmpty(out_dictFormDetails(&quot;Title&quot;)))]" DisplayName="Valid title?" sap:VirtualizedContainerService.HintSize="600,220.8" sap2010:WorkflowViewState.IdRef="If_17">
+        <If Condition="[not (g_Config(&quot;AcceptedTitles&quot;).ToString.Split(&quot;,&quot;).Contains(Regex.Replace(out_dictFormDetails(&quot;Title&quot;),&quot;[^A-z]&quot;,&quot;&quot;)) or String.IsNullOrEmpty(out_dictFormDetails(&quot;Title&quot;)))]" DisplayName="Valid title?" sap:VirtualizedContainerService.HintSize="600,324.4" sap2010:WorkflowViewState.IdRef="If_17">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsPinned">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_43">
+            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,69.6" sap2010:WorkflowViewState.IdRef="Sequence_43">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="boolDis" />
                 <Variable x:TypeArguments="x:String" Name="strButtonSelected" />
@@ -1520,7 +1535,7 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_44">
+            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1540,7 +1555,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeWorkflowFile>
-        <Flowchart DisplayName="Second contact - hobbyist" sap:VirtualizedContainerService.HintSize="1468.8000000000002,395.30400000000003" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+        <Flowchart DisplayName="Second contact - hobbyist" sap:VirtualizedContainerService.HintSize="600,656.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1586,7 +1601,7 @@
                             <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("TitleSecondary")]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=(S|s)econd contact.*?Title).*?(?=First name of second contact)").Value.Trim]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Regex.Match(strFormContent,"(?s)(?&lt;=(S|s)econd contact.*?Title).*?(?=First name of second contact)").Value.Trim.ToLower)]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_130">
@@ -1618,7 +1633,7 @@
                             <OutArgument x:TypeArguments="x:String">[strSecondContactPhoneNumber]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=Phone number of second contact).*?(?=Email address of second contact)").Value.Trim]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=Phone number of second contact).*?(?=Email address of second contact)").Value.Trim.Replace(" ","")]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_134">

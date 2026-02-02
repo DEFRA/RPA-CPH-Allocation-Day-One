@@ -142,26 +142,26 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Add_Second_Contact_to_Business" sap:VirtualizedContainerService.HintSize="1032.8,2550.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add_Second_Contact_to_Business" sap:VirtualizedContainerService.HintSize="1032.8,4407.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - add second contact to business" sap:VirtualizedContainerService.HintSize="620,3789.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - add second contact to business" sap:VirtualizedContainerService.HintSize="620,4384.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Add second contact to business" sap:VirtualizedContainerService.HintSize="586,3651.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Add second contact to business" sap:VirtualizedContainerService.HintSize="586,4223.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - add second business contact" sap:VirtualizedContainerService.HintSize="552,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Adding second contact to business record in Rural Payments&quot;]" />
+            <ui:LogMessage DisplayName="Log Message - add second business contact" sap:VirtualizedContainerService.HintSize="552,85.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Adding second contact to business record in Rural Payments&quot;]" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View/Check business'" sap:VirtualizedContainerService.HintSize="552,190" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/dashboard/5752555/my-account" DesignTimeRectangle="1196, 1777, 242, 55" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'View business'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='A' colName='View or check' rowName='{0}' /&gt;&quot;, in_strBusinessNameSelector)]" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='ng-scope' aaname='View business' check:innerText='View business' /&gt;" Guid="5fa09e72-b399-4d79-b5c5-5782d32b3e20" ImageBase64="" InformativeScreenshot="7945eceb0dc1b63a265b8b53f0d5fe3a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer businesses and messages - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
@@ -172,17 +172,17 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add people'" sap:VirtualizedContainerService.HintSize="552,56.8" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add people'" sap:VirtualizedContainerService.HintSize="552,85.2" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/5967970/menu/overview" DesignTimeRectangle="1092, 1317, 234, 65" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Add people'" FullSelectorArgument="&lt;webctrl visibleInnerText='Add people' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='addPersonBtn' tag='A' type='' class='' aaname='Add people' check:innerText='Add people' /&gt;" Guid="123a93ef-c772-4259-ac7d-0236cab16582" ImageBase64="" InformativeScreenshot="d72efe792654276e0afdcb84dcfb9d45.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Business overview - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type CRN" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="552,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="dbd65817-6de7-4d05-af61-cf45dbca2121" Text="[in_strCRN]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type CRN" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="552,85.2" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="dbd65817-6de7-4d05-af61-cf45dbca2121" Text="[in_strCRN]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/5967970/menu/empowerment/person/add/relationship" DesignTimeRectangle="355, 1676, 495, 118" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT uniqueIdentifier'" FullSelectorArgument="&lt;webctrl tag='INPUT' aaname='Find a person' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aaname='Find a person' type='text' class='ng-pristine ng-untouched ng-valid ng-empty' /&gt;" Guid="777111f7-0299-40d9-aab9-4e5ce052b27f" InformativeScreenshot="7b7d8bc9724b7a026faf7e7621ffda2f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add people permissions - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Delay after so that error doesn't erroneously appear" ClickType="Single" DisplayName="Click 'Find person'" sap:VirtualizedContainerService.HintSize="552,101.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V3">
+            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Delay after so that error doesn't erroneously appear" ClickType="Single" DisplayName="Click 'Find person'" sap:VirtualizedContainerService.HintSize="552,130" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/5967970/menu/empowerment/person/add/relationship" DesignTimeRectangle="897, 1658, 316, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Find person'" FullSelectorArgument="&lt;webctrl visibleInnerText='Find person' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='search-for-person-button' tag='BUTTON' type='' class='btn capd-btn search-button' aaname='Find person' check:innerText='Find person' /&gt;" Guid="e1d82ff3-5475-4da5-8435-7196646f316c" ImageBase64="" InformativeScreenshot="03cdbefd18fd104da97f0823a6263b2f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add people permissions - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -192,7 +192,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NSelectItem DisplayName="Select 'Helper'" sap:VirtualizedContainerService.HintSize="552,56.8" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Helper" ScopeIdentifier="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V3">
+            <uix:NSelectItem DisplayName="Select 'Helper'" sap:VirtualizedContainerService.HintSize="552,85.2" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Helper" ScopeIdentifier="dbd65817-6de7-4d05-af61-cf45dbca2121" Version="V3">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="11">
                   <x:String>Please select...</x:String>
@@ -222,7 +222,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <Sequence DisplayName="Update permissions" sap:VirtualizedContainerService.HintSize="552,2881.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="Update permissions" sap:VirtualizedContainerService.HintSize="552,3260.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <Sequence.Variables>
                 <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ieViewChangePermissions" />
               </Sequence.Variables>
@@ -232,18 +232,28 @@
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:FindChildren Children="[ieViewChangePermissions]" DisplayName="Get all &quot;View or check permission levels&quot; links" Filter="&lt;webctrl visibleInnerText='View or change permission level' tag='A' /&gt;" sap:VirtualizedContainerService.HintSize="518,85.2" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
-                <ui:FindChildren.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e2cad3e8-79e9-48da-8d5d-bbd76fefea47" InformativeScreenshot="85ec89641c226fbdce437ae7e7aa9e03" Selector="&lt;html app='msedge.exe' title='Permissions for Person - Rural Payments' /&gt;&lt;webctrl id='capd-profile' tag='DIV' /&gt;">
-                    <ui:Target.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:Target.TimeoutMS>
-                    <ui:Target.WaitForReady>
-                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                    </ui:Target.WaitForReady>
-                  </ui:Target>
-                </ui:FindChildren.Target>
-              </ui:FindChildren>
+              <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Max 3 iterations" DisplayName="Do While - no elements returned for view/change permissions" sap:VirtualizedContainerService.HintSize="518,286.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="3">
+                <ui:InterruptibleDoWhile.Body>
+                  <ui:FindChildren Children="[ieViewChangePermissions]" DisplayName="Get all &quot;View or check permission levels&quot; links" Filter="&lt;webctrl visibleInnerText='View or change permission level' tag='A' /&gt;" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="FindChildren_3" Scope="FIND_DESCENDANTS">
+                    <ui:FindChildren.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e2cad3e8-79e9-48da-8d5d-bbd76fefea47" InformativeScreenshot="85ec89641c226fbdce437ae7e7aa9e03" Selector="&lt;html app='msedge.exe' title='Permissions for Person - Rural Payments' /&gt;&lt;webctrl id='capd-profile' tag='DIV' /&gt;" TimeoutMS="5000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:FindChildren.Target>
+                  </ui:FindChildren>
+                </ui:InterruptibleDoWhile.Body>
+                <ui:InterruptibleDoWhile.Condition>
+                  <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="ieViewChangePermissions.Count=0" />
+                </ui:InterruptibleDoWhile.Condition>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InterruptibleDoWhile>
               <If Condition="[ieViewChangePermissions.Count=0]" DisplayName="If no elements returned - view change permissions" sap:VirtualizedContainerService.HintSize="518,429.2" sap2010:WorkflowViewState.IdRef="If_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -277,13 +287,13 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each &quot;View or check permission levels&quot;" sap:VirtualizedContainerService.HintSize="518,1022" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ieViewChangePermissions]">
+              <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each &quot;View or check permission levels&quot;" sap:VirtualizedContainerService.HintSize="518,1223.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ieViewChangePermissions]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="ui:UiElement">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentUiElement" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Click rightmost radio button" sap:VirtualizedContainerService.HintSize="484,874.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence DisplayName="Click rightmost radio button" sap:VirtualizedContainerService.HintSize="484,1076" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ieRadio" />
                       </Sequence.Variables>
@@ -293,24 +303,34 @@
                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click current view/change permissions" sap:VirtualizedContainerService.HintSize="450,85.2" sap2010:WorkflowViewState.IdRef="NClick_5" InUiElement="[currentUiElement]" KeyModifiers="None" MouseButton="Left" Version="V3" />
-                      <ui:FindChildren Children="[ieRadio]" DisplayName="Get all radio buttons" Filter="&lt;webctrl tag='INPUT' type='radio'/&gt;" sap:VirtualizedContainerService.HintSize="450,138.8" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
-                        <ui:FindChildren.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c0dd742b-1825-4357-8219-2c784b6a711b" InformativeScreenshot="4ba553b0a4832cd6da8f88a8e00a16f9" Selector="&lt;html app='msedge.exe' title='Permissions for Person - Rural Payments' /&gt;&lt;webctrl tag='DIV' class='panel-collapse form-group form-group-compound' /&gt;">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                            <ui:Target.WaitForReady>
-                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                            </ui:Target.WaitForReady>
-                          </ui:Target>
-                        </ui:FindChildren.Target>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click current view/change permissions" sap:VirtualizedContainerService.HintSize="450,56.8" sap2010:WorkflowViewState.IdRef="NClick_5" InUiElement="[currentUiElement]" KeyModifiers="None" MouseButton="Left" Version="V3" />
+                      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Max 3 iterations" DisplayName="Do While - no elements returned - radio buttons" sap:VirtualizedContainerService.HintSize="450,368.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2" MaxIterations="3">
+                        <ui:InterruptibleDoWhile.Body>
+                          <ui:FindChildren Children="[ieRadio]" DisplayName="Get all radio buttons" Filter="&lt;webctrl tag='INPUT' type='radio'/&gt;" sap:VirtualizedContainerService.HintSize="382,130" sap2010:WorkflowViewState.IdRef="FindChildren_4" Scope="FIND_DESCENDANTS">
+                            <ui:FindChildren.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c0dd742b-1825-4357-8219-2c784b6a711b" InformativeScreenshot="4ba553b0a4832cd6da8f88a8e00a16f9" Selector="&lt;html app='msedge.exe' title='Permissions for Person - Rural Payments' /&gt;&lt;webctrl tag='DIV' class='panel-collapse form-group form-group-compound' /&gt;" TimeoutMS="5000">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:FindChildren.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:FindChildren>
+                        </ui:InterruptibleDoWhile.Body>
+                        <ui:InterruptibleDoWhile.Condition>
+                          <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="ieRadio.Count=0" />
+                        </ui:InterruptibleDoWhile.Condition>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                      </ui:FindChildren>
+                      </ui:InterruptibleDoWhile>
                       <If Condition="[ieRadio.Count=0]" DisplayName="If no elements returned - radio buttons" sap:VirtualizedContainerService.HintSize="450,429.2" sap2010:WorkflowViewState.IdRef="If_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -383,7 +403,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </InvokeMethod>
-                    <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP3.5" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Permissions updated&lt;/h1&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;Please confirm that the permissions have all been set to the rightmost option. If so, please click 'Continue'. Otherwise, click 'Stop' and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 3.5" IN_WidthHeight="[{500,450}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1">
+                    <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP3.5" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Permissions updated&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please confirm that the permissions have all been set to the rightmost option. If so, please click 'Continue'. Otherwise, click 'Stop' and process the rest of this transaction manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 3.5" IN_WidthHeight="[{500,450}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsPinned">True</x:Boolean>

@@ -18,7 +18,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.15.0",
-  "projectVersion": "1.0.2-alpha.12",
+  "projectVersion": "1.0.2-alpha.14",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -117,6 +117,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc01 Add Second Contact to Business.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "ba3ec454-3a4a-42dd-adea-e1c5d13988e6",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc02 Format Address.xaml"
       }
     ],
     "saveToCloud": false

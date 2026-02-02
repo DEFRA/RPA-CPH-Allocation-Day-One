@@ -176,7 +176,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID21</x:Reference>
+      <x:Reference>__ReferenceID18</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="FlowStep_1">
       <sap:WorkflowViewStateService.ViewState>
@@ -231,7 +231,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
-                <FlowStep x:Name="__ReferenceID13" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+                <FlowStep x:Name="__ReferenceID10" sap2010:WorkflowViewState.IdRef="FlowStep_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">165,565</av:Point>
@@ -337,7 +337,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:InvokeWorkflowFile>
                               <FlowStep.Next>
-                                <FlowDecision x:Name="__ReferenceID15" Condition="[dictFormDetails(&quot;SecondContact&quot;)=&quot;Yes (true)&quot;]" DisplayName="Add second contact to business?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                                <FlowDecision x:Name="__ReferenceID12" Condition="[dictFormDetails(&quot;SecondContact&quot;)=&quot;Yes (true)&quot;]" DisplayName="Add second contact to business?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -348,7 +348,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <FlowDecision.True>
-                                    <FlowStep x:Name="__ReferenceID16" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+                                    <FlowStep x:Name="__ReferenceID13" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">175,1055</av:Point>
@@ -449,7 +449,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                                             </ui:InvokeWorkflowFile>
                                           </Sequence>
                                           <FlowStep.Next>
-                                            <FlowStep x:Name="__ReferenceID17">
+                                            <FlowStep x:Name="__ReferenceID14">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <av:Point x:Key="ShapeLocation">245,1275</av:Point>
@@ -457,7 +457,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                                                   <av:PointCollection x:Key="ConnectorLocation">300,1345 300,1365</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Calculate priority" sap:VirtualizedContainerService.HintSize="536,668" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                              <Sequence DisplayName="Calculate priority" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -509,7 +509,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                                                 </If>
                                               </Sequence>
                                               <FlowStep.Next>
-                                                <FlowStep x:Name="__ReferenceID9" sap2010:WorkflowViewState.IdRef="FlowStep_4">
+                                                <FlowStep x:Name="__ReferenceID8" sap2010:WorkflowViewState.IdRef="FlowStep_4">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <av:Point x:Key="ShapeLocation">245,1365</av:Point>
@@ -529,7 +529,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:InvokeWorkflowFile>
                                                   <FlowStep.Next>
-                                                    <FlowDecision x:Name="__ReferenceID18" Condition="[strPriority&lt;&gt;&quot;Standard&quot;]" DisplayName="Priority update required?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                                    <FlowDecision x:Name="__ReferenceID15" Condition="[strPriority&lt;&gt;&quot;Standard&quot;]" DisplayName="Priority update required?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -540,7 +540,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
                                                       <FlowDecision.True>
-                                                        <FlowStep x:Name="__ReferenceID19">
+                                                        <FlowStep x:Name="__ReferenceID16">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <av:Point x:Key="ShapeLocation">175,1555</av:Point>
@@ -571,7 +571,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                               <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{g_TransactionItem(&quot;Case Url&quot;).ToString,g_TransactionItem(&quot;Title&quot;).ToString,Regex.Replace((dictFormDetails(&quot;FirstName&quot;)+&quot; &quot;+dictFormDetails(&quot;MiddleNames&quot;)+&quot; &quot;+dictFormDetails(&quot;LastName&quot;)).Trim,&quot;\s{2,}&quot;,&quot; &quot;),strCRNFirst,dictFormDetails(&quot;BusinessName&quot;),strSBI,&quot;&quot;,&quot;&quot;}]" DataTable="[io_dtCaseUpdates]" DisplayName="Add Data Row - case updates" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
                                                               <FlowStep.Next>
-                                                                <FlowStep x:Name="__ReferenceID14" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+                                                                <FlowStep x:Name="__ReferenceID11" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <av:Point x:Key="ShapeLocation">245,1755</av:Point>
@@ -592,7 +592,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                                                         </FlowStep>
                                                       </FlowDecision.True>
                                                       <FlowDecision.False>
-                                                        <FlowStep x:Name="__ReferenceID20">
+                                                        <FlowStep x:Name="__ReferenceID17">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <av:Point x:Key="ShapeLocation">315,1555</av:Point>
@@ -679,7 +679,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
-    <FlowStep x:Name="__ReferenceID12" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+    <FlowStep x:Name="__ReferenceID9" sap2010:WorkflowViewState.IdRef="FlowStep_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">245,195</av:Point>
@@ -818,90 +818,8 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
         <x:Reference>__ReferenceID7</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_1">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">535,975</av:Point>
-          <av:Size x:Key="ShapeSize">110,70</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">590,1045 590,1080</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CRN - Add Internal Note - Invoke Workflow File (Process\Process Subflows\Add Internal Note.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Process\Process Subflows\Add Internal Note.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_strSubject">CRN created</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_strDescription">[Regex.Replace((dictFormDetails("FirstName")+" "+dictFormDetails("MiddleNames")+" "+dictFormDetails("LastName")).Trim,"\s{2,}"," ")+Environment.NewLine+"CRN: "+strCRNFirst]</InArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeWorkflowFile>
-      <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID10" Condition="[dictFormDetails(&quot;SecondContact&quot;)=&quot;Yes (true)&quot;]" DisplayName="Add second internal note?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">560,1080</av:Point>
-              <av:PointCollection x:Key="TrueConnector">560,1110 530,1110 530,1165</av:PointCollection>
-              <av:Size x:Key="ShapeSize">60,60</av:Size>
-              <av:PointCollection x:Key="FalseConnector">620,1110 650,1110 650,1265 590,1265 590,1295</av:PointCollection>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <FlowDecision.True>
-            <FlowStep x:Name="__ReferenceID11" sap2010:WorkflowViewState.IdRef="FlowStep_2">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">475,1165</av:Point>
-                  <av:Size x:Key="ShapeSize">110,70</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">530,1235 530,1265 590,1265 590,1295</av:PointCollection>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Second CRN - Add Internal Note - Invoke Workflow File (Process\Process Subflows\Add Internal Note.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Process Subflows\Add Internal Note.xaml">
-                <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_strSubject">CRN created</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_strDescription">[Regex.Replace((dictFormDetails("FirstNameSecondary")+" "+dictFormDetails("MiddleNamesSecondary")+" "+dictFormDetails("LastNameSecondary")).Trim,"\s{2,}"," ")+Environment.NewLine+"CRN: "+strCRNSecond]</InArgument>
-                </ui:InvokeWorkflowFile.Arguments>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:InvokeWorkflowFile>
-              <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID8" sap2010:WorkflowViewState.IdRef="FlowStep_3">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">535,1295</av:Point>
-                      <av:Size x:Key="ShapeSize">110,70</av:Size>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SBI - Add Internal Note - Invoke Workflow File (Process\Process Subflows\Add Internal Note.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Process\Process Subflows\Add Internal Note.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_strSubject">SBI created</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_strDescription">[dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:InvokeWorkflowFile>
-                </FlowStep>
-              </FlowStep.Next>
-            </FlowStep>
-          </FlowDecision.True>
-          <FlowDecision.False>
-            <x:Reference>__ReferenceID8</x:Reference>
-          </FlowDecision.False>
-        </FlowDecision>
-      </FlowStep.Next>
-    </FlowStep>
-    <x:Reference>__ReferenceID9</x:Reference>
-    <x:Reference>__ReferenceID10</x:Reference>
-    <x:Reference>__ReferenceID11</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
-    <FlowStep x:Name="__ReferenceID21" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+    <FlowStep x:Name="__ReferenceID18" sap2010:WorkflowViewState.IdRef="FlowStep_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">245,95</av:Point>
@@ -921,18 +839,18 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
       <FlowStep.Next>
-        <x:Reference>__ReferenceID12</x:Reference>
+        <x:Reference>__ReferenceID9</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID13</x:Reference>
+    <x:Reference>__ReferenceID10</x:Reference>
     <x:Reference>__ReferenceID0</x:Reference>
-    <x:Reference>__ReferenceID14</x:Reference>
+    <x:Reference>__ReferenceID11</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID12</x:Reference>
+    <x:Reference>__ReferenceID13</x:Reference>
+    <x:Reference>__ReferenceID14</x:Reference>
     <x:Reference>__ReferenceID15</x:Reference>
     <x:Reference>__ReferenceID16</x:Reference>
     <x:Reference>__ReferenceID17</x:Reference>
-    <x:Reference>__ReferenceID18</x:Reference>
-    <x:Reference>__ReferenceID19</x:Reference>
-    <x:Reference>__ReferenceID20</x:Reference>
   </Flowchart>
 </Activity>

@@ -65,6 +65,7 @@
       <x:String>UiPath.Web.Activities</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Security</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -169,9 +170,10 @@
       <AssemblyReference>System.Net.Requests</AssemblyReference>
       <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID5}" DisplayName="Automation Template" sap:VirtualizedContainerService.HintSize="1050,684.84" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID5}" DisplayName="Automation Template" sap:VirtualizedContainerService.HintSize="1050,410.904" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -291,6 +293,7 @@
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_boolLastTransaction">[boolLastTransaction]</OutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_strProcessType">[strProcessType]</InArgument>
                       <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolContinue">[boolContinue]</InArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="io_intSkipCount">[intSkipCount]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </TryCatch.Try>
@@ -322,7 +325,7 @@
                           </Assign.Value>
                         </Assign>
                         <ui:LogMessage DisplayName="Log message  (Get transaction data error)" sap:VirtualizedContainerService.HintSize="450,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_43" Level="Fatal" Message="[&quot;The robot has encountered a fatal exception processsing transaction &quot;+TransactionNumber.ToString+&quot;. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
-                        <If Condition="[Cbool(g_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="450,464.8" sap2010:WorkflowViewState.IdRef="If_32">
+                        <If Condition="[Cbool(g_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="450,215.2" sap2010:WorkflowViewState.IdRef="If_32">
                           <If.Then>
                             <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="416,90.4" sap2010:WorkflowViewState.IdRef="Sequence_77">
                               <sap:WorkflowViewStateService.ViewState>
@@ -380,7 +383,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="468,685.2" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                      <Sequence sap:VirtualizedContainerService.HintSize="468,749.2" sap2010:WorkflowViewState.IdRef="Sequence_67">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -402,7 +405,7 @@
                             <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign DisplayName="End Process (User Requested Stop)" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_48">
+                        <Assign DisplayName="End Process (User Requested Stop)" sap:VirtualizedContainerService.HintSize="434,114.4" sap2010:WorkflowViewState.IdRef="Assign_48">
                           <Assign.To>
                             <OutArgument x:TypeArguments="sd:DataRow">[g_TransactionItem]</OutArgument>
                           </Assign.To>
@@ -410,7 +413,7 @@
                             <InArgument x:TypeArguments="sd:DataRow">[Nothing]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[Cbool(g_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="434,378" sap2010:WorkflowViewState.IdRef="If_33">
+                        <If Condition="[Cbool(g_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="434,206.4" sap2010:WorkflowViewState.IdRef="If_33">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="300,81.6" sap2010:WorkflowViewState.IdRef="Sequence_79">
                               <sap:WorkflowViewStateService.ViewState>
@@ -582,7 +585,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Assign DisplayName="Set transaction status to SystemException" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_55">
+                        <Assign DisplayName="Set transaction status to SystemException" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_55">
                           <Assign.To>
                             <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
                           </Assign.To>
@@ -594,9 +597,9 @@
                     </Catch>
                   </TryCatch.Catches>
                   <TryCatch.Finally>
-                    <TryCatch DisplayName="Set the transaction status and move to process the next transaction" sap:VirtualizedContainerService.HintSize="536,1215" sap2010:WorkflowViewState.IdRef="TryCatch_19">
+                    <TryCatch DisplayName="Set the transaction status and move to process the next transaction" sap:VirtualizedContainerService.HintSize="458.4,409.2" sap2010:WorkflowViewState.IdRef="TryCatch_19">
                       <TryCatch.Try>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SetTransactionStatus workflow" sap:VirtualizedContainerService.HintSize="334,175" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="Framework\SetTransactionStatus.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SetTransactionStatus workflow" sap:VirtualizedContainerService.HintSize="334,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="Framework\SetTransactionStatus.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="ui:BusinessRuleException" x:Key="in_BusinessException">[BusinessException]</InArgument>
                             <InArgument x:TypeArguments="s:DateTime" x:Key="in_dateCaseStartTime">[dateCaseStartTime]</InArgument>
@@ -605,14 +608,15 @@
                             <InOutArgument x:TypeArguments="x:Int32" x:Key="io_intConSysEx">[intConSysEx]</InOutArgument>
                             <InOutArgument x:TypeArguments="x:Int32" x:Key="io_RetryNumber">[RetryNumber]</InOutArgument>
                             <InOutArgument x:TypeArguments="x:Int32" x:Key="io_TransactionNumber">[TransactionNumber]</InOutArgument>
+                            <InOutArgument x:TypeArguments="x:Int32" x:Key="io_intSkipCount">[intSkipCount]</InOutArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502,1048" sap2010:WorkflowViewState.IdRef="Catch`1_22">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="424.4,23.6" sap2010:WorkflowViewState.IdRef="Catch`1_22">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -620,13 +624,13 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Log Failure &amp; Stop Processing" sap:VirtualizedContainerService.HintSize="496,978" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                            <Sequence DisplayName="Log Failure &amp; Stop Processing" sap:VirtualizedContainerService.HintSize="468,751.2" sap2010:WorkflowViewState.IdRef="Sequence_84">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log message (Failed to set transaction status)" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_47" Level="Fatal" Message="[&quot;SetTransactionStatus.xaml failed: &quot;+exception.Message+&quot; at Source: &quot;+exception.Source]" />
+                              <ui:LogMessage DisplayName="Log message (Failed to set transaction status)" sap:VirtualizedContainerService.HintSize="434,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_47" Level="Fatal" Message="[&quot;SetTransactionStatus.xaml failed: &quot;+exception.Message+&quot; at Source: &quot;+exception.Source]" />
                               <If Condition="[Cbool(g_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="434,438" sap2010:WorkflowViewState.IdRef="If_34">
                                 <If.Then>
                                   <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="300,81" sap2010:WorkflowViewState.IdRef="Sequence_85">
@@ -1714,6 +1718,7 @@
       <Variable x:TypeArguments="x:Boolean" Name="boolSkipEndConfirmation" />
       <Variable x:TypeArguments="x:String" Name="strProcessType" />
       <Variable x:TypeArguments="x:Int32" Name="intConSysEx" />
+      <Variable x:TypeArguments="x:Int32" Name="intSkipCount" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>

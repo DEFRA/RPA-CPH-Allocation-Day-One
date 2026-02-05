@@ -124,6 +124,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc02 Format Address.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "37d84d41-e7b1-49a4-b56e-f6f1c5364189",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\tc01 CloseAllApplications.xaml"
       }
     ],
     "saveToCloud": false

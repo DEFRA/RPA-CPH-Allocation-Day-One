@@ -7,7 +7,6 @@
     <x:Property Name="io_intConSysEx" Type="InOutArgument(x:Int32)" />
     <x:Property sap2010:Annotation.AnnotationText="Used to control the number of attempts of retrying the transaction processing in case of system exceptions." Name="io_RetryNumber" Type="InOutArgument(x:Int32)" />
     <x:Property sap2010:Annotation.AnnotationText="Sequential counter of transaction items." Name="io_TransactionNumber" Type="InOutArgument(x:Int32)" />
-    <x:Property Name="io_intSkipCount" Type="InOutArgument(x:Int32)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -403,10 +402,10 @@
                 </Assign>
                 <Assign DisplayName="Increment skip count - BRE" sap:VirtualizedContainerService.HintSize="450,114.4" sap2010:WorkflowViewState.IdRef="Assign_23">
                   <Assign.To>
-                    <OutArgument x:TypeArguments="x:Int32">[io_intSkipCount]</OutArgument>
+                    <OutArgument x:TypeArguments="x:Int32">[g_intSkipCount]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:Int32">[io_intSkipCount+1]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32">[g_intSkipCount+1]</InArgument>
                   </Assign.Value>
                 </Assign>
                 <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[g_dtTransactionData]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Update To Process data - BRE" FilePath="[g_Config(&quot;CaseUpdatesFile&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,240.4" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_2" ShouldQuote="True" />
@@ -562,10 +561,10 @@
                 </Assign>
                 <Assign DisplayName="Increment skip count - SE" sap:VirtualizedContainerService.HintSize="484,114.4" sap2010:WorkflowViewState.IdRef="Assign_24">
                   <Assign.To>
-                    <OutArgument x:TypeArguments="x:Int32">[io_intSkipCount]</OutArgument>
+                    <OutArgument x:TypeArguments="x:Int32">[g_intSkipCount]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:Int32">[io_intSkipCount+1]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32">[g_intSkipCount+1]</InArgument>
                   </Assign.Value>
                 </Assign>
                 <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[g_dtTransactionData]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Update To Process data - SE" FilePath="[g_Config(&quot;CaseUpdatesFile&quot;).ToString]" sap:VirtualizedContainerService.HintSize="484,240.4" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_3" ShouldQuote="True" />
@@ -642,14 +641,14 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Close applications" sap:VirtualizedContainerService.HintSize="472,668" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                        <Sequence DisplayName="Close applications" sap:VirtualizedContainerService.HintSize="471.6,668" sap2010:WorkflowViewState.IdRef="Sequence_37">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log message (CloseAllApplications failed)" sap:VirtualizedContainerService.HintSize="438,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Warn" Message="[&quot;CloseAllApplications failed. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
-                          <TryCatch DisplayName="Try killing processes" sap:VirtualizedContainerService.HintSize="438,432.4" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+                          <ui:LogMessage DisplayName="Log message (CloseAllApplications failed)" sap:VirtualizedContainerService.HintSize="437.6,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Warn" Message="[&quot;CloseAllApplications failed. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
+                          <TryCatch DisplayName="Try killing processes" sap:VirtualizedContainerService.HintSize="437.6,432.4" sap2010:WorkflowViewState.IdRef="TryCatch_14">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

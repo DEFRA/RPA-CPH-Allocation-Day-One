@@ -4,7 +4,6 @@
     <x:Property Name="out_boolLastTransaction" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_strProcessType" Type="InArgument(x:String)" />
     <x:Property Name="in_boolContinue" Type="InArgument(x:Boolean)" />
-    <x:Property Name="io_intSkipCount" Type="InArgument(x:Int32)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -207,7 +206,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[g_dtTransactionData.RowCount-io_intSkipCount&gt;0]" DisplayName="Retrieved rows?" sap:VirtualizedContainerService.HintSize="536,1734.4" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[g_dtTransactionData.RowCount-g_intSkipCount&gt;0]" DisplayName="Retrieved rows?" sap:VirtualizedContainerService.HintSize="536,1734.4" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="502,1406.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
@@ -222,7 +221,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[g_dtTransactionData.RowCount-io_intSkipCount= 1]" DisplayName="Last Transaction?" sap:VirtualizedContainerService.HintSize="468,380" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[g_dtTransactionData.RowCount-g_intSkipCount= 1]" DisplayName="Last Transaction?" sap:VirtualizedContainerService.HintSize="468,380" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
               <Assign DisplayName="Assign Last Transaction" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
@@ -275,7 +274,7 @@
               <OutArgument x:TypeArguments="sd:DataRow">[g_TransactionItem]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="sd:DataRow">[g_dtTransactionData(io_intSkipCount)]</InArgument>
+              <InArgument x:TypeArguments="sd:DataRow">[g_dtTransactionData(g_intSkipCount)]</InArgument>
             </Assign.Value>
           </Assign>
         </Sequence>

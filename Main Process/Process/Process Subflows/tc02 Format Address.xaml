@@ -125,7 +125,8 @@
               <ui:AssignOperation.Value>
                 <InArgument x:TypeArguments="x:String" xml:space="preserve">Don's cottage
 street &amp; town
-&lt;county goes here&gt;</InArgument>
+&lt;county goes here&gt;
+b146ps</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
           </scg:List>

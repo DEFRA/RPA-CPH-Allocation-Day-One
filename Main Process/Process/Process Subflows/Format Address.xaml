@@ -121,11 +121,12 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Format_Address" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2578.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Format_Address" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2714.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="arrAddressLines" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtAddress" />
       <Variable x:TypeArguments="x:Int32" Name="intRowIndex" />
+      <Variable x:TypeArguments="x:Boolean" Name="boolValidPostcode" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -207,7 +208,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
-      <ui:MultipleAssign x:Key="4" sap2010:Annotation.AnnotationText="Also set title case on all except upper case on postcode" DisplayName="Map array values to table - assume missing addressline2" sap:VirtualizedContainerService.HintSize="479.6,211.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+      <ui:MultipleAssign x:Key="4" sap2010:Annotation.AnnotationText="Also set title case on all except upper case on postcode" DisplayName="Map array values to table - assume missing addressline2" sap:VirtualizedContainerService.HintSize="479.6,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -250,7 +251,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
-      <ui:MultipleAssign x:Key="3" sap2010:Annotation.AnnotationText="Also set title case on all except upper case on postcode" DisplayName="Map array values to table - assume missing addressline2 and county" sap:VirtualizedContainerService.HintSize="479.6,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+      <ui:MultipleAssign x:Key="3" sap2010:Annotation.AnnotationText="Also set title case on all except upper case on postcode" DisplayName="Map array values to table - assume missing addressline2 and county" sap:VirtualizedContainerService.HintSize="479.6,211.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -286,7 +287,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
     </Switch>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtAddress]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="547.6,440.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtAddress]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="547.6,462.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -341,12 +342,20 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
+    <Assign DisplayName="Postcode valid?" sap:VirtualizedContainerService.HintSize="547.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Boolean">[boolValidPostcode]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Boolean">[Regex.Match(dtAddress.Rows(4)("Value"),"^([A-Za-z][A-Ha-hJ-Yj-y]?[0-9][A-Za-z0-9]? ?[0-9][A-Za-z]{2}|[Gg][Ii][Rr] ?0[Aa]{2})$").Success]</InArgument>
+      </Assign.Value>
+    </Assign>
     <InvokeMethod DisplayName="Stop timer - edit address" sap:VirtualizedContainerService.HintSize="547.6,168.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Stop">
       <InvokeMethod.TargetObject>
         <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
       </InvokeMethod.TargetObject>
     </InvokeMethod>
-    <d:Editable_DataTable in_FullReadOnly="{x:Null}" out_TableHTML="{x:Null}" DisplayName="Edit address" sap:VirtualizedContainerService.HintSize="547.6,542.4" sap2010:WorkflowViewState.IdRef="Editable_DataTable_1" in_Body="[&quot;&lt;h1&gt;Format address&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please make any formatting amendments to the following address:&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+in_strKeyName+&quot;:&lt;br&gt;&quot;+io_dictFormDetails(in_strKeyName)+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;Please also make sure that the address parts are mapped correctly (e.g. the value for AddressLine2 is not mistakenly set to TownOrCity).&lt;br&gt;&quot;+&#xA;&quot;Once you are satisfied with the address, please click 'Continue'.&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;NOTE:&lt;/strong&gt; this will not be revalidated. Failure to correctly map the address data here could cause exceptions later in the process.&lt;br&gt;&quot;+&#xA;&quot;The essential fields are &lt;strong&gt;Address Line 1, Town Or City and Postcode&lt;/strong&gt;.&lt;/p&gt;&quot;]" in_CSS_Path="[Directory.GetCurrentDirectory + &quot;\Assets\Generic\Editable Standard Template.css&quot;]" in_FormHTMLPath="[Directory.GetCurrentDirectory + &quot;\Assets\Generic\FormRender.html&quot;]" in_ShowForm="True" in_TemplatePath="[Directory.GetCurrentDirectory + &quot;\Assets\Generic\FormCreatorTemplate.html&quot;]" in_WidthHeight="[{1000,700}]" io_Table="[dtAddress]" />
+    <d:Editable_DataTable in_FullReadOnly="{x:Null}" out_TableHTML="{x:Null}" DisplayName="Edit address" sap:VirtualizedContainerService.HintSize="547.6,542.4" sap2010:WorkflowViewState.IdRef="Editable_DataTable_1" in_Body="[&quot;&lt;h1&gt;Format address&lt;/h1&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;Please make any formatting amendments to the following address:&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;&quot;+in_strKeyName+&quot;:&lt;br&gt;&quot;+io_dictFormDetails(in_strKeyName)+&quot;&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;Please also make sure that the address parts are mapped correctly (e.g. the value for AddressLine2 is not mistakenly set to TownOrCity).&lt;br&gt;&quot;+&#xD;&#xA;&quot;Once you are satisfied with the address, please click 'Continue'.&lt;br&gt;&quot;+&#xD;&#xA;&quot;&lt;strong&gt;NOTE:&lt;/strong&gt; this will not be revalidated. Failure to correctly map the address data here could cause exceptions later in the process.&lt;br&gt;&quot;+&#xD;&#xA;&quot;The essential fields are &lt;strong&gt;Address Line 1, Town Or City and Postcode&lt;/strong&gt;.&lt;/p&gt;&quot;+&#xD;&#xA;If(not boolValidPostcode,&quot;&lt;p style=color:darkred&gt;NOTE: Postcode is invalid. If left uncorrected, this could cause exception at data entry into Rural Payments.&lt;/p&gt;&quot;,&quot;&quot;)]" in_CSS_Path="[Directory.GetCurrentDirectory + &quot;\Assets\Generic\Editable Standard Template.css&quot;]" in_FormHTMLPath="[Directory.GetCurrentDirectory + &quot;\Assets\Generic\FormRender.html&quot;]" in_ShowForm="True" in_TemplatePath="[Directory.GetCurrentDirectory + &quot;\Assets\Generic\FormCreatorTemplate.html&quot;]" in_WidthHeight="[{1000,700}]" io_Table="[dtAddress]" />
     <InvokeMethod DisplayName="Start timer - edit address" sap:VirtualizedContainerService.HintSize="547.6,168.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Start">
       <InvokeMethod.TargetObject>
         <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>

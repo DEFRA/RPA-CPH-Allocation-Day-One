@@ -173,7 +173,7 @@
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID5}" DisplayName="Automation Template" sap:VirtualizedContainerService.HintSize="1468.8000000000002,658.84" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID5}" DisplayName="Automation Template" sap:VirtualizedContainerService.HintSize="1050,684.84" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -457,7 +457,7 @@
         <Transition DisplayName="New Transaction" sap:VirtualizedContainerService.HintSize="449.6,812.8" sap2010:WorkflowViewState.IdRef="Transition_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">589,601.8 589,711.2</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">589,601.8 589,631.8 494.6,631.8 494.6,711.2</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -680,7 +680,7 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">484.6,711.2</av:Point>
-                  <av:Size x:Key="ShapeSize">208.8,273.6</av:Size>
+                  <av:Size x:Key="ShapeSize">20,20</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Double x:Key="StateContainerWidth">197</x:Double>
                   <x:Double x:Key="StateContainerHeight">34</x:Double>
@@ -692,7 +692,7 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <av:PointCollection x:Key="ConnectorLocation">599.44,984.8000000000001 599.44,1014.8000000000001 275.52,1014.8000000000001 275.52,623</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">495.6,731.2 495.6,761.2 275.52,761.2 275.52,623</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">27</x:Int32>
                     </scg:Dictionary>
@@ -1314,31 +1314,75 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Transition.To>
-                                    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="758.8,3600.8" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                                    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="150,120.8" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                                       <State.Entry>
-                                        <Sequence DisplayName="End Process" sap:VirtualizedContainerService.HintSize="713.2,3454.8" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                        <Sequence DisplayName="End Process" sap:VirtualizedContainerService.HintSize="713.2,4358.4" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:String" Name="strButtonSelected" />
+                                          </Sequence.Variables>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[boolRunProcess]" DisplayName="Process Has Run?" sap:VirtualizedContainerService.HintSize="679.2,3394.8" sap2010:WorkflowViewState.IdRef="If_21">
+                                          <If Condition="[boolRunProcess]" DisplayName="Process Has Run?" sap:VirtualizedContainerService.HintSize="679.2,4298.4" sap2010:WorkflowViewState.IdRef="If_21">
                                             <If.Then>
-                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="645.2,3000.4" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="645.2,3904" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <If Condition="[SystemException is Nothing]" DisplayName="Has SystemException Occured on Last Run?" sap:VirtualizedContainerService.HintSize="611.2,754" sap2010:WorkflowViewState.IdRef="If_22">
+                                                <TryCatch DisplayName="Try Catch - close apps on shutdown?" sap:VirtualizedContainerService.HintSize="611.2,610" sap2010:WorkflowViewState.IdRef="TryCatch_20">
+                                                  <TryCatch.Try>
+                                                    <d:Generic_PopUp OUT_ProcessType="{x:Null}" DisplayName="Close all apps?" sap:VirtualizedContainerService.HintSize="334,405.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\CloseApps.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Close all applications?&lt;/h1&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;The robot wants to close Dynamics and Rural Payments as part of its end-of-process routine.&lt;br&gt;&quot;+&#xD;&#xA;&quot;To allow this, please click 'Yes'.&lt;br&gt;&quot;+&#xD;&#xA;&quot;To keep these windows open, please click 'No'.&lt;/p&gt;&quot;]" IN_PopupTitle="Close all applications?" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_6" OUT_strButtonSelected="[strButtonSelected]" />
+                                                  </TryCatch.Try>
+                                                  <TryCatch.Catches>
+                                                    <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="474,412.4" sap2010:WorkflowViewState.IdRef="Catch`1_23">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ActivityAction x:TypeArguments="ui:BusinessRuleException">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
+                                                        </ActivityAction.Argument>
+                                                        <Sequence DisplayName="Form dismissed" sap:VirtualizedContainerService.HintSize="468,341.2" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_48" Level="Info" Message="[&quot;Close apps form dismissed.&quot;]" />
+                                                          <Assign DisplayName="Assume &quot;no&quot; to close apps" sap:VirtualizedContainerService.HintSize="434,105.6" sap2010:WorkflowViewState.IdRef="Assign_62">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:String">[strButtonSelected]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:String">no</InArgument>
+                                                            </Assign.Value>
+                                                          </Assign>
+                                                        </Sequence>
+                                                      </ActivityAction>
+                                                    </Catch>
+                                                  </TryCatch.Catches>
+                                                </TryCatch>
+                                                <If sap2010:Annotation.AnnotationText="OR does user want to keep apps open" Condition="[SystemException is Nothing and strButtonSelected=&quot;yes&quot;]" DisplayName="Has SystemException Occured on Last Run?" sap:VirtualizedContainerService.HintSize="611.2,1047.6" sap2010:WorkflowViewState.IdRef="If_22">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
                                                   <If.Then>
-                                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="471.6,492.4" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="490,754.8" sap2010:WorkflowViewState.IdRef="Sequence_51">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <TryCatch DisplayName="Try to close all applications" sap:VirtualizedContainerService.HintSize="437.6,432.4" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                                      <TryCatch DisplayName="Try to close all applications" sap:VirtualizedContainerService.HintSize="456,694.8" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1353,10 +1397,10 @@
                                                           </ui:InvokeWorkflowFile>
                                                         </TryCatch.Try>
                                                         <TryCatch.Catches>
-                                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.6,23.6" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,506" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
@@ -1618,7 +1662,7 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <av:PointCollection x:Key="ConnectorLocation">599.44,984.8000000000001 599.44,1007.96 733.4000000000001,1007.96 733.4000000000001,557.96 703.4000000000001,557.96</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">495.6,731.2 495.6,761.2 733.4000000000001,761.2 733.4000000000001,557.96 703.4000000000001,557.96</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">44</x:Int32>
                     </scg:Dictionary>
@@ -1631,7 +1675,7 @@
                 <Transition sap2010:Annotation.AnnotationText="Business Rule Exception" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="658,1433.6" sap2010:WorkflowViewState.IdRef="Transition_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">599.44,984.8000000000001 599.44,1005.08 733.4000000000001,1005.08 733.4000000000001,525.08 703.4000000000001,525.08</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">495.6,731.2 495.6,761.2 733.4000000000001,761.2 733.4000000000001,525.08 703.4000000000001,525.08</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">20</x:Int32>
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1647,7 +1691,7 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <av:PointCollection x:Key="ConnectorLocation">599.44,984.8000000000001 599.44,1007.2 735,1007.2 735,347.2 705,347.2</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">495.6,731.2 495.6,761.2 735,761.2 735,347.2 705,347.2</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">36</x:Int32>
                     </scg:Dictionary>
@@ -1684,7 +1728,7 @@
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="If attended, present user with pop-up to confirm robotic process start. Also allow user to confirm single, or multiple transaction processing." DisplayName="Determine Run Type" sap:VirtualizedContainerService.HintSize="213.2,153.6" sap2010:WorkflowViewState.IdRef="State_5">
+    <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="If attended, present user with pop-up to confirm robotic process start. Also allow user to confirm single, or multiple transaction processing." DisplayName="Determine Run Type" sap:VirtualizedContainerService.HintSize="619.2,1638.8" sap2010:WorkflowViewState.IdRef="State_5">
       <State.Entry>
         <If Condition="[in_boolUnattended]" DisplayName="If - Unattended" sap:VirtualizedContainerService.HintSize="573.6,1201.2" sap2010:WorkflowViewState.IdRef="If_15">
           <If.Then>

@@ -19,12 +19,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&352fa106-96ad-4051-a790-7fb45198d227",
-        "g_Config&352fa106-96ad-4051-a790-7fb45198d227",
-        "g_swProcessingTimer&352fa106-96ad-4051-a790-7fb45198d227",
-        "g_intExitPoint&352fa106-96ad-4051-a790-7fb45198d227",
-        "g_BearerToken&352fa106-96ad-4051-a790-7fb45198d227",
-        "g_TransactionItem&352fa106-96ad-4051-a790-7fb45198d227",
+        "g_arrCaseID&c8814b7a-e350-45af-8589-2aa8d53de05a",
+        "g_Config&c8814b7a-e350-45af-8589-2aa8d53de05a",
+        "g_swProcessingTimer&c8814b7a-e350-45af-8589-2aa8d53de05a",
+        "g_intExitPoint&c8814b7a-e350-45af-8589-2aa8d53de05a",
+        "g_BearerToken&c8814b7a-e350-45af-8589-2aa8d53de05a",
+        "g_TransactionItem&c8814b7a-e350-45af-8589-2aa8d53de05a",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -49,13 +49,7 @@
         "strBusinessAndLegal&Sequence_91",
         "boolShouldStop&Sequence_25",
         "dateCaseStartTime&State_3",
-        "strCaseIDText&Sequence_28",
-        "g_arrCaseID&21e93e48-9a8c-4568-b966-94bdc9319a4f",
-        "g_Config&21e93e48-9a8c-4568-b966-94bdc9319a4f",
-        "g_swProcessingTimer&21e93e48-9a8c-4568-b966-94bdc9319a4f",
-        "g_intExitPoint&21e93e48-9a8c-4568-b966-94bdc9319a4f",
-        "g_BearerToken&21e93e48-9a8c-4568-b966-94bdc9319a4f",
-        "g_TransactionItem&21e93e48-9a8c-4568-b966-94bdc9319a4f"
+        "strCaseIDText&Sequence_28"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_boolUnattended"
@@ -812,6 +806,21 @@
         "g_intExitPoint&de7a22b7-27c1-4bb3-8ee1-70219274a0bf",
         "g_BearerToken&de7a22b7-27c1-4bb3-8ee1-70219274a0bf",
         "g_TransactionItem&de7a22b7-27c1-4bb3-8ee1-70219274a0bf"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&c8814b7a-e350-45af-8589-2aa8d53de05a",
+        "g_Config&c8814b7a-e350-45af-8589-2aa8d53de05a",
+        "g_swProcessingTimer&c8814b7a-e350-45af-8589-2aa8d53de05a",
+        "g_intExitPoint&c8814b7a-e350-45af-8589-2aa8d53de05a",
+        "g_BearerToken&c8814b7a-e350-45af-8589-2aa8d53de05a",
+        "g_TransactionItem&c8814b7a-e350-45af-8589-2aa8d53de05a"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],

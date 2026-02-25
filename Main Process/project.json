@@ -18,7 +18,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.15.0",
-  "projectVersion": "1.0.2-alpha.18",
+  "projectVersion": "1.0.2-alpha.19",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -131,6 +131,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Framework\\tc01 CloseAllApplications.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d26e67f1-d9e7-471a-b47e-3dcdd8581698",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Update Case Title.xaml"
       }
     ],
     "saveToCloud": false

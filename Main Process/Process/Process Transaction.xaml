@@ -156,7 +156,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " sap:VirtualizedContainerService.HintSize="1468.8000000000002,658.84" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " sap:VirtualizedContainerService.HintSize="1468.8000000000002,382.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictFormDetails" />
       <Variable x:TypeArguments="x:String" Name="strCRNSecond" />
@@ -530,10 +530,9 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                                                       <av:PointCollection x:Key="ConnectorLocation">300,1435 300,1480</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Update Case Title - Invoke Workflow File (Process\Process Subflows\Update Case Title.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Process\Process Subflows\Update Case Title.xaml">
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Update Case Title - Invoke Workflow File (Process\Process Subflows\Update Case Title.xaml)" sap:VirtualizedContainerService.HintSize="337.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Process\Process Subflows\Update Case Title.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
                                                       <InArgument x:TypeArguments="x:String" x:Key="in_strCaseTitle">["SBI "+strSBI+" ("+Now.ToString("dd/MM")+") - CRM GDS CPH Online - CRN "+strCRNFirst+" - "+strPriority]</InArgument>
-                                                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolException">False</InArgument>
                                                     </ui:InvokeWorkflowFile.Arguments>
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -723,7 +722,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                   <OutArgument x:TypeArguments="x:String">[dictSearchFields("Customer name")]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[dictFormDetails("FirstName")+" "+dictFormDetails("LastName")]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[dictFormDetails("FirstName")+"|"+dictFormDetails("LastName")]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
@@ -800,7 +799,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                         <OutArgument x:TypeArguments="x:String">[dictSearchFields("Customer name 2")]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="x:String">[dictFormDetails("FirstNameSecondary")+" "+dictFormDetails("LastNameSecondary")]</InArgument>
+                        <InArgument x:TypeArguments="x:String">[dictFormDetails("FirstNameSecondary")+"|"+dictFormDetails("LastNameSecondary")]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">

@@ -125,13 +125,13 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Update_Case_Title_Exception" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2399.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_Case_Title_Exception" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2828" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <InvokeMethod sap2010:Annotation.AnnotationText="Returns foreground to CRM after rural payments activities" DisplayName="Bring to foreground - exception" sap:VirtualizedContainerService.HintSize="519.6,213.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">
+    <InvokeMethod sap2010:Annotation.AnnotationText="Returns foreground to CRM after rural payments activities" DisplayName="Bring to foreground - exception" sap:VirtualizedContainerService.HintSize="562,213.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">
       <InvokeMethod.TargetObject>
         <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("DynamicsBrowser"),UiElement)]</InArgument>
       </InvokeMethod.TargetObject>
@@ -141,13 +141,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </InvokeMethod>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - update case title exception" sap:VirtualizedContainerService.HintSize="519.6,2162.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="[NAppOpenMode.Never]" ScopeGuid="990553be-84cb-4756-9ba8-5caa8d2038d4" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - update case title exception" sap:VirtualizedContainerService.HintSize="562,2591.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="[NAppOpenMode.Never]" ScopeGuid="990553be-84cb-4756-9ba8-5caa8d2038d4" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Update case title" sap:VirtualizedContainerService.HintSize="485.6,2001.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Update case title" sap:VirtualizedContainerService.HintSize="528,2430" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strCurrentTitle" />
             </Sequence.Variables>
@@ -156,9 +156,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - exception title" sap:VirtualizedContainerService.HintSize="451.6,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Exception encountered - updating case title&quot;]" />
-            <uix:NGoToUrl DisplayName="Go To Case" sap:VirtualizedContainerService.HintSize="451.6,114.8" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[g_TransactionItem(&quot;Case Url&quot;).ToString]" Version="V3" />
-            <ui:RetryScope sap2010:Annotation.AnnotationText="Prone to Element Invalid exception" DisplayName="Retry Scope - click summary" sap:VirtualizedContainerService.HintSize="451.6,398.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+            <ui:LogMessage DisplayName="Log Message - exception title" sap:VirtualizedContainerService.HintSize="494,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Exception encountered - updating case title&quot;]" />
+            <uix:NGoToUrl DisplayName="Go To Case" sap:VirtualizedContainerService.HintSize="494,114.8" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[g_TransactionItem(&quot;Case Url&quot;).ToString]" Version="V3" />
+            <ui:RetryScope sap2010:Annotation.AnnotationText="Prone to Element Invalid exception" DisplayName="Retry Scope - click summary" sap:VirtualizedContainerService.HintSize="494,398.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Summary' tab" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="990553be-84cb-4756-9ba8-5caa8d2038d4" Timeout="5" Version="V3">
@@ -177,7 +177,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:RetryScope>
-            <uix:NGetText DisplayName="Get current title" sap:VirtualizedContainerService.HintSize="451.6,190" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="990553be-84cb-4756-9ba8-5caa8d2038d4" TextString="[strCurrentTitle]" Version="V3">
+            <uix:NGetText DisplayName="Get current title" sap:VirtualizedContainerService.HintSize="494,190" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="990553be-84cb-4756-9ba8-5caa8d2038d4" TextString="[strCurrentTitle]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=incident&amp;id=24d583d2-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1070, 1530, 992, 76" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'CRM GDS CPH Online'" FullSelectorArgument="&lt;webctrl aria-label='Case Title' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Case Title' tag='INPUT' type='text' class='fui-Input__input r12stul0 ___1ukvzui f7nlbp4 f1l02sjl f1cmbuwj fly5x3f f1pivz5x' /&gt;" Guid="121d2940-df10-4b4a-8edc-8b349d941281" ImageBase64="" InformativeScreenshot="8ab3d4e8bcf57bd8cdff29224944764b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -188,7 +188,7 @@
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
             </uix:NGetText>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into case title" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="451.6,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="DebuggerApi" ScopeIdentifier="990553be-84cb-4756-9ba8-5caa8d2038d4" Text="[in_strCaseTitle+&quot; - &quot;+strCurrentTitle]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into case title" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="494,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="DebuggerApi" ScopeIdentifier="990553be-84cb-4756-9ba8-5caa8d2038d4" Text="[in_strCaseTitle+&quot; - &quot;+strCurrentTitle]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entityrecord&amp;etn=incident&amp;id=24d583d2-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1070, 1530, 992, 76" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'CRM GDS CPH Online'" FullSelectorArgument="&lt;webctrl aria-label='Case Title' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Case Title' tag='INPUT' type='text' class='fui-Input__input r12stul0 ___1ukvzui f7nlbp4 f1l02sjl f1cmbuwj fly5x3f f1pivz5x' aaname='CRM GDS CPH Online' /&gt;" Guid="82165aab-175c-4660-bfac-af3509b8688d" ImageBase64="" InformativeScreenshot="73c91510d1c19daf5de25f15cdf1f94d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case:* - Dynamics 365' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -199,7 +199,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.6,414.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="494,414.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,304" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
@@ -221,7 +221,7 @@
                 </Sequence>
               </ui:CommentOut.Body>
             </ui:CommentOut>
-            <ui:RetryScope sap2010:Annotation.AnnotationText="Prone to element invalid exception" DisplayName="Retry Scope - click save exception title" sap:VirtualizedContainerService.HintSize="451.6,391.6" sap2010:WorkflowViewState.IdRef="RetryScope_2">
+            <ui:RetryScope sap2010:Annotation.AnnotationText="Prone to element invalid exception" DisplayName="Retry Scope - click save exception title" sap:VirtualizedContainerService.HintSize="494,398.8" sap2010:WorkflowViewState.IdRef="RetryScope_2">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save' - exception title" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="990553be-84cb-4756-9ba8-5caa8d2038d4" Timeout="5" Version="V3">
@@ -240,6 +240,30 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:RetryScope>
+            <uix:NCheckState DisplayName="Check App State - confirm saved" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="494,421.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="990553be-84cb-4756-9ba8-5caa8d2038d4" Timeout="10" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,177.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw DisplayName="Throw SE - not saved" Exception="[new System.Exception(&quot;Could not verify that case title was saved before progressing.&quot;)]" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2cf4a1ba-48db-f011-8543-7ced8d41de08" DesignTimeRectangle="1345, 940, 131, 47" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'- Saved'" FullSelectorArgument="&lt;webctrl aria-role='status' tag='SPAN' visibleinnertext='- Saved' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='status' tag='SPAN' visibleinnertext='- Saved' type='' class='pa-vy pa-kp pa-lh pa-vz pa-ex pa-wa pa-ie pa-ck pa-wb pa-uy pa-vc pa-vb pa-vx ' aaname='- Saved' check:text='- Saved' /&gt;" Guid="44fb8fcd-1fe7-4558-9f87-ae6519d5f0c7" InformativeScreenshot="fd468d635d5acd4b53463b01c3d18335.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Case: * - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

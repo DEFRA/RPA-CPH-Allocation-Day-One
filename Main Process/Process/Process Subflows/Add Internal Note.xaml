@@ -136,7 +136,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add_Internal_Note" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4884.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add_Internal_Note" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4825.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -153,13 +153,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </InvokeMethod>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - add internal note" sap:VirtualizedContainerService.HintSize="594,4472" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="Never" ScopeGuid="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - add internal note" sap:VirtualizedContainerService.HintSize="594,4413.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;),UiElement)]" OpenMode="Never" ScopeGuid="4be41ff4-50d4-4df3-a2fe-918d0666a677" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="Should already be on the Activities panel" DisplayName="Add internal note" sap:VirtualizedContainerService.HintSize="560,4310.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap2010:Annotation.AnnotationText="Should already be on the Activities panel" DisplayName="Add internal note" sap:VirtualizedContainerService.HintSize="560,4252" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="intRetry" />
             </Sequence.Variables>
@@ -169,10 +169,10 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RetryScope sap2010:Annotation.AnnotationText="Doesn't always open even if activity executes." DisplayName="Retry Scope - click create timeline record" sap:VirtualizedContainerService.HintSize="526,1242.4" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+            <ui:RetryScope sap2010:Annotation.AnnotationText="Doesn't always open even if activity executes. Higher retry count than others." DisplayName="Retry Scope - click create timeline record" sap:VirtualizedContainerService.HintSize="526,1183.6" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Click create record and find submenu" sap:VirtualizedContainerService.HintSize="484,1001.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Click create record and find submenu" sap:VirtualizedContainerService.HintSize="484,942.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -186,7 +186,7 @@
                         <InArgument x:TypeArguments="x:Int32">[intRetry+1]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[intRetry&gt;1]" DisplayName="If not first attempt" sap:VirtualizedContainerService.HintSize="450,527.2" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If Condition="[intRetry&gt;1]" DisplayName="If not first attempt" sap:VirtualizedContainerService.HintSize="450,468.4" sap2010:WorkflowViewState.IdRef="If_3">
                       <If.Then>
                         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,272.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <sap:WorkflowViewStateService.ViewState>
@@ -207,7 +207,7 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>

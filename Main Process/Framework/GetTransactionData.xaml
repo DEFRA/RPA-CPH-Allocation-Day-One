@@ -183,7 +183,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;This framework is setup by default to look for an Outlook MailMessage from a config-specified mailbox, this should be changed on a work package basis with out_TransactionItem being set to a single transaction from whatever source is required.&#xA;&#xA;If there are no transaction items remaining, out_TransactionItem should be set to Nothing, which leads to the End Process state. &#xA;&#xA;out_boolLastTransaction should be set to True where it is possible to determine that a transaction is the last in the batch. If this is not possible to derive then changes will need to be made to the &quot;Final Transaction&quot; transition at the framework's parent level. " DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4221.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;This framework is setup by default to look for an Outlook MailMessage from a config-specified mailbox, this should be changed on a work package basis with out_TransactionItem being set to a single transaction from whatever source is required.&#xA;&#xA;If there are no transaction items remaining, out_TransactionItem should be set to Nothing, which leads to the End Process state. &#xA;&#xA;out_boolLastTransaction should be set to True where it is possible to determine that a transaction is the last in the batch. If this is not possible to derive then changes will need to be made to the &quot;Final Transaction&quot; transition at the framework's parent level. " DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4182.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtToProcess" />
     </Sequence.Variables>
@@ -198,13 +198,13 @@
         <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("DynamicsBrowser"),UiElement)]</InArgument>
       </InvokeMethod.TargetObject>
     </InvokeMethod>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - get cases" sap:VirtualizedContainerService.HintSize="536,1672.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;), UiElement)]" OpenMode="Never" ScopeGuid="d07e704b-14e0-4b5a-9740-2a97feea160f" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - get cases" sap:VirtualizedContainerService.HintSize="536,1634.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;), UiElement)]" OpenMode="Never" ScopeGuid="d07e704b-14e0-4b5a-9740-2a97feea160f" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Show window and extract" sap:VirtualizedContainerService.HintSize="484,1462.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <Sequence DisplayName="Show window and extract" sap:VirtualizedContainerService.HintSize="484,1464.4" sap2010:WorkflowViewState.IdRef="Sequence_22">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strURLCurrent" />
             </Sequence.Variables>
@@ -236,7 +236,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[io_dtCases.RowCount=0]" DisplayName="If no transaction rows in table" sap:VirtualizedContainerService.HintSize="450,808.8" sap2010:WorkflowViewState.IdRef="If_13">
+            <If Condition="[io_dtCases.RowCount=0]" DisplayName="If no transaction rows in table" sap:VirtualizedContainerService.HintSize="450,810.4" sap2010:WorkflowViewState.IdRef="If_13">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,418" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <sap:WorkflowViewStateService.ViewState>

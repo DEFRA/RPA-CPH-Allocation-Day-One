@@ -285,7 +285,7 @@
                 </uix:NCheckState>
               </Sequence>
             </PickBranch>
-            <PickBranch DisplayName="Default" sap:VirtualizedContainerService.HintSize="423.6,2244" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+            <PickBranch DisplayName="Default" sap:VirtualizedContainerService.HintSize="423.6,2460.4" sap2010:WorkflowViewState.IdRef="PickBranch_3">
               <PickBranch.Trigger>
                 <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Delay_1" />
               </PickBranch.Trigger>

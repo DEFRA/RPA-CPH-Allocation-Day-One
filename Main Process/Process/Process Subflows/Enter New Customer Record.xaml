@@ -190,23 +190,20 @@
             <ui:RetryScope DisplayName="Retry Scope - view customer businesses" sap:VirtualizedContainerService.HintSize="458,562.4" sap2010:WorkflowViewState.IdRef="RetryScope_1">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,360" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="view customer business" sap:VirtualizedContainerService.HintSize="416,360" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View customer's businesses'" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b8abf7ce-afef-4378-9238-9cf8540c2366" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View customer's businesses'" sap:VirtualizedContainerService.HintSize="382,190" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b8abf7ce-afef-4378-9238-9cf8540c2366" Timeout="5" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/dashboard/5720980" DesignTimeRectangle="2434, 950, 482, 55" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'View customer's'" FullSelectorArgument="&lt;webctrl tag='A' visibleinnertext='View customer&amp;apos;s businesses' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' visibleinnertext='View customer&amp;apos;s businesses' type='' class='' aaname='View customer&amp;apos;s businesses' check:text='View customer&amp;apos;s businesses' /&gt;" Guid="f23c32da-4642-4b72-bff3-61cb94cb65e5" InformativeScreenshot="1a533d79c34f7d8a0c61eb824b6666c6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer record - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
                     <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - register a business" sap:VirtualizedContainerService.HintSize="382,110" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                       <ui:WaitUiElementAppear.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9a8b109c-4543-425c-a7c4-d88e6219a2dd" Selector="&lt;webctrl visibleInnerText='Register a business' tag='A' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9a8b109c-4543-425c-a7c4-d88e6219a2dd" Selector="&lt;webctrl visibleInnerText='Register a business' tag='A' /&gt;" TimeoutMS="3000">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>

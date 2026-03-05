@@ -18,7 +18,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.15.0",
-  "projectVersion": "1.0.1",
+  "projectVersion": "1.0.2",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -82,6 +82,62 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc01 Validate Title.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "8ed750cb-5aff-4181-8471-bca9f2f52302",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Create New Business Record.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "9c93a593-b755-4980-bc2c-3721640bc5c4",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Create New Customer.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "069dc351-5c9a-4733-8171-0f7edc0aba7f",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Add Internal Note.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "817e8ddf-fc88-44be-8bc7-c58d0f183658",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Check and Update Priority.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "31aee7d0-a4ef-4466-989c-d83a38f7efa6",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Add Second Contact to Business.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "ba3ec454-3a4a-42dd-adea-e1c5d13988e6",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc02 Format Address.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "37d84d41-e7b1-49a4-b56e-f6f1c5364189",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\tc01 CloseAllApplications.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d26e67f1-d9e7-471a-b47e-3dcdd8581698",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Update Case Title.xaml"
       }
     ],
     "saveToCloud": false

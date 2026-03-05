@@ -102,13 +102,13 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="tc01_Get_Transaction_Data" sap:VirtualizedContainerService.HintSize="1451.6000000000001,967.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="tc01_Get_Transaction_Data" sap:VirtualizedContainerService.HintSize="1451.6000000000001,1082" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="487.2,539.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="487.2,654" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -120,6 +120,14 @@
         </Assign.To>
         <Assign.Value>
           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(of String, Object)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="453.2,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Object">[g_Config("DynamicsURL")]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Object">["https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=8c637536-53db-f011-8544-000d3ab44730&amp;viewType=4230&amp;lid=1769434472092"]</InArgument>
         </Assign.Value>
       </Assign>
       <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Queue Items Robotics View of CPH Allocations Queue - Dynamics 365" sap:VirtualizedContainerService.HintSize="453.2,333.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="3949ac83-213a-4bc9-99db-16edf38267f3" Version="V2" WindowResize="Maximize">
@@ -138,13 +146,17 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="e34689c9bf7952c585b09c246232dd57.jpg" Selector="&lt;html app='msedge.exe' title='Queue Items Robotics View of CPH Allocations Queue - Dynamics 365' /&gt;" Title="Queue Items Robotics View of CPH Allocations Queue - Dynamics 365" Url="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=8c637536-53db-f011-8544-000d3ab44730&amp;viewType=4230&amp;lid=1768472881088" />
+          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="e2604f9994ad73925bc18aa11b891c9c.jpg" Selector="&lt;html app='msedge.exe' title='Queue Items Robotics View of CPH Allocations Queue - Dynamics 365' /&gt;" Title="Queue Items Robotics View of CPH Allocations Queue - Dynamics 365" Url="https://rpa-csc-uat.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=8c637536-53db-f011-8544-000d3ab44730&amp;viewType=4230" />
         </uix:NApplicationCard.TargetApp>
       </uix:NApplicationCard>
     </Sequence>
     <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="487.2,291.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
-        <Variable x:TypeArguments="sd:DataTable" Name="dtCases" />
+        <Variable x:TypeArguments="sd:DataTable" Name="dtCases">
+          <Variable.Default>
+            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="new DataTable" />
+          </Variable.Default>
+        </Variable>
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

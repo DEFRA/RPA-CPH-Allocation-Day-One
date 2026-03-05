@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="834,698" sap2010:WorkflowViewState.IdRef="Initialization_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:d="clr-namespace:DRACOE_PopUps_64;assembly=DRACOE.PopUps.64" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="834,698" sap2010:WorkflowViewState.IdRef="Initialization_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:d="clr-namespace:DRACOE_Credentials_64;assembly=DRACOE.Credentials.64" xmlns:d1="clr-namespace:DRACOE_PopUps_64;assembly=DRACOE.PopUps.64" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sn="clr-namespace:System.Net;assembly=System.Net.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities.XamlIntegration</x:String>
@@ -41,6 +41,14 @@
       <x:String>DRACOE_PopUps_64</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>DRACOE_Credentials_64</x:String>
+      <x:String>CredentialManagement</x:String>
+      <x:String>UiPath.Credentials.Activities</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -112,9 +120,22 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>DRACOE.Credentials.64</AssemblyReference>
+      <AssemblyReference>CredentialManagement</AssemblyReference>
+      <AssemblyReference>UiPath.Credentials.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2623.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="2054.8,3330" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="boolRuralPaymentsOpened" />
       <Variable x:TypeArguments="x:Int32" Name="intAttempt" />
@@ -125,8 +146,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="1092,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Dynamics" sap:VirtualizedContainerService.HintSize="1092,266.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="f797ba3f-af92-404e-a9be-76044a88a244" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="2054.8,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Dynamics" sap:VirtualizedContainerService.HintSize="2054.8,266.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="f797ba3f-af92-404e-a9be-76044a88a244" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -138,93 +159,139 @@
         <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="2af37fb645f019e4633db66d5371da47.jpg" Selector="&lt;html app='msedge.exe' title='*Dynamics 365' /&gt;" Title="My Dashboard - Dynamics 365" Url="[g_Config(&quot;DynamicsURL&quot;).ToString]" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Rural Payments" sap:VirtualizedContainerService.HintSize="1092,1906" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="a11eaecb-fc43-42bd-bb00-5a213fb41748" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Rural Payments" sap:VirtualizedContainerService.HintSize="2054.8,2757.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" OpenMode="Always" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="a11eaecb-fc43-42bd-bb00-5a213fb41748" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Confirm landing page loaded" sap:VirtualizedContainerService.HintSize="1058,1656" sap2010:WorkflowViewState.IdRef="Sequence_16">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:InterruptibleDoWhile Condition="[not boolRuralPaymentsOpened]" CurrentIndex="[intAttempt]" DisplayName="Do While - landing page not loaded" sap:VirtualizedContainerService.HintSize="1024,1172.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="3">
-              <ui:InterruptibleDoWhile.Body>
-                <uix:NCheckState DisplayName="Check App State 'Customer services'" sap:VirtualizedContainerService.HintSize="990,1003.2" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="10" Version="V3">
+          <Pick sap:VirtualizedContainerService.HintSize="2020.8,2507.2" sap2010:WorkflowViewState.IdRef="Pick_1">
+            <PickBranch DisplayName="Already logged in" sap:VirtualizedContainerService.HintSize="425.6,2460.4" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+              <PickBranch.Trigger>
+                <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - Customer Services heading" sap:VirtualizedContainerService.HintSize="334,86.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                  <ui:WaitUiElementAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39b27278-4c7c-4d39-9db1-4af91dfbaa80" Selector="&lt;webctrl visibleInnerText='Customer services*' tag='H1' /&gt;" TimeoutMS="10100">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitUiElementAppear.Target>
+                </ui:WaitUiElementAppear>
+              </PickBranch.Trigger>
+              <ui:LogMessage DisplayName="Log Message - rural payments already logged in" sap:VirtualizedContainerService.HintSize="336,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;User already logged in to Rural Payments&quot;]" />
+            </PickBranch>
+            <PickBranch DisplayName="Log in page" sap:VirtualizedContainerService.HintSize="1077.6,2460.4" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+              <PickBranch.Variables>
+                <Variable x:TypeArguments="sn:NetworkCredential" Name="credsRuralPayments" />
+              </PickBranch.Variables>
+              <PickBranch.Trigger>
+                <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - Sign in heading" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+                  <ui:WaitUiElementAppear.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="df38abec-aa8f-4fd0-a5a8-99ec465b4471" InformativeScreenshot="d48f7262c166ac83170834124a1907e1" Selector="&lt;html app='msedge.exe' title='*Rural Payments' /&gt;&lt;webctrl tag='H1' visibleinnertext='Sign in' /&gt;" TimeoutMS="10100">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:WaitUiElementAppear.Target>
+                </ui:WaitUiElementAppear>
+              </PickBranch.Trigger>
+              <Sequence DisplayName="Log in to Rural Payments" sap:VirtualizedContainerService.HintSize="988,2152.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <InvokeMethod sap2010:Annotation.AnnotationText="Set rural payments as foreground for login" DisplayName="Bring to foreground - search rural payments" sap:VirtualizedContainerService.HintSize="954,216.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="BringToForeground">
+                  <InvokeMethod.TargetObject>
+                    <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("RuralPaymentsBrowser"),UiElement)]</InArgument>
+                  </InvokeMethod.TargetObject>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </InvokeMethod>
+                <d:Get_Credential DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="954,280.4" IN_strRequestMessage="Please enter your email address and Rural Payments password here. By entering your Rural Payments credentials into this pop-up, the robot will be able to log in automatically in future. Please note that these credentials are securely stored in Windows Credential Manager on your device." sap2010:WorkflowViewState.IdRef="Get_Credential_1" in_strCredentialName="RuralPayments" in_strRequestTitle="Please enter Rural Payments credentials" out_credNetworkCredential="[credsRuralPayments]" />
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type email" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Text="[credsRuralPayments.UserName]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/login" DesignTimeRectangle="317, 1021, 1550, 87" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control' aaname='         Email address     ' /&gt;" Guid="722eb795-bb78-46a1-904b-363269406b36" InformativeScreenshot="08754c49eded3784a5ae6d0d7d4e36d0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign in - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" SecureText="[credsRuralPayments.SecurePassword]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/login" DesignTimeRectangle="317, 1245, 1550, 87" DesignTimeScaleFactor="2.5" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-control' aaname='         Password     ' /&gt;" Guid="b82e04a5-cf46-42d1-85e1-05261c97c32a" InformativeScreenshot="5a198b7a209589894271ab9d5fd7c5fd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign in - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" sap:VirtualizedContainerService.HintSize="954,190" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/login" DesignTimeRectangle="291, 1130, 212, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Sign in' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Sign in' type='submit' class='button' aaname='Sign in' check:text='Sign in' /&gt;" Guid="0a710399-cbb6-4159-bf9e-164e0e969f45" InformativeScreenshot="fe155ad3e01d63261c7bccbc8e5cc9e5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign in - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <TryCatch DisplayName="Try Catch - session exists dialog" sap:VirtualizedContainerService.HintSize="954,423.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                  <TryCatch.Try>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="3" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/login" DesignTimeRectangle="2162, 872, 146, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Yes'" FullSelectorArgument="&lt;webctrl id='confirmLogin' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='confirmLogin' tag='BUTTON' type='button' class='button btn capd-btn' aaname='Yes' check:innerText='Yes' /&gt;" Guid="20092896-dc94-4369-bcc2-2f6474813c8f" ImageBase64="" InformativeScreenshot="5cd89ae963d11760a5fe951e7b3bdb26.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign in - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1269, 347, 1200, 71" ElementType="Text" FriendlyName="'Session exists'" FullSelectorArgument="&lt;webctrl innerText='Session exists' tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl innerText='Session exists' tag='H4' type='' class='modal-title w-100' aaname='Session exists' check:text='Session exists' /&gt;" SearchSteps="Selector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </TryCatch.Try>
+                  <TryCatch.Catches>
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.6,23.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ActivityAction x:TypeArguments="s:Exception">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                        </ActivityAction.Argument>
+                        <ui:LogMessage DisplayName="Log Message - no existing session prompt" sap:VirtualizedContainerService.HintSize="334,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Existing session prompt not found.&quot;]" />
+                      </ActivityAction>
+                    </Catch>
+                  </TryCatch.Catches>
+                </TryCatch>
+                <uix:NCheckState DisplayName="Check App State 'Customer services'" sap:VirtualizedContainerService.HintSize="954,475.6" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="5" Version="V3">
                   <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,346.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,231.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message - rural payments loaded" sap:VirtualizedContainerService.HintSize="434,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Rural Payments opened successfully.&quot;]" />
-                      <Assign DisplayName="Assign - rural payments loaded" sap:VirtualizedContainerService.HintSize="434,107.6" sap2010:WorkflowViewState.IdRef="Assign_1">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Boolean">[boolRuralPaymentsOpened]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                        </Assign.Value>
-                      </Assign>
+                      <ui:LogMessage DisplayName="Log Message - rural payments loaded" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Rural Payments logged in successfully.&quot;]" />
                     </Sequence>
                   </uix:NCheckState.IfExists>
                   <uix:NCheckState.IfNotExists>
-                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,784" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,177.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message - rural payments not loaded" sap:VirtualizedContainerService.HintSize="434,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Rural Payments landing page not recognised. Prompting user to fix.&quot;]" />
-                      <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="User prompt log-in" sap:VirtualizedContainerService.HintSize="434,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at initialisation of Rural Payments." IN_PopupMessage="[&quot;&lt;p&gt;The robot does not recognise the landing page for Rural Payments after &quot;+(intAttempt+1).ToString+&quot;/3 attempts. Please log in if necessary and then click 'Continue'. Otherwise, please click 'Stop'.&quot;]" IN_PopupTitle="Rural Payments initialisation" IN_WidthHeight="[{500,200}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
-                      <Assign DisplayName="Assign - rural payments not loaded" sap:VirtualizedContainerService.HintSize="434,107.6" sap2010:WorkflowViewState.IdRef="Assign_2">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Boolean">[boolRuralPaymentsOpened]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                        </Assign.Value>
-                      </Assign>
+                      <Throw DisplayName="Throw SE - log in failed" Exception="[new System.Exception(&quot;Log in to Rural Payments failed. Please contact DRACoE to check correct credentials are stored.&quot;)]" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="Throw_5" />
                     </Sequence>
                   </uix:NCheckState.IfNotExists>
                   <uix:NCheckState.Target>
                     <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/main" DesignTimeRectangle="317, 636, 2042, 225" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Customer services'" FullSelectorArgument="&lt;webctrl visibleInnerText='Customer services*' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl id='internalUserName' tag='H1' type='' class='heading-xlarge' aaname='Customer services ' check:innerText='Customer services&amp;#xD;&amp;#xA;Test User11' /&gt;" Guid="196ec716-58e0-4e5f-b46e-632af2021834" ImageBase64="" InformativeScreenshot="d5f3042214924d1c50c7edd9a680cb36.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                   </uix:NCheckState.Target>
                 </uix:NCheckState>
-              </ui:InterruptibleDoWhile.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:InterruptibleDoWhile>
-            <If Condition="[not boolRuralPaymentsOpened]" DisplayName="If no landing page after 3 attempts" sap:VirtualizedContainerService.HintSize="1024,422" sap2010:WorkflowViewState.IdRef="If_1">
-              <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Throw DisplayName="Throw SE - rural payments initialisation exception" Exception="[new System.Exception(&quot;Could not verify Rural Payments landing page loaded after 3 attempts.&quot;)]" sap:VirtualizedContainerService.HintSize="382,114.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
-                </Sequence>
-              </If.Then>
-              <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Sequence>
-              </If.Else>
-            </If>
-          </Sequence>
+              </Sequence>
+            </PickBranch>
+            <PickBranch DisplayName="Default" sap:VirtualizedContainerService.HintSize="423.6,2460.4" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+              <PickBranch.Trigger>
+                <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              </PickBranch.Trigger>
+              <Throw DisplayName="Throw SE - landing page not recognised" Exception="[new System.Exception(&quot;Neither the log in page nor the home page of Rural Payments has been recognised after 10 seconds.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_4" />
+            </PickBranch>
+          </Pick>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
@@ -237,15 +304,121 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <InvokeMethod sap2010:Annotation.AnnotationText="First activities use CRM and visibility can be important (even though it shouldn't be)" DisplayName="Set CRM as foreground" sap:VirtualizedContainerService.HintSize="1092,221.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">
-      <InvokeMethod.TargetObject>
-        <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("DynamicsBrowser"),UiElement)]</InArgument>
-      </InvokeMethod.TargetObject>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2054.8,76.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1126,1998" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Rural Payments" sap:VirtualizedContainerService.HintSize="1092,1938" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" OutUiElement="[g_Config(&quot;RuralPaymentsBrowser&quot;)]" ScopeGuid="a11eaecb-fc43-42bd-bb00-5a213fb41748" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Confirm landing page loaded" sap:VirtualizedContainerService.HintSize="1058,1696.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InterruptibleDoWhile Condition="[not boolRuralPaymentsOpened]" CurrentIndex="[intAttempt]" DisplayName="Do While - landing page not loaded" sap:VirtualizedContainerService.HintSize="1024,1213.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="3">
+                    <ui:InterruptibleDoWhile.Body>
+                      <uix:NCheckState DisplayName="Check App State 'Customer services'" sap:VirtualizedContainerService.HintSize="990,1044" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="a11eaecb-fc43-42bd-bb00-5a213fb41748" Timeout="10" Version="V3">
+                        <uix:NCheckState.IfExists>
+                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,346.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message - rural payments loaded" sap:VirtualizedContainerService.HintSize="434,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Rural Payments opened successfully.&quot;]" />
+                            <Assign DisplayName="Assign - rural payments loaded" sap:VirtualizedContainerService.HintSize="434,107.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[boolRuralPaymentsOpened]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </uix:NCheckState.IfExists>
+                        <uix:NCheckState.IfNotExists>
+                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,784" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message - rural payments not loaded" sap:VirtualizedContainerService.HintSize="434,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Rural Payments landing page not recognised. Prompting user to fix.&quot;]" />
+                            <d1:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="User prompt log-in" sap:VirtualizedContainerService.HintSize="434,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at initialisation of Rural Payments." IN_PopupMessage="[&quot;&lt;p&gt;The robot does not recognise the landing page for Rural Payments after &quot;+(intAttempt+1).ToString+&quot;/3 attempts. Please log in if necessary and then click 'Continue'. Otherwise, please click 'Stop'.&quot;]" IN_PopupTitle="Rural Payments initialisation" IN_WidthHeight="[{500,200}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                            <Assign DisplayName="Assign - rural payments not loaded" sap:VirtualizedContainerService.HintSize="434,107.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[boolRuralPaymentsOpened]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </uix:NCheckState.IfNotExists>
+                        <uix:NCheckState.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/main" DesignTimeRectangle="317, 636, 2042, 225" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Customer services'" FullSelectorArgument="&lt;webctrl visibleInnerText='Customer services*' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl id='internalUserName' tag='H1' type='' class='heading-xlarge' aaname='Customer services ' check:innerText='Customer services&amp;#xD;&amp;#xA;Test User11' /&gt;" Guid="196ec716-58e0-4e5f-b46e-632af2021834" ImageBase64="" InformativeScreenshot="d5f3042214924d1c50c7edd9a680cb36.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NCheckState.Target>
+                      </uix:NCheckState>
+                    </ui:InterruptibleDoWhile.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InterruptibleDoWhile>
+                  <If Condition="[not boolRuralPaymentsOpened]" DisplayName="If no landing page after 3 attempts" sap:VirtualizedContainerService.HintSize="1024,422" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw DisplayName="Throw SE - rural payments initialisation exception" Exception="[new System.Exception(&quot;Could not verify Rural Payments landing page loaded after 3 attempts.&quot;)]" sap:VirtualizedContainerService.HintSize="382,114.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAJOgAACToAYJjBRwAAADwSURBVDhPzdBBTgJBEAVQbwKJa0xcY+Ia4l7jXsIewzWAAxAPQDwAXAAvgBeAC8wJirxOajIddSML7eSn/lT//6t6rq57/bgE/zzgY7+P983m27tEFXA/vIuH0bjw1WIZTdOEg+u5o+l6SsDt4CaeH5/KRNhtt/G2Xsfn4dBu4ft0PJZvWp42YD57LZNUUwhNdWyBC3DX1VYBBLh0FfSyD/k8vSog18ZNzBVNBpzBHQ0tTxvAYG0i1ZsB9x+EMOCpyW1KAGimgdiaOUmYmpqcXgVITrNVmdQuF0gzfZl8DfBOR8BPMN1JTxXwW/x1QD/OjlcMoi6mvnQAAAAASUVORK5CYII=" InformativeScreenshot="6d990831bea92d3f20598880674b027f.jpg" Selector="&lt;html app='msedge.exe' title='Home - Rural Payments' /&gt;" Title="Home - Rural Payments" Url="[g_Config(&quot;RuralPaymentsURL&quot;).ToString]" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </InvokeMethod>
+    </ui:CommentOut>
   </Sequence>
 </Activity>

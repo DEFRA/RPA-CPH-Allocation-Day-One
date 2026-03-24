@@ -18,7 +18,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.15.0",
-  "projectVersion": "1.0.3",
+  "projectVersion": "1.0.4",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -138,6 +138,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc01 Update Case Title.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e100131e-0663-459b-9245-a17965403e53",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\tc01 InitAllApplications.xaml"
       }
     ],
     "saveToCloud": false

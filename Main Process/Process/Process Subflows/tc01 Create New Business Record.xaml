@@ -248,7 +248,7 @@
                 <OutArgument x:TypeArguments="x:String">[dictFormDetails("BusinessName")]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">Test Biz</InArgument>
+                <InArgument x:TypeArguments="x:String">foreground test</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
           </scg:List>
@@ -270,7 +270,7 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAJOgAACToAYJjBRwAAADwSURBVDhPzdBBTgJBEAVQbwKJa0xcY+Ia4l7jXsIewzWAAxAPQDwAXAAvgBeAC8wJirxOajIddSML7eSn/lT//6t6rq57/bgE/zzgY7+P983m27tEFXA/vIuH0bjw1WIZTdOEg+u5o+l6SsDt4CaeH5/KRNhtt/G2Xsfn4dBu4ft0PJZvWp42YD57LZNUUwhNdWyBC3DX1VYBBLh0FfSyD/k8vSog18ZNzBVNBpzBHQ0tTxvAYG0i1ZsB9x+EMOCpyW1KAGimgdiaOUmYmpqcXgVITrNVmdQuF0gzfZl8DfBOR8BPMN1JTxXwW/x1QD/OjlcMoi6mvnQAAAAASUVORK5CYII=" InformativeScreenshot="8d46b36ad9d1301b5f717d49fffd1026.jpg" Selector="&lt;html app='msedge.exe' title='Customer businesses and messages - Rural Payments' /&gt;" Title="Customer businesses and messages - Rural Payments" Url="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/dashboard/5752555/my-account" />
+          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAJOgAACToAYJjBRwAAADwSURBVDhPzdBBTgJBEAVQbwKJa0xcY+Ia4l7jXsIewzWAAxAPQDwAXAAvgBeAC8wJirxOajIddSML7eSn/lT//6t6rq57/bgE/zzgY7+P983m27tEFXA/vIuH0bjw1WIZTdOEg+u5o+l6SsDt4CaeH5/KRNhtt/G2Xsfn4dBu4ft0PJZvWp42YD57LZNUUwhNdWyBC3DX1VYBBLh0FfSyD/k8vSog18ZNzBVNBpzBHQ0tTxvAYG0i1ZsB9x+EMOCpyW1KAGimgdiaOUmYmpqcXgVITrNVmdQuF0gzfZl8DfBOR8BPMN1JTxXwW/x1QD/OjlcMoi6mvnQAAAAASUVORK5CYII=" InformativeScreenshot="dc774125c08e972a04aa6df6f0e40334.jpg" Selector="&lt;html app='msedge.exe' title='Customer businesses and messages - Rural Payments' /&gt;" Title="Customer businesses and messages - Rural Payments" Url="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/dashboard/5752555/my-account" />
         </uix:NApplicationCard.TargetApp>
       </uix:NApplicationCard>
     </Sequence>
@@ -284,6 +284,7 @@
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_dictFormDetails">[dictFormDetails]</InArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="out_strSBI" />
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strBusinessNameSelector" />
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>

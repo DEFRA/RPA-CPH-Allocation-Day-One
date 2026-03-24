@@ -345,7 +345,7 @@
                   <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("LastName")]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Regex.Match(strFormContent,"(?s)(?&lt;=Last name).*?(?=What is the name of the business\?)").Value.Trim.ToLower)]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Regex.Match(strFormContent,"(?s)(?&lt;=Last name).*?(?=(What is|What\'s) the name of the business\?)").Value.Trim.ToLower)]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_45">
@@ -353,7 +353,7 @@
                   <OutArgument x:TypeArguments="x:String">[out_dictFormDetails("BusinessName")]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=What is the name of the business\?).*?(?=What\'s your main phone number\?)").Value.Trim]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[Regex.Match(strFormContent,"(?s)(?&lt;=(What is|What\'s) the name of the business\?).*?(?=What\'s your main phone number\?)").Value.Trim]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_46">
@@ -913,15 +913,9 @@
                     </ActivityAction>
                   </ufa:FormActivity.DelayBody>
                   <ufa:FormActivity.FormFieldsCollection>
-                    <InArgument x:TypeArguments="x:String" x:Key="PopupMessage">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;&lt;h1&gt;Select Business Purpose&lt;/h1&gt;&lt;p&gt;The user has submitted a business purpose of 'Other'. Please select a suitable business purpose&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Business name:&lt;/strong&gt;&amp;ensp;&quot;+out_dictFormDetails(&quot;BusinessName&quot;)+&quot;&lt;br&gt;&lt;strong&gt;Legal status:&lt;/strong&gt;&amp;ensp;&quot;+out_dictFormDetails(&quot;LegalStatus&quot;)+&quot;&lt;br&gt;&lt;strong&gt;Business Purpose (Other):&lt;/strong&gt;&amp;ensp;&quot;+out_dictFormDetails(&quot;BusinessPurposeOther&quot;)+&quot;&lt;/p&gt;&lt;p&gt;Once you have selected a suitable value, please click 'Continue'. Otherwise, please click 'Stop' and complete this transaction manually.&lt;/p&gt;&quot;" />
-                    </InArgument>
-                    <OutArgument x:TypeArguments="x:String" x:Key="selectBusinessPurpose">
-                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_dictFormDetails(&quot;BusinessPurpose&quot;)" />
-                    </OutArgument>
-                    <InArgument x:TypeArguments="scg:List(x:String)" x:Key="selectBusinessPurpose_dropdown">
-                      <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="in_dtBusinessAndLegal.AsEnumerable.Select(function(x) x(&quot;BusinessPurposes_RPA&quot;).ToString).Where(function(y) y.ToString&lt;&gt;&quot;Other&quot;).ToList" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PopupMessage">["&lt;h1&gt;Select Business Purpose&lt;/h1&gt;&lt;p&gt;The user has submitted a business purpose of 'Other'. Please select a suitable business purpose&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Business name:&lt;/strong&gt;&amp;ensp;"+out_dictFormDetails("BusinessName")+"&lt;br&gt;&lt;strong&gt;Legal status:&lt;/strong&gt;&amp;ensp;"+out_dictFormDetails("LegalStatus")+"&lt;br&gt;&lt;strong&gt;Business Purpose (Other):&lt;/strong&gt;&amp;ensp;"+out_dictFormDetails("BusinessPurposeOther")+"&lt;/p&gt;&lt;p&gt;Once you have selected a suitable value, please click 'Continue'. Otherwise, please click 'Stop' and complete this transaction manually.&lt;/p&gt;"]</InArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="selectBusinessPurpose">[out_dictFormDetails("BusinessPurpose")]</OutArgument>
+                    <InArgument x:TypeArguments="scg:List(x:String)" x:Key="selectBusinessPurpose_dropdown">[in_dtBusinessAndLegal.AsEnumerable.Select(function(x) x("BusinessPurposes_RPA").ToString).Where(function(y) y.ToString&lt;&gt;"Other").ToList]</InArgument>
                   </ufa:FormActivity.FormFieldsCollection>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1424,14 +1418,14 @@
           <x:Reference>__ReferenceID5</x:Reference>
         </Flowchart>
       </Sequence>
-      <Sequence x:Key="I'm a hobbyist keeper (Im a hobbyist keeper)" DisplayName="Extract hobbyist fields" sap:VirtualizedContainerService.HintSize="634,2023.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence x:Key="I'm a hobbyist keeper (Im a hobbyist keeper)" DisplayName="Extract hobbyist fields" sap:VirtualizedContainerService.HintSize="634,2017.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message - hobbyist" sap:VirtualizedContainerService.HintSize="600,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Customer identified as Hobbyist&quot;]" />
+        <ui:LogMessage DisplayName="Log Message - hobbyist" sap:VirtualizedContainerService.HintSize="600,85.2" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Customer identified as Hobbyist&quot;]" />
         <ui:MultipleAssign DisplayName="Extract form fields" sap:VirtualizedContainerService.HintSize="600,430.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">

@@ -133,19 +133,19 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create_New_Business_Record" sap:VirtualizedContainerService.HintSize="1517.6,7437.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Create_New_Business_Record" sap:VirtualizedContainerService.HintSize="1517.6,8088.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - register new business" sap:VirtualizedContainerService.HintSize="1517.6,7414.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - register new business" sap:VirtualizedContainerService.HintSize="1517.6,8065.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Register new business" sap:VirtualizedContainerService.HintSize="1483.6,7253.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Register new business" sap:VirtualizedContainerService.HintSize="1483.6,7904.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -167,12 +167,12 @@
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/select-type?personId=5720980" DesignTimeRectangle="369, 1253, 33, 33" DesignTimeScaleFactor="2.5" ElementType="RadioButton" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Agricultural or other business' /&gt;&lt;webctrl tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Yes' /&gt;&lt;webctrl tag='INPUT' type='radio' class='ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="e555a810-d960-4920-9172-b1fea208c2f6" InformativeScreenshot="368449fd3f737103d7917be97a6a6911.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Register a business - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NCheck.Target>
             </uix:NCheck>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="1026,190" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="1449.6,190" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/select-type?personId=5720980" DesignTimeRectangle="317, 2169, 263, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleInnerText='Continue' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='button' aaname='Continue             ' check:innerText='Continue' /&gt;" Guid="73afcf23-7f5f-4116-838b-3b45e7f33e84" ImageBase64="" InformativeScreenshot="9fa63680441d60c17baa47a20e7c4ef3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Register a business - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Business Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1026,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessName&quot;)]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Business Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1449.6,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;BusinessName&quot;)]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create/amend?personId=5972402" DesignTimeRectangle="355, 1269, 996, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT businessname'" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Business Name' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Business Name' /&gt;&lt;webctrl tag='INPUT' type='text' class='form-control ng-valid-maxlength ng-empty ng-dirty ng-invalid ng-invalid-required ng-valid-parse ng-touched' aaname='Business Name                      Enter business name             You can only enter a maximum of 160 characters for business name              ' /&gt;" Guid="f60b3533-cd75-466b-884f-b750ad3ef2c0" InformativeScreenshot="816e89d87c6184d6011276baceff3774.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
@@ -424,7 +424,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Landline'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1026,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;Landline&quot;)]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Landline'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1449.6,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;Landline&quot;)]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1391, 518, 78" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT landlinenumber'" FullSelectorArgument="&lt;webctrl id='landlinenumber' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='landlinenumber' tag='INPUT' type='text' class='form-control-1-4 ng-pristine ng-untouched ng-valid-maxlength ng-valid-minlength ng-valid-numeric ng-invalid ng-invalid-required ng-empty' aaname='Landline                            Enter at least one business telephone number, either landline or mobile                 Enter a minimum of 10 characters for business landline number                 You can only enter a maximum of 50 characters for business landline number                 Business landline number is not correctly formatted. You can enter numbers, brackets, spaces only and a plus (+) in the first position                  ' /&gt;" Guid="093a38bc-30d7-4174-9b75-bd4ae0792ab3" ImageBase64="" InformativeScreenshot="049ebbee15da377fbed79a15ab880aa6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -435,7 +435,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Mobile'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1026,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;Mobile&quot;)]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Mobile'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1449.6,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[in_dictFormDetails(&quot;Mobile&quot;)]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1619, 518, 78" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT mobilenumber'" FullSelectorArgument="&lt;webctrl id='mobilenumber' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mobilenumber' tag='INPUT' type='text' class='form-control-1-4 ng-pristine ng-untouched ng-valid-maxlength ng-valid-minlength ng-valid-numeric ng-invalid ng-invalid-required ng-empty' aaname='Mobile                       Enter a minimum of 10 characters for business mobile number             You can only enter a maximum of 50 characters for business mobile number             Business mobile number is not correctly formatted. You can enter numbers, brackets, spaces only and a plus (+) in the first position                  ' /&gt;" Guid="d719d300-a283-409c-b8dc-33a6945a3d82" ImageBase64="" InformativeScreenshot="2eb1adc0e7c64697dc50402c501bc0ed.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -446,12 +446,12 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="1026,190" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="1449.6,190" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1491, 263, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl visibleInnerText='Continue' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='continue' tag='BUTTON' type='button' class='button btn-link ng-scope ng-isolate-scope' aaname='Continue         ' check:innerText='Continue' /&gt;" Guid="fa34e2b3-9e08-49ca-bd80-53cb3fdc8521" ImageBase64="" InformativeScreenshot="4d9a49400f06c720282fede1eecbc5d3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NSelectItem DisplayName="Select Item 'Legal Status'" sap:VirtualizedContainerService.HintSize="1026,190" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_dictFormDetails(&quot;LegalStatus&quot;)]" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
+            <uix:NSelectItem DisplayName="Select Item 'Legal Status'" sap:VirtualizedContainerService.HintSize="1449.6,190" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_dictFormDetails(&quot;LegalStatus&quot;)]" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="15">
                   <x:String>-- Please make a selection --</x:String>
@@ -481,7 +481,7 @@
                 </uix:TargetAnchorable>
               </uix:NSelectItem.Target>
             </uix:NSelectItem>
-            <uix:NSelectItem DisplayName="Select Item 'Type of business'" sap:VirtualizedContainerService.HintSize="1026,190" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[in_dictFormDetails(&quot;BusinessPurpose&quot;)]" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
+            <uix:NSelectItem DisplayName="Select Item 'Type of business'" sap:VirtualizedContainerService.HintSize="1449.6,190" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[in_dictFormDetails(&quot;BusinessPurpose&quot;)]" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="17">
                   <x:String>-- Please make a selection --</x:String>
@@ -513,7 +513,7 @@
                 </uix:TargetAnchorable>
               </uix:NSelectItem.Target>
             </uix:NSelectItem>
-            <uix:NCheckState DisplayName="Check App State 'Reference number'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1026,516.8" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Timeout="2" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Reference number'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1449.6,516.8" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Timeout="2" Version="V3">
               <uix:NCheckState.IfExists>
                 <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Should never be a situation where both have been provided, so just type whichever field isn't blank" ClickBeforeMode="None" DisplayName="Type charity/company number" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,265.6" sap2010:WorkflowViewState.IdRef="NTypeInto_26" InteractionMode="DebuggerApi" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Text="[if(not String.IsNullOrEmpty(in_dictFormDetails(&quot;CharityNumber&quot;)),in_dictFormDetails(&quot;CharityNumber&quot;),in_dictFormDetails(&quot;CompanyNumber&quot;))]" Version="V3">
                   <uix:NTypeInto.Target>
@@ -530,7 +530,7 @@
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create/details?personId=5752555" DesignTimeRectangle="317, 1101, 501, 75" DesignTimeScaleFactor="2.5" FriendlyName="'Reference number'" FullSelectorArgument="&lt;webctrl visibleInnerText='Reference number' tag='LEGEND' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='LEGEND' class='heading-medium ng-scope' aaname='Reference number' check:innerText='Reference number' /&gt;" Guid="438bd711-2287-4d63-a906-5d8d2d521f9f" ImageBase64="" InformativeScreenshot="33bd446e3ef45c6af0e99def91e5f966.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="1026,190" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="1449.6,190" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/organisation/create?personId=5720980" DesignTimeRectangle="355, 1491, 263, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='button' aaname='Continue' /&gt;" FuzzySelectorArgument="&lt;webctrl id='continue' tag='BUTTON' type='button' class='button btn-link ng-scope ng-isolate-scope' aaname='Continue         ' check:innerText='Continue' /&gt;" Guid="fa34e2b3-9e08-49ca-bd80-53cb3fdc8521" ImageBase64="" InformativeScreenshot="4d9a49400f06c720282fede1eecbc5d3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Add business details - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -572,6 +572,12 @@
               </uix:NClick.Target>
             </uix:NClick>
             <Pick sap:VirtualizedContainerService.HintSize="1449.6,1588.8" sap2010:WorkflowViewState.IdRef="Pick_1">
+              <PickBranch DisplayName="PickBranch - default" sap:VirtualizedContainerService.HintSize="423.6,1510" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+                <PickBranch.Trigger>
+                  <Delay DisplayName="Delay - no duplicate or success" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                </PickBranch.Trigger>
+                <Throw DisplayName="Throw SE - unknown error" Exception="[new System.Exception(&quot;Unknown error encountered on registering business. Neither duplicate prompt nor success message appeared.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
+              </PickBranch>
               <PickBranch DisplayName="PickBranch - duplicate business found" sap:VirtualizedContainerService.HintSize="505.6,1510" sap2010:WorkflowViewState.IdRef="PickBranch_1">
                 <PickBranch.Trigger>
                   <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find element - duplicate business found" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
@@ -623,12 +629,6 @@
                 </PickBranch.Trigger>
                 <ui:LogMessage DisplayName="Log Message - business successfully registered" sap:VirtualizedContainerService.HintSize="336.8,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Business successfully registered&quot;]" />
               </PickBranch>
-              <PickBranch DisplayName="PickBranch - default" sap:VirtualizedContainerService.HintSize="423.6,1510" sap2010:WorkflowViewState.IdRef="PickBranch_3">
-                <PickBranch.Trigger>
-                  <Delay DisplayName="Delay - no duplicate or success" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                </PickBranch.Trigger>
-                <Throw DisplayName="Throw SE - unknown error" Exception="[new System.Exception(&quot;Unknown error encountered on registering business. Neither duplicate prompt nor success message appeared.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
-              </PickBranch>
             </Pick>
             <Assign sap2010:Annotation.AnnotationText="Replace &lt; &gt; &amp; ' &quot; from company name with ? wildcard" DisplayName="Assign selector part for retrieving SBI" sap:VirtualizedContainerService.HintSize="1449.6,146" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
@@ -643,11 +643,38 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <uix:NGetText DisplayName="Get SBI" sap:VirtualizedContainerService.HintSize="1449.6,190" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" TextString="[out_strSBI]" Version="V3">
-              <uix:NGetText.Target>
-                <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/dashboard/5967943/my-account" DesignTimeRectangle="317, 2017, 678, 154" DesignTimeScaleFactor="2.5" FriendlyName="'Test Business'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl visibleInnerText='{0}' tag='TD' /&gt;&quot;, out_strBusinessNameSelector)]" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='                                                              ' /&gt;" Guid="c0f5fd55-c6a3-4481-9776-a67285f89d94" ImageBase64="" InformativeScreenshot="7eefcda60ddd10e707275c4bee404d48.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer businesses and messages - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NGetText.Target>
-            </uix:NGetText>
+            <ui:LogMessage DisplayName="Log Message - SBI selector" sap:VirtualizedContainerService.HintSize="1449.6,177.2" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Getting SBI with visibleInnerText: &quot;+out_strBusinessNameSelector]" />
+            <ui:RetryScope DisplayName="Retry Scope - Get SBI" sap:VirtualizedContainerService.HintSize="1449.6,664" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <Sequence DisplayName="Ensure rural payments is foreground and get SBI" sap:VirtualizedContainerService.HintSize="416,454.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <InvokeMethod sap2010:Annotation.AnnotationText="Set rural payments as foreground after CRM activities." DisplayName="Bring to foreground - get SBI" sap:VirtualizedContainerService.HintSize="382,213.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" MethodName="BringToForeground">
+                      <InvokeMethod.TargetObject>
+                        <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("RuralPaymentsBrowser"),UiElement)]</InArgument>
+                      </InvokeMethod.TargetObject>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </InvokeMethod>
+                    <uix:NGetText DisplayName="Get SBI" sap:VirtualizedContainerService.HintSize="382,181.2" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="2c70399d-a2c2-45ee-ab3b-a1105281d97d" TextString="[out_strSBI]" Timeout="5" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/dashboard/5967943/my-account" DesignTimeRectangle="317, 2017, 678, 154" DesignTimeScaleFactor="2.5" FriendlyName="'*'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl visibleInnerText='{0}' tag='TD' /&gt;&quot;, out_strBusinessNameSelector)]" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='*' /&gt;" Guid="c0f5fd55-c6a3-4481-9776-a67285f89d94" ImageBase64="" InformativeScreenshot="7eefcda60ddd10e707275c4bee404d48.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer businesses and messages - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                  </Sequence>
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean" />
+              </ui:RetryScope.Condition>
+            </ui:RetryScope>
             <Assign DisplayName="Extract SBI" sap:VirtualizedContainerService.HintSize="1449.6,107.6" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[out_strSBI]</OutArgument>

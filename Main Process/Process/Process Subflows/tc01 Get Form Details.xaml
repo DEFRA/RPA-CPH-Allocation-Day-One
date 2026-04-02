@@ -123,14 +123,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="490.4,1242.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="484.8,1242.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[dtBusinessAndLegal]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" FilePath="C:\Users\rm000121\OneDrive - Defra\UiPath\RPA-CPH-Allocation-Day-One\Test Data\BusinessAndLegal.csv" sap:VirtualizedContainerService.HintSize="456.4,190.8" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
-      <Assign sap:VirtualizedContainerService.HintSize="456.4,114.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[dtBusinessAndLegal]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" FilePath="C:\Users\rm000121\OneDrive - Defra\UiPath\RPA-CPH-Allocation-Day-One\Test Data\BusinessAndLegal.csv" sap:VirtualizedContainerService.HintSize="450.8,190.8" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+      <Assign sap:VirtualizedContainerService.HintSize="450.8,114.4" sap2010:WorkflowViewState.IdRef="Assign_3">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</OutArgument>
         </Assign.To>
@@ -138,7 +138,7 @@
           <InArgument x:TypeArguments="sd:Stopwatch">[new Stopwatch]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="456.4,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign sap:VirtualizedContainerService.HintSize="450.8,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[g_Config]</OutArgument>
         </Assign.To>
@@ -146,7 +146,7 @@
           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(of String, Object)]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="456.4,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign sap:VirtualizedContainerService.HintSize="450.8,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Object">[g_Config("AcceptedTitles")]</OutArgument>
         </Assign.To>
@@ -154,7 +154,7 @@
           <InArgument x:TypeArguments="x:Object">["Mr,Mrs,Ms,Miss,Mx,Prof,Dr,Captain"]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="456.4,114.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign sap:VirtualizedContainerService.HintSize="450.8,114.4" sap2010:WorkflowViewState.IdRef="Assign_4">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Object">[g_Config("PausePoint1")]</OutArgument>
         </Assign.To>
@@ -162,7 +162,7 @@
           <InArgument x:TypeArguments="x:Object">[True]</InArgument>
         </Assign.Value>
       </Assign>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Case: Case - SLA: SBI 201127053 (23/03) - CRM GDS CPH Online - CRN 1106807693 - Cr" sap:VirtualizedContainerService.HintSize="456.4,342" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="1e94dd35-f01c-46dd-ab79-afd2c2c15b8e" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Case: Case - SLA: SYSTEM EXCEPTION - day one process - CRM GDS CPH Online - Dynami" sap:VirtualizedContainerService.HintSize="450.8,342" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="1e94dd35-f01c-46dd-ab79-afd2c2c15b8e" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -178,16 +178,16 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="7e41e2f27ad542f9a8f4ffda69746c83.jpg" Selector="&lt;html app='msedge.exe' htmlwindowname='5123b8b3a426f11183427ced8d481189' title='Case: Case - SLA: SBI 201127053 (23/03) - CRM GDS CPH Online - CRN 1106807693 - Critical - Dynamics 365' /&gt;" Title="Case: Case - SLA: CRM GDS CPH Online - Dynamics 365" Url="https://rpa-csc-prod.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;newWindow=true&amp;pagetype=entityrecord&amp;etn=incident&amp;id=5123b8b3-a426-f111-8342-7ced8d481189" />
+          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="2aa5e381c217ae15250e53cc853a6c48.jpg" Selector="&lt;html app='msedge.exe' title='Case: Case - SLA: SYSTEM EXCEPTION - day one process - CRM GDS CPH Online - Dynamics 365' /&gt;" Title="Case: Case - SLA: CRM GDS CPH Online - Dynamics 365" Url="https://rpa-csc-prod.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=dd9add73-1b2c-f111-88b4-7ced8d4816e7" />
         </uix:NApplicationCard.TargetApp>
       </uix:NApplicationCard>
-      <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="456.4,160" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">
+      <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="450.8,160" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">
         <InvokeMethod.TargetObject>
           <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("DynamicsBrowser"),UiElement)]</InArgument>
         </InvokeMethod.TargetObject>
       </InvokeMethod>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="490.4,291.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="484.8,291.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictFormDetails" />
       </Sequence.Variables>
@@ -203,7 +203,7 @@
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="490.4,113.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

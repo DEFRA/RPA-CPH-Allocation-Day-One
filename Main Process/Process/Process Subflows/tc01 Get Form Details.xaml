@@ -162,7 +162,7 @@
           <InArgument x:TypeArguments="x:Object">[True]</InArgument>
         </Assign.Value>
       </Assign>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Case: Case - SLA: SBI 201137738 (22/04) - CRM GDS CPH Online - CRN 1106833317 - St" sap:VirtualizedContainerService.HintSize="450,342" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="1e94dd35-f01c-46dd-ab79-afd2c2c15b8e" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Case: Case - SLA: SBI 201138637 (27/04) - CRM GDS CPH Online - CRN 1106835506 - St" sap:VirtualizedContainerService.HintSize="450,342" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="1e94dd35-f01c-46dd-ab79-afd2c2c15b8e" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -178,7 +178,7 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="c5ccfab4e8a3fc0e9b17d8ff0aecddb9.jpg" Selector="&lt;html app='msedge.exe' title='Case: Case - SLA: SBI 201137738 (22/04) - CRM GDS CPH Online - CRN 1106833317 - Standard - Dynamics 365' /&gt;" Title="Case: Case - SLA: CRM GDS CPH Online - Dynamics 365" Url="https://rpa-csc-prod.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2a1c2907-5d3e-f111-88b4-0022489a409d" />
+          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="984ca9d85321b8786a34bd03fa85e18e.jpg" Selector="&lt;html app='msedge.exe' title='Case: Case - SLA: SBI 201138637 (27/04) - CRM GDS CPH Online - CRN 1106835506 - Standard - Dynamics 365' /&gt;" Title="Case: Case - SLA: CRM GDS CPH Online - Dynamics 365" Url="https://rpa-csc-prod.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=cdca883e-8b41-f111-88b4-7ced8d481189" />
         </uix:NApplicationCard.TargetApp>
       </uix:NApplicationCard>
       <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="450,160" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">

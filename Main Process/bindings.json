@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "resources": [
+    {
+      "resource": "bucket",
+      "metadata": {
+        "name": {
+          "defaultValue": "CPH Allocations Day One",
+          "isExpression": false,
+          "displayName": "Storage Bucket Name"
+        }
+      }
+    }
+  ]
+}

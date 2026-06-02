@@ -1,0 +1,71 @@
+﻿{
+  "Version": "1.0",
+  "Metadata": [
+    {
+      "ApplicationType": "WindowsApplication",
+      "ExecutablePath": null,
+      "Url": null,
+      "Arguments": null,
+      "Version": null
+    },
+    {
+      "ApplicationType": "API",
+      "ExecutablePath": null,
+      "Url": {
+        "Value": "https://www.google.co.uk",
+        "IsExpression": false
+      },
+      "Arguments": null,
+      "Version": null
+    },
+    {
+      "ApplicationType": "Edge",
+      "ExecutablePath": {
+        "Value": "msedge.exe",
+        "IsExpression": false
+      },
+      "Url": {
+        "Value": "g_Config(\"DynamicsURL\").ToString",
+        "IsExpression": true
+      },
+      "Arguments": null,
+      "Version": null
+    },
+    {
+      "ApplicationType": "Edge",
+      "ExecutablePath": {
+        "Value": "msedge.exe",
+        "IsExpression": false
+      },
+      "Url": {
+        "Value": "g_Config(\"RuralPaymentsURL\").ToString",
+        "IsExpression": true
+      },
+      "Arguments": null,
+      "Version": null
+    },
+    {
+      "ApplicationType": "Edge",
+      "ExecutablePath": {
+        "Value": "msedge.exe",
+        "IsExpression": false
+      },
+      "Url": null,
+      "Arguments": null,
+      "Version": null
+    },
+    {
+      "ApplicationType": "Edge",
+      "ExecutablePath": {
+        "Value": "msedge.exe",
+        "IsExpression": false
+      },
+      "Url": {
+        "Value": "https://rpa-csc-prod.crm4.dynamics.com",
+        "IsExpression": false
+      },
+      "Arguments": null,
+      "Version": null
+    }
+  ]
+}

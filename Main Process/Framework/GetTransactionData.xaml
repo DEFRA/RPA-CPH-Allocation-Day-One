@@ -183,7 +183,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;This framework is setup by default to look for an Outlook MailMessage from a config-specified mailbox, this should be changed on a work package basis with out_TransactionItem being set to a single transaction from whatever source is required.&#xA;&#xA;If there are no transaction items remaining, out_TransactionItem should be set to Nothing, which leads to the End Process state. &#xA;&#xA;out_boolLastTransaction should be set to True where it is possible to determine that a transaction is the last in the batch. If this is not possible to derive then changes will need to be made to the &quot;Final Transaction&quot; transition at the framework's parent level. " DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4182.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;This framework is setup by default to look for an Outlook MailMessage from a config-specified mailbox, this should be changed on a work package basis with out_TransactionItem being set to a single transaction from whatever source is required.&#xA;&#xA;If there are no transaction items remaining, out_TransactionItem should be set to Nothing, which leads to the End Process state. &#xA;&#xA;out_boolLastTransaction should be set to True where it is possible to determine that a transaction is the last in the batch. If this is not possible to derive then changes will need to be made to the &quot;Final Transaction&quot; transition at the framework's parent level. " DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="1451.6000000000001,4116" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtToProcess" />
     </Sequence.Variables>
@@ -198,13 +198,13 @@
         <InArgument x:TypeArguments="ui:UiElement">[DirectCast(g_Config("DynamicsBrowser"),UiElement)]</InArgument>
       </InvokeMethod.TargetObject>
     </InvokeMethod>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - get cases" sap:VirtualizedContainerService.HintSize="536,1634.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;), UiElement)]" OpenMode="Never" ScopeGuid="d07e704b-14e0-4b5a-9740-2a97feea160f" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser - get cases" sap:VirtualizedContainerService.HintSize="536,1567.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[DirectCast(g_Config(&quot;DynamicsBrowser&quot;), UiElement)]" OpenMode="Never" ScopeGuid="d07e704b-14e0-4b5a-9740-2a97feea160f" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Show window and extract" sap:VirtualizedContainerService.HintSize="484,1464.4" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <Sequence DisplayName="Show window and extract" sap:VirtualizedContainerService.HintSize="484,1397.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strURLCurrent" />
             </Sequence.Variables>
@@ -213,29 +213,81 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetUrl CurrentUrl="[strURLCurrent]" DisplayName="Get URL - get transaction data" sap:VirtualizedContainerService.HintSize="450,120" sap2010:WorkflowViewState.IdRef="NGetUrl_2" Version="V3" />
-            <If Condition="[strURLCurrent&lt;&gt;g_Config(&quot;DynamicsURL&quot;).ToString]" DisplayName="If not currently on dynamics home page" sap:VirtualizedContainerService.HintSize="450,472.4" sap2010:WorkflowViewState.IdRef="If_12">
-              <If.Then>
-                <Sequence sap2010:Annotation.AnnotationText="Should only need to navigate back to main queue items page between transactions. Saves unnecessary refresh on first transaction." DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,210.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NGoToUrl DisplayName="Go To URL - dynamics home page" sap:VirtualizedContainerService.HintSize="382,106" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[g_Config(&quot;DynamicsURL&quot;).ToString]" Version="V3" />
-                </Sequence>
-              </If.Then>
-              <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Sequence>
-              </If.Else>
-            </If>
+            <uix:NGoToUrl sap2010:Annotation.AnnotationText="Not necessary on first transaction but we do it anyway" DisplayName="Go To URL - dynamics home page" sap:VirtualizedContainerService.HintSize="450,159.6" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[g_Config(&quot;DynamicsURL&quot;).ToString]" Version="V3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NGoToUrl>
+            <ui:RetryScope DisplayName="Retry Scope  - select queue" sap:VirtualizedContainerService.HintSize="450,367.6" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <uix:NSelectItem DisplayName="Select queue" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[g_Config(&quot;QueueName&quot;).ToString]" ScopeIdentifier="d07e704b-14e0-4b5a-9740-2a97feea160f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="50">
+                        <x:String>Cases with an Activity Due in the Next 7 Days</x:String>
+                        <x:String>CS Capital Grants - PA</x:String>
+                        <x:String>CS Revenue Claims - worked by me</x:String>
+                        <x:String>CS Woodland View</x:String>
+                        <x:String>Emails - Early Closure</x:String>
+                        <x:String>ES Correspondence</x:String>
+                        <x:String>ES Extensions</x:String>
+                        <x:String>ES Query Forms</x:String>
+                        <x:String>ES Queue Activities</x:String>
+                        <x:String>ES Revenue</x:String>
+                        <x:String>Grant Service Queue</x:String>
+                        <x:String>Grant Services Cases</x:String>
+                        <x:String>Items with Case Details</x:String>
+                        <x:String>KL - Working on</x:String>
+                        <x:String>KL - Working on (Complete)</x:String>
+                        <x:String>KL - Working on (TL)</x:String>
+                        <x:String>Lump Sum Items - No Org on Case</x:String>
+                        <x:String>Queue Items - Carol Pratt</x:String>
+                        <x:String>Queue Items - ES</x:String>
+                        <x:String>Queue Items In Q but Activity Not attached to a Case</x:String>
+                        <x:String>Queue Items in the BP5 Claim Team Queue - Current User</x:String>
+                        <x:String>Queue Items linked to Inactive CRM Users</x:String>
+                        <x:String>Queue Items not attached to a Case</x:String>
+                        <x:String>Robotics CPH Allocations Day One view</x:String>
+                        <x:String>Robotics CPH Allocations view</x:String>
+                        <x:String>Robotics CPH Allocations view</x:String>
+                        <x:String>SFI Assist Team Queue Items</x:String>
+                        <x:String>All Items</x:String>
+                        <x:String>Items I am working on</x:String>
+                        <x:String>!CS Minor Temporary Adjustments - Cases</x:String>
+                        <x:String>.</x:String>
+                        <x:String>.</x:String>
+                        <x:String>Active CPH Online Cases in a Queue</x:String>
+                        <x:String>Active Ewe Headage Queue Items</x:String>
+                        <x:String>Active Queue Items linked to SFI Expanded Offer Cases</x:String>
+                        <x:String>Activities for Assisted Digital - Digital Assistance Cases</x:String>
+                        <x:String>Activities linked to Intervention Cases - Queue Items</x:String>
+                        <x:String>Activities related to Case</x:String>
+                        <x:String>Alex's SFI Team 04.06.2024</x:String>
+                        <x:String>All Cases - ES Agreements</x:String>
+                        <x:String>All Cases in Selected Queues</x:String>
+                        <x:String>All CPH Items I am working on</x:String>
+                        <x:String>All E.L.M. SFI Queries Items</x:String>
+                        <x:String>All Items - ES Agreement Activities</x:String>
+                        <x:String>All Items - Where I am the Countersigner</x:String>
+                        <x:String>All Items - Where I am the Immediate Manager</x:String>
+                        <x:String>All Items - With Worked By Site</x:String>
+                        <x:String>All KA Items</x:String>
+                        <x:String>All Online Enquiries</x:String>
+                        <x:String>All Queue Items - Worked by My Team</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpa-csc-prod.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entitylist&amp;etn=queueitem&amp;viewid=2c898367-a55d-f111-a826-002248a3836a&amp;viewType=4230" DesignTimeRectangle="593, 596, 445, 94" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'ANOTHER TESTOpen'" FullSelectorArgument="&lt;webctrl tag='H1' innertext='*Open popup to change view.' /&gt;&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='ANOTHER TEST' tag='BUTTON' type='button' class='ms-Button ms-Button--default ms-Button--hasMenu root-138' aaname='ANOTHER TEST' check:innerText='ANOTHER TEST&amp;#xD;&amp;#xA;Open popup to change view.&amp;#xD;&amp;#xA;' /&gt;" Guid="938af444-315a-4b9a-81eb-005fc67f10d8" ImageBase64="" InformativeScreenshot="8929686a5594728527184a08c289a9b7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Queue Items * - Dynamics 365' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean" />
+              </ui:RetryScope.Condition>
+            </ui:RetryScope>
             <If Condition="[io_dtCases.RowCount=0]" DisplayName="If no transaction rows in table" sap:VirtualizedContainerService.HintSize="450,810.4" sap2010:WorkflowViewState.IdRef="If_13">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,418" sap2010:WorkflowViewState.IdRef="Sequence_25">

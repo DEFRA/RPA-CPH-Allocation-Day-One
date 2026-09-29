@@ -156,7 +156,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " sap:VirtualizedContainerService.HintSize="1468.8000000000002,382.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " sap:VirtualizedContainerService.HintSize="1468.8000000000002,658.84" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictFormDetails" />
       <Variable x:TypeArguments="x:String" Name="strCRNSecond" />
@@ -169,6 +169,7 @@
       <Variable x:TypeArguments="x:Int32" Name="intDifference" />
       <Variable x:TypeArguments="x:Boolean" Name="boolRetry" />
       <Variable x:TypeArguments="x:Int32" Name="intRetryCount" />
+      <Variable x:TypeArguments="x:Boolean" Name="boolDigAssist" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -250,7 +251,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Initialise second customer dictionary" sap:VirtualizedContainerService.HintSize="468,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign DisplayName="Initialise second customer dictionary" sap:VirtualizedContainerService.HintSize="479.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
                         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[dictSecondCustomer]</OutArgument>
                       </Assign.To>
@@ -258,7 +259,7 @@
                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[new Dictionary(of String, String)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Get all the second contact info and map it to a separate dictionary&#xA;&#xA;This feels better than duplicating or putting conditionals into Create New Customer for a second contact." DisplayName="For Each &quot;secondary&quot; form detail" sap:VirtualizedContainerService.HintSize="468,320.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[dictFormDetails.Where(function(x) x.Key.Contains(&quot;Secondary&quot;)).ToDictionary]">
+                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Get all the second contact info and map it to a separate dictionary&#xA;&#xA;This feels better than duplicating or putting conditionals into Create New Customer for a second contact." DisplayName="For Each &quot;secondary&quot; form detail" sap:VirtualizedContainerService.HintSize="479.6,329.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[dictFormDetails.Where(function(x) x.Key.Contains(&quot;Secondary&quot;)).ToDictionary]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                           <ActivityAction.Argument>
@@ -280,6 +281,36 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEach>
+                    <ui:MultipleAssign DisplayName="Add memorable details" sap:VirtualizedContainerService.HintSize="479.6,203.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[dictSecondCustomer("MemorableDate")]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[dictFormDetails("MemorableDate")]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_27">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[dictSecondCustomer("MemorableLocation")]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[dictFormDetails("MemorableLocation")]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[dictSecondCustomer("MemorableEvent")]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[dictFormDetails("MemorableEvent")]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
                   </Sequence>
                   <FlowStep.Next>
                     <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_3">
@@ -373,7 +404,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeWorkflowFile>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID1">
+                                        <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">245,1185</av:Point>
@@ -532,7 +563,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Update Case Title - Invoke Workflow File (Process\Process Subflows\Update Case Title.xaml)" sap:VirtualizedContainerService.HintSize="337.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Process\Process Subflows\Update Case Title.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_strCaseTitle">["SBI "+strSBI+" ("+Now.ToString("dd/MM")+") - CRM GDS CPH Online - CRN "+strCRNFirst+" - "+strPriority]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_strCaseTitle">[if(boolDigAssist,"ASSISTED DIGITAL - ","")+"SBI "+strSBI+" ("+Now.ToString("dd/MM")+") - CRM GDS CPH Online - CRN "+strCRNFirst+" - "+strPriority]</InArgument>
                                                     </ui:InvokeWorkflowFile.Arguments>
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -843,6 +874,7 @@ dictFormDetails("BusinessName")+Environment.NewLine+"SBI: "+strSBI]</InArgument>
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_dictFormDetails">[dictFormDetails]</OutArgument>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtBusinessAndLegal">[in_dtBusinessAndLegal]</InArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_boolDigAssist">[boolDigAssist]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">

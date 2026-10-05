@@ -114,7 +114,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="tc01_Get_Form_Details" sap:VirtualizedContainerService.HintSize="1451.6000000000001,1670.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="tc01_Get_Form_Details" sap:VirtualizedContainerService.HintSize="1451.6000000000001,1728.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd1:DataTable" Name="dtBusinessAndLegal" />
     </Sequence.Variables>
@@ -162,7 +162,7 @@
           <InArgument x:TypeArguments="x:Object">[True]</InArgument>
         </Assign.Value>
       </Assign>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Case: Case - SLA: SBI 201138637 (27/04) - CRM GDS CPH Online - CRN 1106835506 - St" sap:VirtualizedContainerService.HintSize="450,342" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="1e94dd35-f01c-46dd-ab79-afd2c2c15b8e" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Case: Case - SLA: SBI 201182426 (30/09) - CRM GDS CPH Online - CRN 1106947177 - Cr" sap:VirtualizedContainerService.HintSize="450,342" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[g_Config(&quot;DynamicsBrowser&quot;)]" ScopeGuid="1e94dd35-f01c-46dd-ab79-afd2c2c15b8e" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -178,7 +178,7 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABiSURBVDhP7cyxDYBADENRT8JIrMQytwQsRUmZM5bcOdU1FFj6VfSCZ9+qC9xxobre+//gEw/WN+5q4+pEdclH6LgEnXyEjkvQyUfouASdfISOS9DJR+i4BJ18hI5L0MmvDZhNnuSD8tzgJQAAAABJRU5ErkJggg==" InformativeScreenshot="984ca9d85321b8786a34bd03fa85e18e.jpg" Selector="&lt;html app='msedge.exe' title='Case: Case - SLA: SBI 201138637 (27/04) - CRM GDS CPH Online - CRN 1106835506 - Standard - Dynamics 365' /&gt;" Title="Case: Case - SLA: CRM GDS CPH Online - Dynamics 365" Url="https://rpa-csc-prod.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=cdca883e-8b41-f111-88b4-7ced8d481189" />
+          <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA6SURBVDhPY/juJ/cfF2ZgYGCo38XwHxcGyTOgaxo1YCAMoBwsef8fJ2ZgYPi/k+E/LjxqwOAxgEIAAE2e5IMOgF4vAAAAAElFTkSuQmCC" InformativeScreenshot="f997c57c3af2a1fa47a7d322979f06a5.jpg" Selector="&lt;html app='msedge.exe' title='Case: Case - SLA: SBI 201182426 (30/09) - CRM GDS CPH Online - CRN 1106947177 - Critical - Dynamics 365' /&gt;" Title="Case: Case - SLA: CRM GDS CPH Online - Dynamics 365" Url="https://rpa-csc-prod.crm4.dynamics.com/main.aspx?appid=27bd311b-fd95-ea11-a811-000d3ab7f90f&amp;forceUCI=1&amp;pagetype=entityrecord&amp;etn=incident&amp;id=2268fd23-debc-f111-aaaf-7ced8d4945b2" />
         </uix:NApplicationCard.TargetApp>
       </uix:NApplicationCard>
       <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="450,160" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="BringToForeground">
@@ -187,7 +187,7 @@
         </InvokeMethod.TargetObject>
       </InvokeMethod>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="484,291.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="484,349.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictFormDetails" />
       </Sequence.Variables>
@@ -196,7 +196,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Form Details - Invoke Workflow File (Process\Process Subflows\Get Form Details.xaml)" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Process Subflows\Get Form Details.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Form Details - Invoke Workflow File (Process\Process Subflows\Get Form Details.xaml)" sap:VirtualizedContainerService.HintSize="416,257.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Process Subflows\Get Form Details.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_dictFormDetails">[dictFormDetails]</OutArgument>
           <InArgument x:TypeArguments="sd1:DataTable" x:Key="in_dtBusinessAndLegal">[dtBusinessAndLegal]</InArgument>

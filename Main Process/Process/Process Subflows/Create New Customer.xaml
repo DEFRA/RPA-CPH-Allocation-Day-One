@@ -131,19 +131,19 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create_New_Customer" sap:VirtualizedContainerService.HintSize="1938.4,8734.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Create_New_Customer" sap:VirtualizedContainerService.HintSize="1938.4,9045.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1938.4,8711.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1938.4,9022.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;RuralPaymentsBrowser&quot;),UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Complete customer registration" sap:VirtualizedContainerService.HintSize="1904.4,8550" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Complete customer registration" sap:VirtualizedContainerService.HintSize="1904.4,8861.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -499,8 +499,8 @@
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/create-customer" DesignTimeRectangle="317, 1734, 175, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl visibleInnerText='Next' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='btn capd-btn' aaname='Next         ' check:innerText='Next' /&gt;" Guid="7489a2b4-9be7-46b9-a60f-53e25aa8ab85" ImageBase64="" InformativeScreenshot="0f34f59d8341d5b233bc78d85027a6c3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New customer registration - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <Pick DisplayName="Pick - duplicate customer?" sap:VirtualizedContainerService.HintSize="1870.4,1588.8" sap2010:WorkflowViewState.IdRef="Pick_1">
-              <PickBranch DisplayName="Duplicate customer found" sap:VirtualizedContainerService.HintSize="505.6,1510" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+            <Pick DisplayName="Pick - duplicate customer?" sap:VirtualizedContainerService.HintSize="1870.4,1587.2" sap2010:WorkflowViewState.IdRef="Pick_1">
+              <PickBranch DisplayName="Duplicate customer found" sap:VirtualizedContainerService.HintSize="505.6,1508.4" sap2010:WorkflowViewState.IdRef="PickBranch_1">
                 <PickBranch.Trigger>
                   <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find element - duplicate customer" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
                     <ui:WaitUiElementAppear.Target>
@@ -512,7 +512,7 @@
                     </ui:WaitUiElementAppear.Target>
                   </ui:WaitUiElementAppear>
                 </PickBranch.Trigger>
-                <Sequence DisplayName="User prompt to check customer" sap:VirtualizedContainerService.HintSize="416,1202.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence DisplayName="User prompt to check customer" sap:VirtualizedContainerService.HintSize="416,1200.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -530,14 +530,14 @@
                       <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                     </InvokeMethod.TargetObject>
                   </InvokeMethod>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirm details' - duplicate customer" sap:VirtualizedContainerService.HintSize="382,182.8" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirm details' - duplicate customer" sap:VirtualizedContainerService.HintSize="382,181.2" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/create-customer" DesignTimeRectangle="1453, 1875, 388, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Confirm details'" FullSelectorArgument="&lt;webctrl visibleInnerText='Confirm details' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Confirm details                         ' tag='BUTTON' type='' class='button ng-isolate-scope' check:innerText='Confirm details' /&gt;" Guid="facf0e92-eec2-4960-b395-595ca7f81e0c" ImageBase64="" InformativeScreenshot="e512270f13bae971fd3e1de1e2d5a3bb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New customer registration - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
                 </Sequence>
               </PickBranch>
-              <PickBranch DisplayName="Memorable info" sap:VirtualizedContainerService.HintSize="423.6,1510" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+              <PickBranch DisplayName="Memorable info" sap:VirtualizedContainerService.HintSize="423.6,1508.4" sap2010:WorkflowViewState.IdRef="PickBranch_2">
                 <PickBranch.Trigger>
                   <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - register button" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                     <ui:WaitUiElementAppear.Target>
@@ -551,7 +551,7 @@
                 </PickBranch.Trigger>
                 <ui:LogMessage DisplayName="Log Message - customer details complete" sap:VirtualizedContainerService.HintSize="334,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Customer details entered successfully.&quot;]" />
               </PickBranch>
-              <PickBranch DisplayName="Validation issue" sap:VirtualizedContainerService.HintSize="423.6,1510" sap2010:WorkflowViewState.IdRef="PickBranch_4">
+              <PickBranch DisplayName="Validation issue" sap:VirtualizedContainerService.HintSize="423.6,1508.4" sap2010:WorkflowViewState.IdRef="PickBranch_4">
                 <PickBranch.Trigger>
                   <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - validation message" sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
                     <ui:WaitUiElementAppear.Target>
@@ -565,28 +565,48 @@
                 </PickBranch.Trigger>
                 <Throw DisplayName="Throw BRE - validation error" Exception="[new BusinessRuleException(&quot;One or more validation messages have appeared. Please complete the rest of this transaction manually.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_2" />
               </PickBranch>
-              <PickBranch DisplayName="Default" sap:VirtualizedContainerService.HintSize="423.6,1510" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+              <PickBranch DisplayName="Default" sap:VirtualizedContainerService.HintSize="423.6,1508.4" sap2010:WorkflowViewState.IdRef="PickBranch_3">
                 <PickBranch.Trigger>
                   <Delay DisplayName="Delay - no duplicate or register button" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Delay_1" />
                 </PickBranch.Trigger>
                 <Throw DisplayName="Throw SE - unknown error" Exception="[new System.Exception(&quot;Unknown error encountered on registering customer. Neither duplicate prompt nor register button appeared.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
               </PickBranch>
             </Pick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Memorable Date" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1870.4,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_14" InteractionMode="DebuggerApi" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Text="[in_dictFormDetails(&quot;MemorableDate&quot;)]" Version="V3">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/security-questions" DesignTimeRectangle="317, 1457, 831, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT date'" FullSelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable date' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable date' /&gt;&lt;webctrl tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid ng-valid-max-length ng-empty' aaname='' /&gt;" Guid="bc2ab23c-3e7a-47f1-a69e-94d975f27c77" ImageBase64="" InformativeScreenshot="61d935fdc5d0740e8eb1a9ae67b8f394.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='security-questions - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Memorable Event" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1870.4,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_16" InteractionMode="DebuggerApi" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Text="[in_dictFormDetails(&quot;MemorableEvent&quot;)]" Version="V3">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/security-questions" DesignTimeRectangle="317, 1677, 831, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT event'" FullSelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable event' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable event' /&gt;&lt;webctrl tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid ng-valid-max-length ng-empty' aaname='' /&gt;" Guid="f7b82864-daf8-44e6-b1cb-6a089fc22de3" InformativeScreenshot="43bcceb49c5d87bee5edc900ed3c53e8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='security-questions - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Memorable Place" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1870.4,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_15" InteractionMode="DebuggerApi" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Text="[in_dictFormDetails(&quot;MemorableLocation&quot;)]" Version="V3">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/security-questions" DesignTimeRectangle="317, 1897, 831, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT location'" FullSelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable place' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable place' /&gt;&lt;webctrl tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid ng-valid-max-length ng-empty' aaname='' /&gt;" Guid="a5de01a6-9496-4311-bba6-739e6c23bf5a" InformativeScreenshot="daa6b2332bae8fbdd10cee8f14426242.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='security-questions - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
+            <If Condition="[not String.IsNullOrEmpty(in_dictFormDetails(&quot;MemorableDate&quot;))]" DisplayName="If memorable info provided (i.e. not second contact)" sap:VirtualizedContainerService.HintSize="1870.4,1071.2" sap2010:WorkflowViewState.IdRef="If_9">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,809.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Memorable Date" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_14" InteractionMode="DebuggerApi" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Text="[in_dictFormDetails(&quot;MemorableDate&quot;)]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/security-questions" DesignTimeRectangle="317, 1457, 831, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT date'" FullSelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable date' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable date' /&gt;&lt;webctrl tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid ng-valid-max-length ng-empty' aaname='' /&gt;" Guid="bc2ab23c-3e7a-47f1-a69e-94d975f27c77" ImageBase64="" InformativeScreenshot="61d935fdc5d0740e8eb1a9ae67b8f394.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='security-questions - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Memorable Event" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_16" InteractionMode="DebuggerApi" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Text="[in_dictFormDetails(&quot;MemorableEvent&quot;)]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/security-questions" DesignTimeRectangle="317, 1677, 831, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT event'" FullSelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable event' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable event' /&gt;&lt;webctrl tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid ng-valid-max-length ng-empty' aaname='' /&gt;" Guid="f7b82864-daf8-44e6-b1cb-6a089fc22de3" InformativeScreenshot="43bcceb49c5d87bee5edc900ed3c53e8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='security-questions - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Memorable Place" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,244" sap2010:WorkflowViewState.IdRef="NTypeInto_15" InteractionMode="DebuggerApi" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Text="[in_dictFormDetails(&quot;MemorableLocation&quot;)]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/security-questions" DesignTimeRectangle="317, 1897, 831, 95" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT location'" FullSelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable place' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' visibleinnertext='Memorable place' /&gt;&lt;webctrl tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid ng-valid-max-length ng-empty' aaname='' /&gt;" Guid="a5de01a6-9496-4311-bba6-739e6c23bf5a" InformativeScreenshot="daa6b2332bae8fbdd10cee8f14426242.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='security-questions - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register'" sap:VirtualizedContainerService.HintSize="1870.4,190" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9ccdc32-86aa-4baa-8d48-9add28b7a2fc" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www-chs-upgrade.ruraldev.org.uk/#/internal_user/create-customer" DesignTimeRectangle="317, 1734, 175, 97" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl visibleInnerText='Register' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='btn capd-btn' aaname='Register*' check:innerText='Register' /&gt;" Guid="7489a2b4-9be7-46b9-a60f-53e25aa8ab85" ImageBase64="" InformativeScreenshot="0f34f59d8341d5b233bc78d85027a6c3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New customer registration - Rural Payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
